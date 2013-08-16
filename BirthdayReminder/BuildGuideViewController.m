@@ -42,7 +42,16 @@ CGFloat rotation, previousRotation;
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(doDrag:)];
     panGesture.delegate = self;
     [self.imageView addGestureRecognizer:panGesture];
-
+    
+    /*
+    // Long Press 감지
+    UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:(doLongPress:)];
+    longGesture.minimumPressDuration = 1.5;   // 최소 몇 초간 눌러야 인식할지 설정
+    longGesture.allowableMovement = 15;       // 어느정도 거리까지 누른 상태로 이동해도 인식할지 설정
+    longGesture.numberOfTouchesRequired = 1;  // 몇 개의 손가락으로 터치해야  인식할지 설정
+    longGesture.delegate = self;
+    [self.imageView addGestureRecognizer:longGesture];
+    */
 }
 
 #pragma mark - 핀치 및 회전 감지
@@ -63,6 +72,8 @@ CGFloat rotation, previousRotation;
 
 - (void)doPinch:(UIPinchGestureRecognizer *)gesture
 {
+    NSLog(@"Pinch Gesture detected!");
+    
     scale = gesture.scale;
     [self transformImageview];
     if (gesture.state == UIGestureRecognizerStateEnded) {
@@ -74,6 +85,8 @@ CGFloat rotation, previousRotation;
 
 - (void)doRotate:(UIRotationGestureRecognizer *)gesture
 {
+    NSLog(@"Rotation Gesture detected!");
+    
     rotation = gesture.rotation;
     [self transformImageview];
     if (gesture.state == UIGestureRecognizerStateEnded) {
@@ -83,10 +96,12 @@ CGFloat rotation, previousRotation;
 }
 
 
-#pragma mark - 드래그 감지
+#pragma mark - 드래그(Pan) 감지
 
 - (void)doDrag:(UIPanGestureRecognizer *)gesture
 {
+    NSLog(@"Pan Gesture detected!");
+    
     UIView *piece = [gesture view];
     
     if ([gesture state] == UIGestureRecognizerStateBegan || [gesture state] == UIGestureRecognizerStateChanged) {
@@ -98,6 +113,14 @@ CGFloat rotation, previousRotation;
     }
 }
 
+/*
+#pragma mark - Long Press 감지
+
+- (void)doLongPress:(UIPanGestureRecognizer *)gesture
+{
+    NSLog(@"Long Press Gesture detected!");
+}
+*/
 
 
 @end
