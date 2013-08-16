@@ -47,17 +47,21 @@
             </objects>
             <point key="canvasLocation" x="593" y="170"/>
         </scene>
-        <!--View Controller - Edit Birthday-->
+        <!--Edit View Controller - Edit Birthday-->
         <scene sceneID="PRe-PM-THo">
             <objects>
-                <viewController id="PLS-rQ-6es" sceneMemberID="viewController">
+                <viewController id="PLS-rQ-6es" customClass="EditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0z7-FN-6vB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Birthday" id="rW4-BL-vhL">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kao-ao-nrh"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kao-ao-nrh">
+                            <connections>
+                                <action selector="cancelAndDismiss:" destination="PLS-rQ-6es" id="OkT-g8-2Nq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="YLS-G7-2HC"/>
                     </navigationItem>
                 </viewController>

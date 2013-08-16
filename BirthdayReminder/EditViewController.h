@@ -10,4 +10,7 @@
 
 @interface EditViewController : UIViewController
 
+#pragma mark - 생일 편집 뷰에서 Cancel 버튼을 눌렀을 때 홈 뷰 컨트롤러로 되돌아가기 위한 메소드.
+- (IBAction)cancelAndDismiss:(id)sender;
+
 @end
