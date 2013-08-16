@@ -21,6 +21,7 @@
 		BF6487F517BE0D9300202254 /* BRAppGuide01.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6487F317BE0D9300202254 /* BRAppGuide01.png */; };
 		BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BF6487F917BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
+		BF6487FB17BE3EDF00202254 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6487FA17BE3EDF00202254 /* QuartzCore.framework */; };
 		BFC18B9317BDAF2900D49685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9217BDAF2900D49685 /* Foundation.framework */; };
 		BFC18B9517BDAF2900D49685 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */; };
 		BFC18B9717BDAF2900D49685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9617BDAF2900D49685 /* UIKit.framework */; };
@@ -82,6 +83,7 @@
 		BF6487F317BE0D9300202254 /* BRAppGuide01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BRAppGuide01.png; sourceTree = "<group>"; };
 		BF6487F617BE0EB200202254 /* BuildGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildGuideViewController.h; sourceTree = "<group>"; };
 		BF6487F717BE0EB200202254 /* BuildGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildGuideViewController.m; sourceTree = "<group>"; };
+		BF6487FA17BE3EDF00202254 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BFC18B8F17BDAF2900D49685 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC18B9217BDAF2900D49685 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6487FB17BE3EDF00202254 /* QuartzCore.framework in Frameworks */,
 				BFC18B9517BDAF2900D49685 /* CoreGraphics.framework in Frameworks */,
 				BFC18B9717BDAF2900D49685 /* UIKit.framework in Frameworks */,
 				BFC18B9317BDAF2900D49685 /* Foundation.framework in Frameworks */,
@@ -160,6 +163,7 @@
 		BFC18B9117BDAF2900D49685 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF6487FA17BE3EDF00202254 /* QuartzCore.framework */,
 				BFC18B9217BDAF2900D49685 /* Foundation.framework */,
 				BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */,
 				BFC18B9617BDAF2900D49685 /* UIKit.framework */,

@@ -43,15 +43,14 @@ CGFloat rotation, previousRotation;
     panGesture.delegate = self;
     [self.imageView addGestureRecognizer:panGesture];
     
-    /*
+    
     // Long Press 감지
-    UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:(doLongPress:)];
+    UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(doLongPress:)];
     longGesture.minimumPressDuration = 1.5;   // 최소 몇 초간 눌러야 인식할지 설정
     longGesture.allowableMovement = 15;       // 어느정도 거리까지 누른 상태로 이동해도 인식할지 설정
     longGesture.numberOfTouchesRequired = 1;  // 몇 개의 손가락으로 터치해야  인식할지 설정
     longGesture.delegate = self;
     [self.imageView addGestureRecognizer:longGesture];
-    */
 }
 
 #pragma mark - 핀치 및 회전 감지
@@ -113,14 +112,21 @@ CGFloat rotation, previousRotation;
     }
 }
 
-/*
+
 #pragma mark - Long Press 감지
 
 - (void)doLongPress:(UIPanGestureRecognizer *)gesture
 {
     NSLog(@"Long Press Gesture detected!");
+    
+    // 현재 뷰 컨트롤러 화면을 캡쳐
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *imageCapture = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    // 앨범에 저장
+    UIImageWriteToSavedPhotosAlbum(imageCapture, Nil, nil, nil);
 }
-*/
 
 
 @end

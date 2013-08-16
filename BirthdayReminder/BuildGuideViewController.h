@@ -7,6 +7,8 @@
 //
 
 #import "CoreViewController.h"
+#import <QuartzCore/QuartzCore.h>   // 화면캡쳐 예제 (longPressGesture 액션에 구현)
+
 
 @interface BuildGuideViewController : CoreViewController <UIGestureRecognizerDelegate>
 
