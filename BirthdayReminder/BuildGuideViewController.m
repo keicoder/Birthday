@@ -23,8 +23,10 @@ CGFloat rotation, previousRotation;
     UIImage *image = [UIImage imageNamed:@"BRAppGuide01.png"];
     self.imageView = [[UIImageView alloc] initWithImage:image];
     self.imageView.userInteractionEnabled = YES;
+    //self.imageView.center = CGPointMake([[UIScreen mainScreen] applicationFrame].size.width/7, [[UIScreen mainScreen] applicationFrame].size.height/7);
+    self.imageView.multipleTouchEnabled = YES;
     //self.imageView.center = CGPointMake(160, 160);
-    //self.imageView.frame = CGRectMake(55, 300, 300, 200);
+    self.imageView.frame = CGRectMake(0, 40, 320, 528);
     //self.imageView.frame = CGRectMake(5, 5, image.size.width,image.size.height);
     [self.view addSubview:self.imageView];
     
@@ -35,11 +37,15 @@ CGFloat rotation, previousRotation;
     UIRotationGestureRecognizer *rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(doRotate:)];
     rotationGesture.delegate = self;
     [self.imageView addGestureRecognizer:rotationGesture];
+    
+    // 드래그 감지
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(doDrag:)];
+    panGesture.delegate = self;
+    [self.imageView addGestureRecognizer:panGesture];
+
 }
 
-#pragma mark -
-#pragma mark 핀치 및 회전 감지
-
+#pragma mark - 핀치 및 회전 감지
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
@@ -75,6 +81,23 @@ CGFloat rotation, previousRotation;
         rotation = 0;
     }
 }
+
+
+#pragma mark - 드래그 감지
+
+- (void)doDrag:(UIPanGestureRecognizer *)gesture
+{
+    UIView *piece = [gesture view];
+    
+    if ([gesture state] == UIGestureRecognizerStateBegan || [gesture state] == UIGestureRecognizerStateChanged) {
+        CGPoint translation = [gesture translationInView:[piece superview]];
+        
+        [piece setCenter:CGPointMake([piece center].x + translation.x, [piece center].y + translation.y)];
+        
+        [gesture setTranslation:CGPointZero inView:[piece superview]];
+    }
+}
+
 
 
 @end
