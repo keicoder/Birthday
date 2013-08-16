@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF6487E117BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
+		BF6487E217BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BFC18B9317BDAF2900D49685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9217BDAF2900D49685 /* Foundation.framework */; };
 		BFC18B9517BDAF2900D49685 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */; };
 		BFC18B9717BDAF2900D49685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9617BDAF2900D49685 /* UIKit.framework */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF6487DF17BDE90C00202254 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		BF6487E017BDE90C00202254 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		BFC18B8F17BDAF2900D49685 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC18B9217BDAF2900D49685 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -215,6 +219,8 @@
 				BFC18BF917BDD96000D49685 /* HomeViewController.m */,
 				BFC18BFC17BDD98600D49685 /* DetailViewController.h */,
 				BFC18BFD17BDD98600D49685 /* DetailViewController.m */,
+				BF6487DF17BDE90C00202254 /* EditViewController.h */,
+				BF6487E017BDE90C00202254 /* EditViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				BFC18BA317BDAF2900D49685 /* AppDelegate.m in Sources */,
 				BFC18B9F17BDAF2900D49685 /* main.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
+				BF6487E117BDE90C00202254 /* EditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6487E217BDE90C00202254 /* EditViewController.m in Sources */,
 				BFC18BBE17BDAF2900D49685 /* BirthdayReminderTests.m in Sources */,
 				BFC18BFB17BDD96000D49685 /* HomeViewController.m in Sources */,
 				BFC18BFF17BDD98600D49685 /* DetailViewController.m in Sources */,
