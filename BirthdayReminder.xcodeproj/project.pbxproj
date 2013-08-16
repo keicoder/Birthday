@@ -11,6 +11,8 @@
 		BF6487E217BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
 		BF6487E617BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
+		BF6487E917BE02EF00202254 /* NotesEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E817BE02EF00202254 /* NotesEditViewController.m */; };
+		BF6487EA17BE02EF00202254 /* NotesEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E817BE02EF00202254 /* NotesEditViewController.m */; };
 		BFC18B9317BDAF2900D49685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9217BDAF2900D49685 /* Foundation.framework */; };
 		BFC18B9517BDAF2900D49685 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */; };
 		BFC18B9717BDAF2900D49685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9617BDAF2900D49685 /* UIKit.framework */; };
@@ -63,6 +65,8 @@
 		BF6487E017BDE90C00202254 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		BF6487E317BDEDE200202254 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
 		BF6487E417BDEDE200202254 /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
+		BF6487E717BE02EF00202254 /* NotesEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesEditViewController.h; sourceTree = "<group>"; };
+		BF6487E817BE02EF00202254 /* NotesEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesEditViewController.m; sourceTree = "<group>"; };
 		BFC18B8F17BDAF2900D49685 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC18B9217BDAF2900D49685 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,6 +231,8 @@
 				BFC18BFD17BDD98600D49685 /* DetailViewController.m */,
 				BF6487DF17BDE90C00202254 /* EditViewController.h */,
 				BF6487E017BDE90C00202254 /* EditViewController.m */,
+				BF6487E717BE02EF00202254 /* NotesEditViewController.h */,
+				BF6487E817BE02EF00202254 /* NotesEditViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				BFC18BFE17BDD98600D49685 /* DetailViewController.m in Sources */,
 				BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */,
 				BFC18BA317BDAF2900D49685 /* AppDelegate.m in Sources */,
+				BF6487E917BE02EF00202254 /* NotesEditViewController.m in Sources */,
 				BFC18B9F17BDAF2900D49685 /* main.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
 				BF6487E117BDE90C00202254 /* EditViewController.m in Sources */,
@@ -364,6 +371,7 @@
 			files = (
 				BF6487E617BDEDE200202254 /* CoreViewController.m in Sources */,
 				BF6487E217BDE90C00202254 /* EditViewController.m in Sources */,
+				BF6487EA17BE02EF00202254 /* NotesEditViewController.m in Sources */,
 				BFC18BBE17BDAF2900D49685 /* BirthdayReminderTests.m in Sources */,
 				BFC18BFB17BDD96000D49685 /* HomeViewController.m in Sources */,
 				BFC18BFF17BDD98600D49685 /* DetailViewController.m in Sources */,
