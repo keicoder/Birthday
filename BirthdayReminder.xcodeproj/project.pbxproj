@@ -13,6 +13,14 @@
 		BF6487E617BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
 		BF6487E917BE02EF00202254 /* NotesEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E817BE02EF00202254 /* NotesEditViewController.m */; };
 		BF6487EA17BE02EF00202254 /* NotesEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E817BE02EF00202254 /* NotesEditViewController.m */; };
+		BF6487ED17BE070100202254 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487EC17BE070100202254 /* SettingsViewController.m */; };
+		BF6487EE17BE070100202254 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487EC17BE070100202254 /* SettingsViewController.m */; };
+		BF6487F117BE091C00202254 /* NotificationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F017BE091C00202254 /* NotificationTimeViewController.m */; };
+		BF6487F217BE091C00202254 /* NotificationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F017BE091C00202254 /* NotificationTimeViewController.m */; };
+		BF6487F417BE0D9300202254 /* BRAppGuide01.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6487F317BE0D9300202254 /* BRAppGuide01.png */; };
+		BF6487F517BE0D9300202254 /* BRAppGuide01.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6487F317BE0D9300202254 /* BRAppGuide01.png */; };
+		BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
+		BF6487F917BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BFC18B9317BDAF2900D49685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9217BDAF2900D49685 /* Foundation.framework */; };
 		BFC18B9517BDAF2900D49685 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */; };
 		BFC18B9717BDAF2900D49685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9617BDAF2900D49685 /* UIKit.framework */; };
@@ -67,6 +75,13 @@
 		BF6487E417BDEDE200202254 /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
 		BF6487E717BE02EF00202254 /* NotesEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesEditViewController.h; sourceTree = "<group>"; };
 		BF6487E817BE02EF00202254 /* NotesEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesEditViewController.m; sourceTree = "<group>"; };
+		BF6487EB17BE070100202254 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BF6487EC17BE070100202254 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BF6487EF17BE091C00202254 /* NotificationTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationTimeViewController.h; sourceTree = "<group>"; };
+		BF6487F017BE091C00202254 /* NotificationTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationTimeViewController.m; sourceTree = "<group>"; };
+		BF6487F317BE0D9300202254 /* BRAppGuide01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BRAppGuide01.png; sourceTree = "<group>"; };
+		BF6487F617BE0EB200202254 /* BuildGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildGuideViewController.h; sourceTree = "<group>"; };
+		BF6487F717BE0EB200202254 /* BuildGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildGuideViewController.m; sourceTree = "<group>"; };
 		BFC18B8F17BDAF2900D49685 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC18B9217BDAF2900D49685 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -199,6 +214,7 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF6487F317BE0D9300202254 /* BRAppGuide01.png */,
 				BFC18BC817BDB74400D49685 /* Default-568h@2x.png */,
 				BFC18BC917BDB74400D49685 /* Default.png */,
 				BFC18BCA17BDB74400D49685 /* Default@2x.png */,
@@ -233,6 +249,12 @@
 				BF6487E017BDE90C00202254 /* EditViewController.m */,
 				BF6487E717BE02EF00202254 /* NotesEditViewController.h */,
 				BF6487E817BE02EF00202254 /* NotesEditViewController.m */,
+				BF6487EB17BE070100202254 /* SettingsViewController.h */,
+				BF6487EC17BE070100202254 /* SettingsViewController.m */,
+				BF6487EF17BE091C00202254 /* NotificationTimeViewController.h */,
+				BF6487F017BE091C00202254 /* NotificationTimeViewController.m */,
+				BF6487F617BE0EB200202254 /* BuildGuideViewController.h */,
+				BF6487F717BE0EB200202254 /* BuildGuideViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -323,6 +345,7 @@
 				BFC18BDD17BDB74400D49685 /* Icon-Small@2x.png in Resources */,
 				BFC18BD117BDB74400D49685 /* Default-568h@2x.png in Resources */,
 				BFC18B9D17BDAF2900D49685 /* InfoPlist.strings in Resources */,
+				BF6487F417BE0D9300202254 /* BRAppGuide01.png in Resources */,
 				BFC18BA617BDAF2900D49685 /* Main.storyboard in Resources */,
 				BFC18BD717BDB74400D49685 /* Icon-72.png in Resources */,
 				BFC18BDF17BDB74400D49685 /* Icon.png in Resources */,
@@ -340,6 +363,7 @@
 				BFC18BDC17BDB74400D49685 /* Icon-Small.png in Resources */,
 				BFC18BD817BDB74400D49685 /* Icon-72.png in Resources */,
 				BFC18BDA17BDB74400D49685 /* Icon-72@2x.png in Resources */,
+				BF6487F517BE0D9300202254 /* BRAppGuide01.png in Resources */,
 				BFC18BBC17BDAF2900D49685 /* InfoPlist.strings in Resources */,
 				BFC18BDE17BDB74400D49685 /* Icon-Small@2x.png in Resources */,
 				BFC18BD417BDB74400D49685 /* Default.png in Resources */,
@@ -355,9 +379,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */,
+				BF6487F117BE091C00202254 /* NotificationTimeViewController.m in Sources */,
 				BFC18BFE17BDD98600D49685 /* DetailViewController.m in Sources */,
 				BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */,
 				BFC18BA317BDAF2900D49685 /* AppDelegate.m in Sources */,
+				BF6487ED17BE070100202254 /* SettingsViewController.m in Sources */,
 				BF6487E917BE02EF00202254 /* NotesEditViewController.m in Sources */,
 				BFC18B9F17BDAF2900D49685 /* main.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
@@ -369,12 +396,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6487F217BE091C00202254 /* NotificationTimeViewController.m in Sources */,
 				BF6487E617BDEDE200202254 /* CoreViewController.m in Sources */,
 				BF6487E217BDE90C00202254 /* EditViewController.m in Sources */,
 				BF6487EA17BE02EF00202254 /* NotesEditViewController.m in Sources */,
 				BFC18BBE17BDAF2900D49685 /* BirthdayReminderTests.m in Sources */,
 				BFC18BFB17BDD96000D49685 /* HomeViewController.m in Sources */,
+				BF6487F917BE0EB200202254 /* BuildGuideViewController.m in Sources */,
 				BFC18BFF17BDD98600D49685 /* DetailViewController.m in Sources */,
+				BF6487EE17BE070100202254 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
