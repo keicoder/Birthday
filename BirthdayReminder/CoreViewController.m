@@ -21,7 +21,8 @@
 {
     [super viewDidLoad];
 	// 상속받는 모든 뷰의 백그라운드 칼라 지정
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    // self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f];
 }
 
 
