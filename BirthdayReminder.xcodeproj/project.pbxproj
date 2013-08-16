@@ -114,9 +114,9 @@
 			children = (
 				BFC18BA117BDAF2900D49685 /* AppDelegate.h */,
 				BFC18BA217BDAF2900D49685 /* AppDelegate.m */,
-				BFC18BA417BDAF2900D49685 /* Main.storyboard */,
 				BFC18BA717BDAF2900D49685 /* ViewController.h */,
 				BFC18BA817BDAF2900D49685 /* ViewController.m */,
+				BFC18BA417BDAF2900D49685 /* Main.storyboard */,
 				BFC18BAA17BDAF2900D49685 /* Images.xcassets */,
 				BFC18B9917BDAF2900D49685 /* Supporting Files */,
 			);
