@@ -30,7 +30,6 @@
 
     
 #pragma mark - 뷰 라이프 사이클
-// UIViewController의 
 
 - (void) dealloc
 {

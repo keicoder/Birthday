@@ -59,10 +59,14 @@
                     <navigationItem key="navigationItem" title="Edit Birthday" id="rW4-BL-vhL">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kao-ao-nrh">
                             <connections>
-                                <action selector="cancelAndDismiss:" destination="PLS-rQ-6es" id="OkT-g8-2Nq"/>
+                                <action selector="cancelAndDismiss:" destination="PLS-rQ-6es" id="3Mg-eB-9ff"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="YLS-G7-2HC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="YLS-G7-2HC">
+                            <connections>
+                                <action selector="saveAndDismiss:" destination="PLS-rQ-6es" id="aAI-iD-rUS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doB-la-Of8" userLabel="First Responder" sceneMemberID="firstResponder"/>
