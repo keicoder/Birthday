@@ -27,22 +27,58 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Birthdays" id="ocA-Us-sDF"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="58q-3F-Qhf"/>
+                        <barButtonItem title="Address Book" id="qqW-He-IAo"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="UF8-xT-H6B"/>
+                        <barButtonItem title="Facebook" id="u4q-Rg-1Sv"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Mx7-ZR-uDX"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Birthdays" id="ocA-Us-sDF">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="Kgx-CB-Xhq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="WOd-SV-Ml1">
+                            <connections>
+                                <segue destination="fG4-6S-L59" kind="modal" id="4ZG-yo-WKQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="593" y="170"/>
         </scene>
+        <!--View Controller - Edit Birthday-->
+        <scene sceneID="PRe-PM-THo">
+            <objects>
+                <viewController id="PLS-rQ-6es" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0z7-FN-6vB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Birthday" id="rW4-BL-vhL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kao-ao-nrh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="YLS-G7-2HC"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doB-la-Of8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1447" y="-519"/>
+        </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="w3n-KO-R6a">
             <objects>
-                <viewController id="4Aq-Aa-gJv" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="4Aq-Aa-gJv" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qC6-TP-70u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="IlF-MT-69Z"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Detail" id="T32-At-CxC"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlF-yb-gPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,13 +87,17 @@
         <!--Navigation Controller-->
         <scene sceneID="Zdn-li-aH8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zuH-yB-dXZ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="zuH-yB-dXZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="95I-HL-vWB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Gm6-3R-sOc">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="jwG-bZ-ncz"/>
                     </connections>
@@ -65,6 +105,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiq-vj-jXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="161" y="170"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9sx-IW-8GY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fG4-6S-L59" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Efh-xU-CZp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PLS-rQ-6es" kind="relationship" relationship="rootViewController" id="L2d-QD-OJg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvp-mB-xEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="-519"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
