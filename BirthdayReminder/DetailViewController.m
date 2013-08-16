@@ -12,27 +12,66 @@
 
 @end
 
+
 @implementation DetailViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+#pragma mark - 스토리보드 지정초기자
+
+- (id) initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithCoder:aDecoder];
+    
     if (self) {
-        // Custom initialization
+        NSLog(@"initWithCoder");
     }
     return self;
 }
 
-- (void)viewDidLoad
+    
+#pragma mark - 뷰 라이프 사이클
+// UIViewController의 
+
+- (void) dealloc
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    NSLog(@"dealloc");
 }
 
-- (void)didReceiveMemoryWarning
+- (void) viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"viewDidAppear");
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"viewWillDisappear");
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"viewDidDisappear");
+}
+    
+    
+#pragma mark - 메모리 관리
+
+- (void) didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
