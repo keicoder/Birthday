@@ -1,46 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="13A538g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zuH-yB-dXZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="13A538g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zuH-yB-dXZ">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
     </dependencies>
     <scenes>
-        <!--Build Guide View Controller - App Build Guide-->
+        <!--Build Guide View Controller - Build Guide-->
         <scene sceneID="qaH-yp-oCv">
             <objects>
                 <viewController id="a3d-rG-rkL" customClass="BuildGuideViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ya6-8X-xS4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bws-dw-k4v"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="65o-F9-zUq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BRAppGuide01.png" id="qmb-2L-6qd">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mru-YS-KK1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="App Build Guide" id="1X2-7R-yEb">
+                    <navigationItem key="navigationItem" title="Build Guide" id="1X2-7R-yEb">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="7qG-HN-Mut">
                             <connections>
                                 <action selector="saveAndDismiss:" destination="a3d-rG-rkL" id="BES-QQ-SZe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="Mru-YS-KK1" id="gAV-sz-dh2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iRF-Yg-6WC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-365" y="-1357"/>
+            <point key="canvasLocation" x="-753" y="-1399"/>
         </scene>
         <!--Home View Controller - Birthdays-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0OP-KZ-Jba"/>
+                        <viewControllerLayoutGuide type="bottom" id="C4Q-xh-3h0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="22L-YC-f9N">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22L-YC-f9N">
                                 <rect key="frame" x="20" y="269" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -82,12 +93,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-365" y="-672"/>
+            <point key="canvasLocation" x="-753" y="-714"/>
         </scene>
         <!--Edit View Controller - Edit Birthday-->
         <scene sceneID="PRe-PM-THo">
             <objects>
                 <viewController id="PLS-rQ-6es" customClass="EditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XTH-3G-RHi"/>
+                        <viewControllerLayoutGuide type="bottom" id="yCI-Kj-ShK"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0z7-FN-6vB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -108,17 +123,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doB-la-Of8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="-1357"/>
+            <point key="canvasLocation" x="570" y="-1399"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="w3n-KO-R6a">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="4Aq-Aa-gJv" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G49-Cc-6fA"/>
+                        <viewControllerLayoutGuide type="bottom" id="RrS-XO-eqD"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qC6-TP-70u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vRp-Yh-iox">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRp-Yh-iox">
                                 <rect key="frame" x="20" y="269" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -146,17 +165,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlF-yb-gPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="-672"/>
+            <point key="canvasLocation" x="-317" y="-714"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="YfT-Dj-J5b">
             <objects>
                 <viewController id="CMT-Ve-nkm" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9gL-DP-t6Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="EpP-zP-LQQ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SIA-IV-dbS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s8g-yj-gsH">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8g-yj-gsH">
                                 <rect key="frame" x="20" y="269" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -180,12 +203,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7l-LZ-QFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="22"/>
+            <point key="canvasLocation" x="152" y="-20"/>
         </scene>
         <!--Notification Time View Controller - Alert Time-->
         <scene sceneID="Mq4-p0-yte">
             <objects>
                 <viewController id="Kpb-sO-KKL" customClass="NotificationTimeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GGO-6G-yIJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="2SD-Gf-eQL"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fvf-IO-adC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -195,12 +222,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQs-ci-YXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="22"/>
+            <point key="canvasLocation" x="570" y="-20"/>
         </scene>
         <!--Notes Edit View Controller - Edit Notes-->
         <scene sceneID="M9u-Hk-n9Z">
             <objects>
                 <viewController id="IAn-Se-qne" customClass="NotesEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yZc-JH-uPb"/>
+                        <viewControllerLayoutGuide type="bottom" id="HsC-WO-RG4"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xb5-c0-hMn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -221,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7UN-g4-T9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="-672"/>
+            <point key="canvasLocation" x="570" y="-714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zdn-li-aH8">
@@ -243,7 +274,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiq-vj-jXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-797" y="-672"/>
+            <point key="canvasLocation" x="-1185" y="-714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9sx-IW-8GY">
@@ -261,7 +292,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvp-mB-xEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="-1357"/>
+            <point key="canvasLocation" x="152" y="-1399"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FMF-mp-Tfg">
@@ -279,7 +310,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EB3-c2-kcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="-672"/>
+            <point key="canvasLocation" x="152" y="-714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ijv-Oo-xnP">
@@ -297,7 +328,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWp-dp-BnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="22"/>
+            <point key="canvasLocation" x="-317" y="-20"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AHK-5t-7Ev">
@@ -315,12 +346,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="429-3c-ELj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-797" y="-1357"/>
+            <point key="canvasLocation" x="-1185" y="-1399"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="BRAppGuide01.png" width="1091" height="1031"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

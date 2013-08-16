@@ -8,6 +8,8 @@
 
 #import "CoreViewController.h"
 
-@interface BuildGuideViewController : CoreViewController
+@interface BuildGuideViewController : CoreViewController <UIGestureRecognizerDelegate>
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
