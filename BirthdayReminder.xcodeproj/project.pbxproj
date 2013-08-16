@@ -14,7 +14,6 @@
 		BFC18B9F17BDAF2900D49685 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18B9E17BDAF2900D49685 /* main.m */; };
 		BFC18BA317BDAF2900D49685 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18BA217BDAF2900D49685 /* AppDelegate.m */; };
 		BFC18BA617BDAF2900D49685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC18BA417BDAF2900D49685 /* Main.storyboard */; };
-		BFC18BA917BDAF2900D49685 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18BA817BDAF2900D49685 /* ViewController.m */; };
 		BFC18BAB17BDAF2900D49685 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC18BAA17BDAF2900D49685 /* Images.xcassets */; };
 		BFC18BB217BDAF2900D49685 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18BB117BDAF2900D49685 /* XCTest.framework */; };
 		BFC18BB317BDAF2900D49685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9217BDAF2900D49685 /* Foundation.framework */; };
@@ -39,6 +38,10 @@
 		BFC18BE017BDB74400D49685 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC18BCF17BDB74400D49685 /* Icon.png */; };
 		BFC18BE117BDB74400D49685 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC18BD017BDB74400D49685 /* Icon@2x.png */; };
 		BFC18BE217BDB74400D49685 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC18BD017BDB74400D49685 /* Icon@2x.png */; };
+		BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18BF917BDD96000D49685 /* HomeViewController.m */; };
+		BFC18BFB17BDD96000D49685 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18BF917BDD96000D49685 /* HomeViewController.m */; };
+		BFC18BFE17BDD98600D49685 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18BFD17BDD98600D49685 /* DetailViewController.m */; };
+		BFC18BFF17BDD98600D49685 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18BFD17BDD98600D49685 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +66,6 @@
 		BFC18BA117BDAF2900D49685 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFC18BA217BDAF2900D49685 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BFC18BA517BDAF2900D49685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BFC18BA717BDAF2900D49685 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BFC18BA817BDAF2900D49685 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BFC18BAA17BDAF2900D49685 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BFC18BB017BDAF2900D49685 /* BirthdayReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthdayReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC18BB117BDAF2900D49685 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -80,6 +81,10 @@
 		BFC18BCE17BDB74400D49685 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		BFC18BCF17BDB74400D49685 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BFC18BD017BDB74400D49685 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		BFC18BF817BDD96000D49685 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		BFC18BF917BDD96000D49685 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		BFC18BFC17BDD98600D49685 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BFC18BFD17BDD98600D49685 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,11 +144,10 @@
 		BFC18B9817BDAF2900D49685 /* BirthdayReminder */ = {
 			isa = PBXGroup;
 			children = (
+				BFC18BF617BDD8A400D49685 /* interface */,
 				BFC18BC717BDB74400D49685 /* images */,
 				BFC18BA117BDAF2900D49685 /* AppDelegate.h */,
 				BFC18BA217BDAF2900D49685 /* AppDelegate.m */,
-				BFC18BA717BDAF2900D49685 /* ViewController.h */,
-				BFC18BA817BDAF2900D49685 /* ViewController.m */,
 				BFC18BA417BDAF2900D49685 /* Main.storyboard */,
 				BFC18BAA17BDAF2900D49685 /* Images.xcassets */,
 				BFC18B9917BDAF2900D49685 /* Supporting Files */,
@@ -194,6 +198,25 @@
 				BFC18BD017BDB74400D49685 /* Icon@2x.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		BFC18BF617BDD8A400D49685 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				BFC18BF717BDD8BF00D49685 /* viewControllers */,
+			);
+			name = interface;
+			sourceTree = "<group>";
+		};
+		BFC18BF717BDD8BF00D49685 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFC18BF817BDD96000D49685 /* HomeViewController.h */,
+				BFC18BF917BDD96000D49685 /* HomeViewController.m */,
+				BFC18BFC17BDD98600D49685 /* DetailViewController.h */,
+				BFC18BFD17BDD98600D49685 /* DetailViewController.m */,
+			);
+			name = viewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,9 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC18BA917BDAF2900D49685 /* ViewController.m in Sources */,
+				BFC18BFE17BDD98600D49685 /* DetailViewController.m in Sources */,
 				BFC18BA317BDAF2900D49685 /* AppDelegate.m in Sources */,
 				BFC18B9F17BDAF2900D49685 /* main.m in Sources */,
+				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +349,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC18BBE17BDAF2900D49685 /* BirthdayReminderTests.m in Sources */,
+				BFC18BFB17BDD96000D49685 /* HomeViewController.m in Sources */,
+				BFC18BFF17BDD98600D49685 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
