@@ -44,4 +44,20 @@
 {
     NSLog(@"The text was changed : %@", self.nameTextField.text);
 }
+
+
+#pragma mark - 텍스트 필드의 텍스트 변경시에만 Save 버튼을 활성하기 위한 private 메소드
+
+- (void) updateSaveButton
+{
+    self.saveButton.enabled = self.nameTextField.text > 0;
+}
+
+
+
+
+
+
+
+
 @end
