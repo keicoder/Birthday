@@ -34,9 +34,11 @@ CGFloat rotation, previousRotation;
     pinchGesture.delegate = self;
     [self.imageView addGestureRecognizer:pinchGesture];
     
+    /*
     UIRotationGestureRecognizer *rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(doRotate:)];
     rotationGesture.delegate = self;
     [self.imageView addGestureRecognizer:rotationGesture];
+    */
     
     // 드래그 감지
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(doDrag:)];
@@ -115,9 +117,23 @@ CGFloat rotation, previousRotation;
 
 #pragma mark - Long Press 감지
 
-- (void)doLongPress:(UIPanGestureRecognizer *)gesture
+- (void)doLongPress:(UILongPressGestureRecognizer *)gesture
 {
     NSLog(@"Long Press Gesture detected!");
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Capture Current View"
+                          message:@"Do you want capture current View?"
+                          delegate:nil
+                          cancelButtonTitle:@"Dismiss"
+                          otherButtonTitles:nil];     // [[NSArray arrayWithObject:@[@"Yes"]];
+    [alert show];
+}
+
+
+- (void)captureView:(UILongPressGestureRecognizer *)gesture
+{
+    NSLog(@"View capture will occur!");
     
     // 현재 뷰 컨트롤러 화면을 캡쳐
     UIGraphicsBeginImageContext(self.view.frame.size);
@@ -127,6 +143,5 @@ CGFloat rotation, previousRotation;
     // 앨범에 저장
     UIImageWriteToSavedPhotosAlbum(imageCapture, Nil, nil, nil);
 }
-
 
 @end

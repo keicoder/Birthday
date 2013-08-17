@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "CoreViewController.h"
 
-@interface EditViewController : CoreViewController
 
+// 편집 뷰 컨트롤러를 텍스트 필드의 델리게이트로 설정 
+@interface EditViewController : CoreViewController <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UILabel *includeYearLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *includeYearSwitch;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end

@@ -14,14 +14,16 @@
 
 @implementation EditViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+#pragma mark - 텍스트 필드 델리게이트 메소드 (필수 메소드는 없음 / UITextFieldDelegate)
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [self.nameTextField resignFirstResponder];
+    return NO;
 }
+
+
+#pragma mark - 뷰 라이프 사이클
 
 - (void)viewDidLoad
 {
