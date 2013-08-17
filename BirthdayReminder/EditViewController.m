@@ -76,7 +76,12 @@
 }
 
 
+#pragma mark - 데이트 피커 업데이트 시점에 따른 액션
 
+- (IBAction)didChangeDatePicker:(id)sender
+{
+    NSLog(@"New birthdate selected : %@", self.datePicker.date);
+}
 
 
 
