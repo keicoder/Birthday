@@ -37,12 +37,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+// updateSaveButton 메소드의 호출 지점 -->
+// viewWillAppear 및 didChangeNameText가 실행되는 시점
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self updateSaveButton];
+}
+
 
 #pragma mark - 텍스트 필드의 텍스트 변경 추적 및 반응
 
 - (IBAction)didChangeNameText:(id)sender
 {
     NSLog(@"The text was changed : %@", self.nameTextField.text);
+    [self updateSaveButton];
 }
 
 
