@@ -64,6 +64,16 @@
 }
 
 
+#pragma mark - 스위치 토글 시점에 따른 액션
+
+- (IBAction)didToggleSwitch:(id)sender
+{
+    if (self.includeYearSwitch.on) {
+        NSLog(@"Sure, I'll share my age with you!");
+    } else {
+        NSLog(@"I'd prefer to keep my birthday year to myself. Thank you!");
+    }
+}
 
 
 

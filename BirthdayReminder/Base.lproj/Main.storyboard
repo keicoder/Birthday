@@ -115,6 +115,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="3gm-o3-qUK">
                                 <rect key="frame" x="251" y="367" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="didToggleSwitch:" destination="PLS-rQ-6es" eventType="valueChanged" id="tJI-Bd-HX8"/>
+                                </connections>
                             </switch>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="30l-BO-3fH">
                                 <rect key="frame" x="0.0" y="406" width="320" height="162"/>
