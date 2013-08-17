@@ -38,4 +38,10 @@
 }
 
 
+#pragma mark - 텍스트 필드의 텍스트 변경 추적 및 반응
+
+- (IBAction)didChangeNameText:(id)sender
+{
+    NSLog(@"The text was changed : %@", self.nameTextField.text);
+}
 @end
