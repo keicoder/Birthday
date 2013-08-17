@@ -14,14 +14,18 @@
 
 @implementation NotesEditViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+#pragma mark - UITextViewDelegate 프로토콜의 메소드
+// textViewDidChange: 콜백 --> 이 메소드는 텍스트 뷰에서 텍스트가 변경될 때마다 일어남
+
+- (void)textViewDidChange:(UITextView *)textView
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    NSLog(@"User changed the notes text : %@", self.textView.text);
 }
+
+
+
+#pragma mark - 뷰 라이프 사이클
+
 
 - (void)viewDidLoad
 {
