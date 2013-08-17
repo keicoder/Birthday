@@ -23,20 +23,25 @@
 }
 
 
+#pragma mark - 뷰 라이프 사이클 (사용자가 노트 뷰로 넘어올 때 자동으로 키보드 표시)
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.textView becomeFirstResponder];
+}
+
 
 #pragma mark - 뷰 라이프 사이클
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
