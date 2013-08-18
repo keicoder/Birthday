@@ -57,6 +57,10 @@
 		BFC18BFB17BDD96000D49685 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18BF917BDD96000D49685 /* HomeViewController.m */; };
 		BFC18BFE17BDD98600D49685 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18BFD17BDD98600D49685 /* DetailViewController.m */; };
 		BFC18BFF17BDD98600D49685 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC18BFD17BDD98600D49685 /* DetailViewController.m */; };
+		BFC1BBDD17C09058007B8266 /* icon-birthday-cake.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC1BBD917C09058007B8266 /* icon-birthday-cake.png */; };
+		BFC1BBDE17C09058007B8266 /* icon-birthday-cake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC1BBDA17C09058007B8266 /* icon-birthday-cake@2x.png */; };
+		BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC1BBDB17C09058007B8266 /* thumbnail-background.png */; };
+		BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC1BBDC17C09058007B8266 /* thumbnail-background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,10 @@
 		BFC18BF917BDD96000D49685 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		BFC18BFC17BDD98600D49685 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BFC18BFD17BDD98600D49685 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BFC1BBD917C09058007B8266 /* icon-birthday-cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-birthday-cake.png"; sourceTree = "<group>"; };
+		BFC1BBDA17C09058007B8266 /* icon-birthday-cake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-birthday-cake@2x.png"; sourceTree = "<group>"; };
+		BFC1BBDB17C09058007B8266 /* thumbnail-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail-background.png"; sourceTree = "<group>"; };
+		BFC1BBDC17C09058007B8266 /* thumbnail-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail-background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +226,10 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BFC1BBD917C09058007B8266 /* icon-birthday-cake.png */,
+				BFC1BBDA17C09058007B8266 /* icon-birthday-cake@2x.png */,
+				BFC1BBDB17C09058007B8266 /* thumbnail-background.png */,
+				BFC1BBDC17C09058007B8266 /* thumbnail-background@2x.png */,
 				BF6487F317BE0D9300202254 /* BRAppGuide01.png */,
 				BFC18BC817BDB74400D49685 /* Default-568h@2x.png */,
 				BFC18BC917BDB74400D49685 /* Default.png */,
@@ -343,15 +355,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC18BD517BDB74400D49685 /* Default@2x.png in Resources */,
+				BFC1BBDD17C09058007B8266 /* icon-birthday-cake.png in Resources */,
 				BFC18BE117BDB74400D49685 /* Icon@2x.png in Resources */,
 				BFC18BAB17BDAF2900D49685 /* Images.xcassets in Resources */,
 				BFC18BD917BDB74400D49685 /* Icon-72@2x.png in Resources */,
 				BFC18BDD17BDB74400D49685 /* Icon-Small@2x.png in Resources */,
+				BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */,
+				BFC1BBDE17C09058007B8266 /* icon-birthday-cake@2x.png in Resources */,
 				BFC18BD117BDB74400D49685 /* Default-568h@2x.png in Resources */,
 				BFC18B9D17BDAF2900D49685 /* InfoPlist.strings in Resources */,
 				BF6487F417BE0D9300202254 /* BRAppGuide01.png in Resources */,
 				BFC18BA617BDAF2900D49685 /* Main.storyboard in Resources */,
 				BFC18BD717BDB74400D49685 /* Icon-72.png in Resources */,
+				BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */,
 				BFC18BDF17BDB74400D49685 /* Icon.png in Resources */,
 				BFC18BD317BDB74400D49685 /* Default.png in Resources */,
 				BFC18BDB17BDB74400D49685 /* Icon-Small.png in Resources */,

@@ -83,6 +83,11 @@
     NSLog(@"New birthdate selected : %@", self.datePicker.date);
 }
 
+- (IBAction)didTapPhoto:(id)sender
+{
+    NSLog(@"Did tap photo!!!");
+}
+
 
 
 @end
