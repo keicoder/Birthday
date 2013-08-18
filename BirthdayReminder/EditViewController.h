@@ -10,9 +10,10 @@
 #import "CoreViewController.h"
 
 
-// 편집 뷰 컨트롤러를 텍스트 필드의 델리게이트로 설정
-// 액션 시트 구현을 위해 <UIActionSheetDelegate> 프로토콜 구현 선언
-@interface EditViewController : CoreViewController <UITextFieldDelegate, UIActionSheetDelegate>
+#pragma mark - 편집 뷰 컨트롤러를 텍스트 필드의 델리게이트로 설정 <UITextFieldDelegate>
+#pragma mark 액션 시트 구현을 위해 <UIActionSheetDelegate> 프로토콜 구현 선언
+#pragma mark 사진 촬영과 사진 라이브러리 검색을 위해 <UIImagePickerControllerDelegate>와 <UINavigationControllerDelegate> 프로토콜 구현 선언
+@interface EditViewController : CoreViewController <UITextFieldDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 #pragma mark - 공개 속성
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
