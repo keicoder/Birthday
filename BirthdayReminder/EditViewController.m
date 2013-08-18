@@ -91,11 +91,14 @@
 
 #pragma mark - 좌측상단 포토 이미지를 탭할때 실행할 Tap Gesture Recognizer 액션 메소드 (액션 시트 활용)
 
+// 만약 카메라를 찍을 수 없는 상황에서도 사진 라이브러리는 이용할 수 있으므로 사진 라이브러리를 보여줄 수 있도록 [self pickPhoto] 추가
+
 - (IBAction)didTapPhoto:(id)sender
 {
     NSLog(@"Did tap photo!!!");
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         NSLog(@"No camera detected!");
+        [self pickPhoto];
         return;
     }
     
