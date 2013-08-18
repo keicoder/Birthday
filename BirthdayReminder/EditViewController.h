@@ -11,7 +11,7 @@
 
 
 #pragma mark - 편집 뷰 컨트롤러를 텍스트 필드의 델리게이트로 설정
-@interface 추가Controller : CoreViewController <UITextFieldDelegate>
+@interface EditViewController : CoreViewController <UITextFieldDelegate>
 
 #pragma mark - 공개 속성
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
