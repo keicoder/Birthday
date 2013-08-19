@@ -91,14 +91,12 @@
 
 #pragma mark - 좌측상단 포토 이미지를 탭할때 실행할 Tap Gesture Recognizer 액션 메소드 (액션 시트 활용)
 
-// 만약 카메라를 찍을 수 없는 상황에서도 사진 라이브러리는 이용할 수 있으므로 사진 라이브러리를 보여줄 수 있도록 [self pickPhoto] 추가
-
 - (IBAction)didTapPhoto:(id)sender
 {
     NSLog(@"Did tap photo!!!");
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         NSLog(@"No camera detected!");
-        [self pickPhoto];
+        [self pickPhoto];  // 만약 카메라를 찍을 수 없는 상황에서도 사진 라이브러리는 이용할 수 있으므로 사진 라이브러리를 보여줄 수 있도록 [self pickPhoto] 추가
         return;
     }
     
@@ -107,7 +105,7 @@
 }
 
 
-#pragma mark - 이미지 피커 컨트롤러의 인스턴스를 생성
+#pragma mark - 이미지 피커 컨트롤러(UIImagePickerController)의 인스턴스를 생성
 
 // 이미지 피커 속성의 게터만 오버라이드해 최초로 참조하는 시점에만 이미지 피커 컨트롤러의 인스턴스를 생성 (늦은 초기화)
 
@@ -158,6 +156,20 @@
             break;
     }
 }
+
+
+#pragma mark - 이미지 피커 컨트롤러(UIImagePickerControllerDelegate) 델리게이트 콜백
+
+// 찍거나 라이브러리에서 가져온 사진 가져오기
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    self.photoView.image = image;
+}
+
 
 
 
