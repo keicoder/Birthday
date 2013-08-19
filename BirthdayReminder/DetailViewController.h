@@ -11,4 +11,10 @@
 
 @interface DetailViewController : CoreViewController
 
+// 상세 뷰에서 보여질 사진 뷰 속성
+@property (weak, nonatomic) IBOutlet UIImageView *photoView;
+// 상세 뷰에서 필요한 수정 가능한 생일 딕셔너리 속성
+@property (weak, nonatomic) NSMutableDictionary *birthday;
+
+
 @end

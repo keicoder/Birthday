@@ -45,6 +45,9 @@
 {
     [super viewWillAppear:animated];
     NSLog(@"viewWillAppear");
+    
+    // 상세 뷰가 보일 때마다 생일 딕셔너리 속성을 읽고 렌더링
+
 }
 
 -(void) viewDidAppear:(BOOL)animated
