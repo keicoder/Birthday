@@ -31,7 +31,7 @@
     self = [super initWithCoder:aDecoder];
     
     if (self) {
-        NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"birthdays" ofType:@"plist"];
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"birthdays" ofType:@"plist"];
         // birthdays.plist 파일은 딕셔너리 객체로 구성된 배열임
         NSArray *nonMutableBirthdays = [NSArray arrayWithContentsOfFile:plistPath];
         // plist 파일에서 수정 불가능한 배열 생성 --> 수정 가능한 배열을 생성해야 함.
@@ -90,6 +90,16 @@
 {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
+    NSMutableDictionary *birthday = self.birthdays[indexPath.row];
+    
+    NSString *name = birthday[@"name"];
+    NSDate *birthdate = birthday[@"birthdate"];
+    UIImage *image = birthday[@"image"];
+        
+    cell.textLabel.text = name;
+    cell.detailTextLabel.text = birthdate.description;
+    cell.imageView.image = image;
+    
     return cell;
 }
 
@@ -97,6 +107,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // return 100;
+    // birthdays.plist에서 가져온 데이터의 수
     return [self.birthdays count];
 }
 
