@@ -51,12 +51,25 @@
 #pragma mark - 테이블 뷰 델리게이트 메소드 (Table view delegate)
 
 // 테이블 뷰의 셀을 선택했을 때 선택된 행의 하이라이트를 자연스럽게 페이드아웃 됨
+// * 테이블 뷰의 개별 행 높이는 tableView.heightForRowAtIndexPath 메소드를 구현해 결정할 수 있음
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+
+// 개별 행 높이
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        return 200;
+    } else {
+        return 72;
+    }
+}
 
 
 @end
