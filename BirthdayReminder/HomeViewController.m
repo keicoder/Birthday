@@ -10,9 +10,61 @@
 
 @interface HomeViewController ()
 
+// birthdays.plist에서 로드한 생일 딕셔너리로 이뤄진 배열 생성
+// 이 배열 속성을 홈 뷰 컨트롤러.m의 private 인터페이스에 선언
+@property (nonatomic, strong) NSMutableArray *birthdays;
+
 @end
 
+
 @implementation HomeViewController
+
+@synthesize tableView;
+
+#pragma mark - 지정 초기자 오버라이드
+
+// birthdays 인스턴스 생성
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"birthdays" ofType:@"plist"];
+        // birthdays.plist 파일은 딕셔너리 객체로 구성된 배열임
+        NSArray *nonMutableBirthdays = [NSArray arrayWithContentsOfFile:plistPath];
+        // plist 파일에서 수정 불가능한 배열 생성 --> 수정 가능한 배열을 생성해야 함.
+        
+        self.birthdays = [NSMutableArray array];
+        
+        NSMutableDictionary *birthday;
+        NSDictionary *dictionary;
+        NSString *name;
+        NSString *pic;
+        UIImage *image;
+        NSDate *birthdate;
+        
+        for (int i = 0; i < [nonMutableBirthdays count]; i++) {
+            dictionary = [nonMutableBirthdays objectAtIndex:i];
+            name = dictionary[@"name"];
+            pic = dictionary[@"pic"];
+            image = [UIImage imageNamed:pic];
+            birthdate = dictionary[@"birthdate"];
+            
+            birthday = [NSMutableDictionary dictionary];
+            birthday [@"name"] = name;
+            birthday [@"image"] = image;
+            birthday [@"birthdate"] = birthdate;
+            // 수정 불가능한 딕셔너리를 모두 순회하며 수정 가능한 딕셔너리를 새로 생성
+            
+            [self.birthdays addObject:birthday];
+            // birthdays 배열은 수정 가능하며 name, birthdate, image 속성을 갖춘 수정 가능 생일 딕셔너리를 포함 
+        }
+    }
+    
+    return self;
+}
 
 
 #pragma mark - 뷰 라이프 사이클
@@ -44,7 +96,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 100;
+    // return 100;
+    return [self.birthdays count];
 }
 
 
