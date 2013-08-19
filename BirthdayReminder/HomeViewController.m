@@ -31,7 +31,7 @@
 
 
 
-#pragma mark - 테이블 뷰 데이터 소스 (Table view data source)
+#pragma mark - 테이블 뷰 데이터 소스 메소드 (Table view data source)
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -46,6 +46,17 @@
 {
     return 100;
 }
-    
+
+
+#pragma mark - 테이블 뷰 델리게이트 메소드 (Table view delegate)
+
+// 테이블 뷰의 셀을 선택했을 때 선택된 행의 하이라이트를 자연스럽게 페이드아웃 됨
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
 
 @end
