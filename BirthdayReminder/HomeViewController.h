@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "CoreViewController.h"
 
-@interface HomeViewController : CoreViewController
 
- 
+// 데이블 뷰의 데이터소스 및 델리게이트로 선언
+// UITableViewDataSource의 필수 메소드 (– tableView:numberOfRowsInSection:, – tableView:cellForRowAtIndexPath:)
+
+@interface HomeViewController : CoreViewController <UITableViewDataSource, UITableViewDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
 @end
