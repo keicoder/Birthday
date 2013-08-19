@@ -16,7 +16,7 @@
 @implementation DetailViewController
 
 
-#pragma mark - 스토리보드 지정초기자
+#pragma mark - 스토리보드 지정 초기자
 
 - (id) initWithCoder:(NSCoder *)aDecoder
 {

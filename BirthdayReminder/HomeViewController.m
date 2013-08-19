@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "DetailViewController.h"
 
 @interface HomeViewController ()
 
@@ -132,6 +133,29 @@
         return 200;
     } else {
         return 72;
+    }
+}
+
+
+#pragma mark - 세그웨이(Segues) 화면 전환 메소드
+
+// 아래 세그웨이 코드는 뷰 컨트롤러가 내비게이션 스택에 추가되기 전에 실행됨.
+// 따라서 상세 뷰 컨트롤러에서 viewWillAppear:가 호출되는 시점에 상세 뷰 컨트롤러는 이미 birthday 딕셔너리에 접근할 수 있음.
+// --> 그러므로 컨트롤러의 제목과 photoView 이미지 속성을 아무 문제없이 업데이트할 수 있음.
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"prepareForSegue!");
+    
+    NSString *identifier = segue.identifier;
+    
+    if ([identifier isEqualToString:@"ToDetailViewSegue"]) { // 세그웨이 식별자 ToDetailViewSegue
+        // 먼저 데이터를 가져옴
+        NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
+        NSMutableDictionary *birthday = self.birthdays[selectedIndexPath.row];
+        
+        DetailViewController *detailViewController = segue.destinationViewController;
+        detailViewController.birthday = birthday;
     }
 }
 
