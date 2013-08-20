@@ -56,7 +56,7 @@
     UIImage *image = self.birthday [@"image"];
     
     self.nameTextField.text = name;
-    self.datePicker.date = birthdate;
+    //self.datePicker.date = birthdate;
     if (image == Nil) {
         // 생일 이미지가 없으면 기본으로 생일 케이크 이미지 사용
         self.photoView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];

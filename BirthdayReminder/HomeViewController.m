@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "DetailViewController.h"
+#import "EditViewController.h"
 
 @interface HomeViewController ()
 
@@ -147,6 +148,8 @@
 {
     NSLog(@"prepareForSegue!");
     
+    // 홈 뷰의 테이블 뷰 셀을 탭할 때 호출되는 세그웨이(Segues)
+    
     NSString *identifier = segue.identifier;
     
     if ([identifier isEqualToString:@"ToDetailViewSegue"]) { // 세그웨이 식별자 ToDetailViewSegue
@@ -157,6 +160,26 @@
         DetailViewController *detailViewController = segue.destinationViewController;
         detailViewController.birthday = birthday;
     }
+    
+    else if ([identifier isEqualToString:@"ToAddBirthdaySegue"]) // 홈 뷰의 Add 바 버튼 항목을 탭할 때 호출되는 세그웨이(Segues)
+    {
+        // 생일 배열에 새로운 생일 딕셔너리를 추가
+        /* 생일 편집 뷰 컨트롤러는 모달로 보여주는 내비게이션 컨트롤러의 자식이므로 세그웨이의 destinationViewController 속성 값은 내비게이션 컨트롤러를 가리킨다.
+           이 내비게이션 컨트롤러에 대한 참조를 통해 생일 편집 뷰 컨트롤러에 대한 참조도 가져올 수 있다. 
+           생일 편집 뷰 컨트롤러에 대한 참조를 가져온 후에는 생일 편집 뷰 컨트롤러의 birthday 속성값에 새로 생성한 birthday 딕셔너리를 설정한다. */
+        
+        NSMutableDictionary *birthday = [NSMutableDictionary dictionary];
+        
+        birthday[@"name"] = @"My Friend";
+        birthday[@"birthdate"] = [NSDate date];
+        [self.birthdays addObject:birthday];
+        
+        UINavigationController *navigationController = segue.destinationViewController;
+        
+        EditViewController *editViewController = (EditViewController *) navigationController.topViewController;
+        editViewController.birthday = birthday;
+    }
+    
 }
 
 
