@@ -44,11 +44,25 @@
 
 // updateSaveButton 메소드의 호출 지점 -->
 // viewWillAppear 및 didChangeNameText가 실행되는 시점
+// birthday 딕셔너리 - 딕셔너리의 키 값을 기반으로 하위 뷰 업데이트
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self updateSaveButton];
+    
+    NSString *name = self.birthday [@"name"];
+    NSDate *birthdate = self.birthday [@"birthdate"];
+    UIImage *image = self.birthday [@"image"];
+    
+    self.nameTextField.text = name;
+    self.datePicker.date = birthdate;
+    if (image == Nil) {
+        // 생일 이미지가 없으면 기본으로 생일 케이크 이미지 사용
+        self.photoView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
+    } else {
+        self.photoView.image = image;
+    }
 }
 
 

@@ -22,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UISwitch *includeYearSwitch;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
+// birthday 딕셔너리 - 딕셔너리의 키 값을 기반으로 하위 뷰 업데이트
+@property (nonatomic, strong) NSMutableDictionary *birthday;
+
 
 #pragma mark - 좌측상단 포토 이미지 속성
 @property (weak, nonatomic) IBOutlet UIView *photoContainerView;
