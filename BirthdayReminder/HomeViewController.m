@@ -77,10 +77,19 @@
 	// Do any additional setup after loading the view.
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    // Add/Edit 버튼을 통해 생성/편집한 모델(생일의 배열)을 홈 뷰 컨트롤러가 나타나려는 시점마다 재로드
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 
