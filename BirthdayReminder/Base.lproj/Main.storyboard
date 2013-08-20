@@ -274,7 +274,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Detail" id="T32-At-CxC">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ikG-vK-YpS">
                             <connections>
-                                <segue destination="fG4-6S-L59" kind="modal" id="rJU-Rv-1EP"/>
+                                <segue destination="fG4-6S-L59" kind="modal" identifier="ToEditViewFromDetailSegue" id="rJU-Rv-1EP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -527,6 +527,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4ZG-yo-WKQ"/>
+        <segue reference="rJU-Rv-1EP"/>
     </inferredMetricsTieBreakers>
 </document>

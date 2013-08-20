@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "EditViewController.h"
 
 @interface DetailViewController ()
 
@@ -84,5 +85,24 @@
 {
     [super didReceiveMemoryWarning];
 }
+
+
+
+#pragma mark - 세그웨이(Segues) 화면 전환 메소드 --> 상세 뷰 컨트롤러의 생일(birthday) 딕셔너리를 편집 뷰 컨트롤러로 넘겨줌.
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSString *identifier = segue.identifier;
+    
+    if ([identifier isEqualToString:@"ToEditViewFromDetailSegue"]) {
+        // 이 생일을 편집
+        UINavigationController *navigationController = segue.destinationViewController;
+        
+        EditViewController *editViewController = (EditViewController *) navigationController.topViewController;
+        editViewController.birthday = self.birthday;
+        
+    }
+}
+
 
 @end
