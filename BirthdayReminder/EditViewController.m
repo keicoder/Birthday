@@ -68,10 +68,15 @@
 
 #pragma mark - 텍스트 필드의 텍스트 변경 추적 및 반응
 
+// 편집 뷰에서 수정된 birthday 딕셔너리 업데이트
+// 사용자가 생일의 name 텍스트 필드를 수정할 때마다 참조된 birthday 딕셔너리의 name 키 값 업데이트
+
 - (IBAction)didChangeNameText:(id)sender
 {
     NSLog(@"The text was changed : %@", self.nameTextField.text);
     [self updateSaveButton];
+    
+    self.birthday[@"name"] = self.nameTextField.text;
 }
 
 
@@ -97,9 +102,14 @@
 
 #pragma mark - 데이트 피커 업데이트 시점에 따른 액션
 
+// 편집 뷰에서 수정된 birthday 딕셔너리 업데이트
+// 사용자가 생일의 데이트 피커에서 날짜를 선택하면 참조된 birthday 딕셔너리의 birthdate 키 값 업데이트
+
 - (IBAction)didChangeDatePicker:(id)sender
 {
     NSLog(@"New birthdate selected : %@", self.datePicker.date);
+    
+    self.birthday[@"birthdate"] = self.datePicker.date;
 }
 
 
@@ -175,6 +185,9 @@
 #pragma mark - 이미지 피커 컨트롤러(UIImagePickerControllerDelegate) 델리게이트 콜백
 
 // 찍거나 라이브러리에서 가져온 사진 가져오기
+// 편집 뷰에서 수정된 birthday 딕셔너리 업데이트
+// 사용자가 생일의 사진을 수정할 때마다 참조된 photoView 이미지 업데이트
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
@@ -182,6 +195,8 @@
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
     self.photoView.image = image;
+    
+    self.birthday[@"image"] = image;
 }
 
 
