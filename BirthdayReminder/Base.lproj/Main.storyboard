@@ -105,7 +105,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="WOd-SV-Ml1">
                             <connections>
-                                <segue destination="fG4-6S-L59" kind="modal" id="4ZG-yo-WKQ"/>
+                                <segue destination="fG4-6S-L59" kind="modal" identifier="ToAddBirthdaySegue" id="4ZG-yo-WKQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
