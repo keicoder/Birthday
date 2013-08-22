@@ -25,6 +25,7 @@
 		BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BF6487F917BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BF6487FB17BE3EDF00202254 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6487FA17BE3EDF00202254 /* QuartzCore.framework */; };
+		BFA76B7617C5A70B00721697 /* DModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA76B7517C5A70B00721697 /* DModel.m */; };
 		BFBC035617C1A4FE002E4687 /* birthdays.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFBC035517C1A4FE002E4687 /* birthdays.plist */; };
 		BFBC036217C1A513002E4687 /* aloe-blacc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC035817C1A513002E4687 /* aloe-blacc.jpg */; };
 		BFBC036317C1A513002E4687 /* angelina-jolie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC035917C1A513002E4687 /* angelina-jolie.jpg */; };
@@ -106,6 +107,8 @@
 		BF6487F617BE0EB200202254 /* BuildGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildGuideViewController.h; sourceTree = "<group>"; };
 		BF6487F717BE0EB200202254 /* BuildGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildGuideViewController.m; sourceTree = "<group>"; };
 		BF6487FA17BE3EDF00202254 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BFA76B7417C5A70B00721697 /* DModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DModel.h; sourceTree = "<group>"; };
+		BFA76B7517C5A70B00721697 /* DModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DModel.m; sourceTree = "<group>"; };
 		BFBC035517C1A4FE002E4687 /* birthdays.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = birthdays.plist; sourceTree = "<group>"; };
 		BFBC035817C1A513002E4687 /* aloe-blacc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aloe-blacc.jpg"; sourceTree = "<group>"; };
 		BFBC035917C1A513002E4687 /* angelina-jolie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "angelina-jolie.jpg"; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				BF47BE6517C4648E003C209C /* BirthdayReminder.xcdatamodeld */,
 				BF47BE6817C46AD8003C209C /* DBirthday.h */,
 				BF47BE6917C46AD8003C209C /* DBirthday.m */,
+				BFA76B7417C5A70B00721697 /* DModel.h */,
+				BFA76B7517C5A70B00721697 /* DModel.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				BFC18B9F17BDAF2900D49685 /* main.m in Sources */,
 				BF47BE6717C4648E003C209C /* BirthdayReminder.xcdatamodeld in Sources */,
 				BF47BE6A17C46AD8003C209C /* DBirthday.m in Sources */,
+				BFA76B7617C5A70B00721697 /* DModel.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
 				BF6487E117BDE90C00202254 /* EditViewController.m in Sources */,
 			);
