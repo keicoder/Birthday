@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF47BE6317C4635A003C209C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF47BE6217C4635A003C209C /* CoreData.framework */; };
+		BF47BE6717C4648E003C209C /* BirthdayReminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF47BE6517C4648E003C209C /* BirthdayReminder.xcdatamodeld */; };
+		BF47BE6A17C46AD8003C209C /* DBirthday.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47BE6917C46AD8003C209C /* DBirthday.m */; };
 		BF6487E117BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E217BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
@@ -87,6 +89,9 @@
 
 /* Begin PBXFileReference section */
 		BF47BE6217C4635A003C209C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BF47BE6617C4648E003C209C /* BirthdayReminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirthdayReminder.xcdatamodel; sourceTree = "<group>"; };
+		BF47BE6817C46AD8003C209C /* DBirthday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBirthday.h; sourceTree = "<group>"; };
+		BF47BE6917C46AD8003C209C /* DBirthday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBirthday.m; sourceTree = "<group>"; };
 		BF6487DF17BDE90C00202254 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		BF6487E017BDE90C00202254 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		BF6487E317BDEDE200202254 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
@@ -174,6 +179,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF47BE6417C4641E003C209C /* data */ = {
+			isa = PBXGroup;
+			children = (
+				BF47BE6517C4648E003C209C /* BirthdayReminder.xcdatamodeld */,
+				BF47BE6817C46AD8003C209C /* DBirthday.h */,
+				BF47BE6917C46AD8003C209C /* DBirthday.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		BFBC035717C1A513002E4687 /* Celebrity Pics */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +241,7 @@
 		BFC18B9817BDAF2900D49685 /* BirthdayReminder */ = {
 			isa = PBXGroup;
 			children = (
+				BF47BE6417C4641E003C209C /* data */,
 				BFC18BF617BDD8A400D49685 /* interface */,
 				BFC18BC717BDB74400D49685 /* images */,
 				BFC18BA117BDAF2900D49685 /* AppDelegate.h */,
@@ -463,6 +479,8 @@
 				BF6487ED17BE070100202254 /* SettingsViewController.m in Sources */,
 				BF6487E917BE02EF00202254 /* NotesEditViewController.m in Sources */,
 				BFC18B9F17BDAF2900D49685 /* main.m in Sources */,
+				BF47BE6717C4648E003C209C /* BirthdayReminder.xcdatamodeld in Sources */,
+				BF47BE6A17C46AD8003C209C /* DBirthday.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
 				BF6487E117BDE90C00202254 /* EditViewController.m in Sources */,
 			);
@@ -697,6 +715,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF47BE6517C4648E003C209C /* BirthdayReminder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF47BE6617C4648E003C209C /* BirthdayReminder.xcdatamodel */,
+			);
+			currentVersion = BF47BE6617C4648E003C209C /* BirthdayReminder.xcdatamodel */;
+			path = BirthdayReminder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BFC18B8717BDAF2900D49685 /* Project object */;
 }
