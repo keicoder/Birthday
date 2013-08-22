@@ -47,4 +47,71 @@ static DModel *_sharedInstance = nil;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 
+
+#pragma mark - 코어 데이터 스택 (Core Data stack)
+
+// managed object context 반환
+// context가 존재하지 않으면 context 생성하고 애플리케이션의 영속성 저장소 조율기에 바운드(bound to the persistent store coordinator) 시킴
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    if (_managedObjectContext != nil) {
+        return _managedObjectContext;
+    }
+    
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    if (coordinator != nil) {
+        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+    return _managedObjectContext;
+}
+
+
+// 애플리케이션의 관리 객체 모델을 반환함
+// 모델이 이미 존재하지 않으면 애플리케이션의 모델로부터 관리 객체 모델을 생성함
+
+- (NSManagedObjectModel *)managedObjectModel
+{
+    if (_managedObjectModel != nil) {
+        return _managedObjectModel;
+    }
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"BirthdayReminder" withExtension:@"momd"];  // 해당 앱의 modelURL로 수정
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    return _managedObjectModel;
+}
+
+
+// 애플리케이션의 영속성 저장소 조율기를 반환함
+// 조율기가 이미 존재하지 않으면 조율기를 생성하고 애플리케이션의 저장소를 조율기에 추가함
+
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
+    if (_persistentStoreCoordinator != nil) {
+        return _persistentStoreCoordinator;
+    }
+    
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"BirthdayReminder.sqlite"]; // 해당 앱의 storeURL로 수정
+    
+    NSError *error = nil;
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return _persistentStoreCoordinator;
+}
+
+
+#pragma mark - 애플리케이션의 다큐먼트 디렉토리
+
+// 애플리케이션의 다큐먼트 디렉토리 반환
+
+- (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+
 @end
