@@ -9,12 +9,18 @@
 #import "HomeViewController.h"
 #import "DetailViewController.h"
 #import "EditViewController.h"
+#import "DBirthday.h"
+#import "DModel.h"
+
 
 @interface HomeViewController ()
 
 // birthdays.plist에서 로드한 생일 딕셔너리로 이뤄진 배열 생성
 // 이 배열 속성을 홈 뷰 컨트롤러.m의 private 인터페이스에 선언
 @property (nonatomic, strong) NSMutableArray *birthdays;
+
+// NSFetchedResultsController를 private 속성으로 선언
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
@@ -190,6 +196,45 @@
     }
     
 }
+
+
+#pragma mark - fetchedResultsController의 게터 접근자 메소드 오버라이드 (Fetched Results Controller to keep track of the Core Data DBirthday managed objects)
+
+// NSFetchedResultsController 클래스 : 코어 데이터 엔티티에 저장된 결과셋을 조회, 변경사항을 델리게이트에 알려줌
+// --> 이를 통해 객체의 새로운 추가, 수정, 삭제같은 변경사항을 알 수 있음
+// --> 여기서는 코어 데이터 저장소 내의 Birthday 엔티티 목록을 추적하고 이를 홈 뷰 컨트롤러에 보여줄 때 이 클래스 사용함
+
+- (NSFetchedResultsController *)fetchedResultsController {
+    if (_fetchedResultsController == nil) {
+        
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        
+        // 싱글톤 모델을 통해 하나뿐인 관리 객체 컨텍스트에 접근
+        NSManagedObjectContext *context = [DModel sharedInstance].managedObjectContext;
+        
+        // 가져오기 요청에는 엔티티 설명이 필요하다. 여기서는 DBirthday 관리 객체만 필요하다.
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"DBirthday" inManagedObjectContext:context];
+        fetchRequest.entity = entity;
+        
+        // 지금은 일단 nextBirthday 순으로 DBirthday 객체를 정렬한다.
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"nextBirthday" ascending:YES];
+        NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+        fetchRequest.sortDescriptors = sortDescriptors;
+        
+        self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
+        self.fetchedResultsController.delegate = self;
+        NSError *error = nil;
+        if (![self.fetchedResultsController performFetch:&error]) {
+            
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+        
+    }
+	
+	return _fetchedResultsController;
+}
+
 
 
 @end
