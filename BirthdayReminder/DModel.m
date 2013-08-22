@@ -23,6 +23,9 @@
 
 static DModel *_sharedInstance = nil;
 
+
+#pragma mark - 코어 데이터 모델의 초기화 메소드
+
 // 클래스 메소드
 // sharedInstance 메소드는 자기 자신의 인스턴스를 생성함
 // 오브젝티브 C에서 싱글톤을 구현할 때는 이런 기법을 자주 사용함
@@ -35,6 +38,13 @@ static DModel *_sharedInstance = nil;
     }
     return _sharedInstance;
 }
+
+#pragma mark - 코어 데이터 모델의 속성 합성
+// ** readonly 속성에서는 자동 합성 코드를 만들어 주지 않음
+
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 
 @end
