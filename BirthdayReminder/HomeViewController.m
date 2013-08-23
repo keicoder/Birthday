@@ -107,15 +107,20 @@
 {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    NSMutableDictionary *birthday = self.birthdays[indexPath.row];
+    // NSMutableDictionary *birthday = self.birthdays[indexPath.row];
+    DBirthday *birthday = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    NSString *name = birthday[@"name"];
-    NSDate *birthdate = birthday[@"birthdate"];
-    UIImage *image = birthday[@"image"];
+    // NSString *name = birthday[@"name"];
+    // NSDate *birthdate = birthday[@"birthdate"];
+    // UIImage *image = birthday[@"image"];
         
-    cell.textLabel.text = name;
-    cell.detailTextLabel.text = birthdate.description;
-    cell.imageView.image = image;
+    // cell.textLabel.text = name;
+    // cell.detailTextLabel.text = birthdate.description;
+    // cell.imageView.image = image;
+    
+    cell.textLabel.text = birthday.name;
+    cell.detailTextLabel.text = birthday.birthdayNextToDisplay;
+    cell.imageView.image = [UIImage imageWithData:birthday.imageData];
     
     return cell;
 }
@@ -125,7 +130,9 @@
 {
     // return 100;
     // birthdays.plist에서 가져온 데이터의 수
-    return [self.birthdays count];
+    // return [self.birthdays count];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
 }
 
 
@@ -233,6 +240,16 @@
     }
 	
 	return _fetchedResultsController;
+}
+
+
+#pragma mark - NSFetchedResultsControllerDelegate (변경 사항 추적 - controllerDidChangeContent:)
+
+// 델리게이트가 변경 사항을 추적하려면 최소 한 개의 변경 추적 델리게이트 메소드를 구현해야 한다. 구현체로는 controllerDidChangeContent:의 빈 구현체를 제공하는 것만으로 충분하다 - iOS 개발자 라이브러리
+
+- (void) controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    // 가져온 결과가 반영됨 --> 여기서는 테이블 뷰의 cellForRowAtIndexPath:, numberOfRowsInSection: 메소드에 반영
 }
 
 
