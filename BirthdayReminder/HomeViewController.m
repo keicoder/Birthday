@@ -33,6 +33,55 @@
 
 // birthdays 인스턴스 생성
 
+// 코어 데이터 모델로 테이블 뷰를 채우기 위해 수정
+
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"birthdays" ofType:@"plist"];
+        NSArray *nonMutableBirthdays = [NSArray arrayWithContentsOfFile:plistPath];
+        
+        DBirthday *birthday;
+        NSDictionary *dictionary;
+        NSString *name;
+        NSString *pic;
+        NSString *pathForPic;
+        NSData *imageData;
+        NSDate *birthdate;
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        
+        NSManagedObjectContext *context = [DModel sharedInstance].managedObjectContext;
+        
+        for (int i=0; i<[nonMutableBirthdays count]; i++) {
+            dictionary = nonMutableBirthdays[i];
+            
+            birthday = [NSEntityDescription insertNewObjectForEntityForName:@"DBirthday" inManagedObjectContext:context];
+            
+            name = dictionary[@"name"];
+            pic = dictionary[@"pic"];
+            birthdate = dictionary[@"birthdate"];
+            pathForPic = [[NSBundle mainBundle] pathForResource:pic ofType:nil];
+            imageData = [NSData dataWithContentsOfFile:pathForPic];
+            birthday.name = name;
+            birthday.imageData = imageData;
+            NSDateComponents *components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:birthdate];
+            
+            // 새로운 리터럴 구문. 다음과 동일
+            // birthday.birthDay = [NSNumber numberWithInt:components.day];
+            birthday.birthDay = @(components.day);
+            birthday.birthMonth = @(components.month);
+            birthday.birthYear = @(components.year);
+            [birthday updateNextBirthdayAndAge];
+        }
+        [[DModel sharedInstance] saveChanges];
+    }
+    return self;
+}
+
+
+/*
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     
@@ -73,7 +122,7 @@
     
     return self;
 }
-
+*/
 
 #pragma mark - 뷰 라이프 사이클
 

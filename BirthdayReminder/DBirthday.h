@@ -37,4 +37,7 @@
 @property (nonatomic, readonly) BOOL isBirthdayToday; // 생일이 오늘이면 카운트다운 대신 케이크 이미지를 보여줌
 
 
+#pragma mark - updateNextBirthdayAndAge (nextBirthday와 nextBirthdayAge를 업데이트하는데 이용)
+- (void) updateNextBirthdayAndAge;
+
 @end
