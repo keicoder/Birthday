@@ -18,6 +18,7 @@
  */
 
 #import "DModel.h"
+#import "DBirthday.h"
 
 @implementation DModel
 
@@ -129,5 +130,55 @@ static DModel *_sharedInstance = nil;
     }
 }
 
+
+#pragma mark - 중복 엔티티 검사
+
+- (NSMutableDictionary *) getExistingBirthdaysWithUIDs:(NSArray *)uids
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSManagedObjectContext *context = self.managedObjectContext;
+    
+    // NSPredicate는 결과셋을 필터링하는 데 사용한다.
+    // 여기서는 uid 배열 내 하나 이상의 항목과 일치하는 결과셋을 반환하게끔 지정한다.
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uid IN %@", uids];
+    fetchRequest.predicate = predicate;
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"DBirthday" inManagedObjectContext:context];
+    fetchRequest.entity = entity;
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"uid" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    fetchRequest.sortDescriptors = sortDescriptors;
+    
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
+    
+    NSError *error = nil;
+    if (![fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    NSArray *fetchedObjects = fetchedResultsController.fetchedObjects;
+    
+    NSInteger resultCount = [fetchedObjects count];
+    
+    if (resultCount == 0) {
+        return [NSMutableDictionary dictionary]; // 코어 데이터 저장소에 아무것도 없음
+    }
+    
+    DBirthday *birthday;
+    
+    NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
+    
+    int i;
+    
+    for (i = 0; i < resultCount; i++) {
+        birthday = fetchedObjects[i];
+        tmpDict[birthday.uid] = birthday;
+    }
+    
+    return tmpDict;
+}
 
 @end

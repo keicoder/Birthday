@@ -36,4 +36,7 @@
 - (void) saveChanges;
 
 
+#pragma mark - 중복 엔티티 검사
+- (NSMutableDictionary *) getExistingBirthdaysWithUIDs:(NSArray *)uids;
+
 @end
