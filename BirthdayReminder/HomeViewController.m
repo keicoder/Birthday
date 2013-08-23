@@ -34,6 +34,9 @@
 // birthdays 인스턴스 생성
 
 // 코어 데이터 모델로 테이블 뷰를 채우기 위해 수정
+// DModel.m - (NSMutableDictionary *) getExistingBirthdaysWithUIDs:(NSArray *)uids 메소드(중복 엔티티 검사) 활용
+// getExistingBirthdaysWithUIDs: 메소드는 생일 엔티티의 고유 id를 키로 사용해 기존 생일 엔티티의 수정 가능 딕셔너리를 반환한다.
+// 이 수정 가능 딕셔너리는 생일 딕셔너리를 불러올 때마다 매번 참조할 수 있다.
 
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
@@ -52,12 +55,37 @@
         NSDate *birthdate;
         NSCalendar *calendar = [NSCalendar currentCalendar];
         
+        
+        NSString *uid;
+        NSMutableArray *uids = [NSMutableArray array];
+        for (int i=0; i<[nonMutableBirthdays count]; i++) {
+            dictionary = [nonMutableBirthdays objectAtIndex:i];
+            uid = dictionary[@"name"];
+            [uids addObject:uid];
+        }
+        
+        // DModel.m에 추가한 getExistingBirthdaysWithUIDs: 메소드(중복 엔티티 검사) 활용
+        NSMutableDictionary *existingEntities = [[DModel sharedInstance] getExistingBirthdaysWithUIDs:uids];
+        
         NSManagedObjectContext *context = [DModel sharedInstance].managedObjectContext;
         
         for (int i=0; i<[nonMutableBirthdays count]; i++) {
             dictionary = nonMutableBirthdays[i];
             
-            birthday = [NSEntityDescription insertNewObjectForEntityForName:@"DBirthday" inManagedObjectContext:context];
+            uid = dictionary[@"name"];
+            
+            birthday = existingEntities[uid];
+            
+            if (birthday) {
+                // 생일이 이미 존재 - 새 엔티티를 생성하지 않고 어트리뷰트만 업데이트
+            } else {
+                // 생일이 존재하지 않음 - 엔티티를 생성
+                birthday = [NSEntityDescription insertNewObjectForEntityForName:@"DBirthday" inManagedObjectContext:context];
+                existingEntities[uid] = birthday;
+                birthday.uid = uid;
+            }
+            
+            // birthday = [NSEntityDescription insertNewObjectForEntityForName:@"DBirthday" inManagedObjectContext:context];
             
             name = dictionary[@"name"];
             pic = dictionary[@"pic"];

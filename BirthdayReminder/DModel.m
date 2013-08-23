@@ -133,6 +133,9 @@ static DModel *_sharedInstance = nil;
 
 #pragma mark - 중복 엔티티 검사
 
+// getExistingBirthdaysWithUIDs: 메소드는 생일 엔티티의 고유 id를 키로 사용해 기존 생일 엔티티의 수정 가능 딕셔너리를 반환한다.
+// 이 수정 가능 딕셔너리는 생일 딕셔너리를 불러올 때마다 매번 참조할 수 있다.
+
 - (NSMutableDictionary *) getExistingBirthdaysWithUIDs:(NSArray *)uids
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
