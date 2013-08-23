@@ -114,4 +114,20 @@ static DModel *_sharedInstance = nil;
 }
 
 
+#pragma mark - 코어 데이터 저장소 채우기 - public 인스턴스 메소드이므로 DModel.h에 선언
+
+- (void) saveChanges
+{
+    NSError *error = nil;
+    if ([self.managedObjectContext hasChanges]) {
+        if (![self.managedObjectContext save:&error]) {
+            // save failed
+            NSLog(@"Save failed : %@", [error localizedDescription]);
+        } else {
+            NSLog(@"Save succeeded");
+        }
+    }
+}
+
+
 @end
