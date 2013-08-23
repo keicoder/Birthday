@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "EditViewController.h"
+#import "DBirthday.h"
 
 @interface DetailViewController ()
 
@@ -49,12 +50,18 @@
     
     // 상세 뷰가 보일 때마다 생일 딕셔너리 속성을 읽고 렌더링
     
-    NSString *name = self.birthday[@"name"];
-    self.title = name; // 네비게이션 바의 타이틀 업데이트
+    // NSString *name = self.birthday[@"name"];
+    // self.title = name; // 네비게이션 바의 타이틀 업데이트
     
-    UIImage *image = self.birthday[@"image"];
+    self.title = self.birthday.name;
+    
+    // UIImage *image = self.birthday[@"image"];
+    
+    UIImage *image = [UIImage imageWithData:self.birthday.imageData];
+    
     if (image == nil) {
-        self.photoView.image = [UIImage imageNamed:@"icon-birthday-cake.png"]; // 딕셔너리애 이미지가 없을 경우 기본 이미지 지정
+        // 딕셔너리애 이미지가 없을 경우 기본으로 생일 케이크 이미지를 사용
+        self.photoView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
     } else {
         self.photoView.image = image;
     }

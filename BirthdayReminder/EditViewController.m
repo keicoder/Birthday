@@ -8,7 +8,6 @@
 
 #import "EditViewController.h"
 
-
 @interface EditViewController ()
 
 #pragma mark 사진 촬영과 사진 라이브러리 검색을 위해 private 속성 선언
