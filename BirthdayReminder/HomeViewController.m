@@ -251,8 +251,11 @@
     
     NSString *identifier = segue.identifier;
     
-    if ([identifier isEqualToString:@"ToDetailViewSegue"]) { // 세그웨이 식별자 ToDetailViewSegue
+    if ([identifier isEqualToString:@"ToDetailViewSegue"]) {
+        
+        // 세그웨이 식별자 ToDetailViewSegue
         // 먼저 데이터를 가져옴
+        
         NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
         // NSMutableDictionary *birthday = self.birthdays[selectedIndexPath.row];
         
@@ -277,6 +280,9 @@
         // [self.birthdays addObject:birthday];
         
         // DBirthday에서 가져옴
+        
+        // 사용자가 Add 버튼을 탭하면 코어 데이터 관리 객체 컨텍스트 내에서 새 DBirthday 엔티티를 생성하되 컨텍스트를 저장하지는 않는다.
+        // 이렇게 해야 추가 작업을 취소할 경우 롤백해 새 생일 엔티티를 제거할 수 있다.
         
         NSManagedObjectContext *context = [DModel sharedInstance].managedObjectContext;
         DBirthday *birthday = [NSEntityDescription insertNewObjectForEntityForName:@"DBirthday" inManagedObjectContext:context];
