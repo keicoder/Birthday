@@ -11,6 +11,7 @@
 #import "EditViewController.h"
 #import "DBirthday.h"
 #import "DModel.h"
+#import "TableViewCell.h"
 
 
 @interface HomeViewController ()
@@ -185,6 +186,8 @@
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     // NSMutableDictionary *birthday = self.birthdays[indexPath.row];
+    
+    // DBirthday 엔티티
     DBirthday *birthday = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     // NSString *name = birthday[@"name"];
@@ -195,9 +198,21 @@
     // cell.detailTextLabel.text = birthdate.description;
     // cell.imageView.image = image;
     
-    cell.textLabel.text = birthday.name;
-    cell.detailTextLabel.text = birthday.birthdayNextToDisplay;
-    cell.imageView.image = [UIImage imageWithData:birthday.imageData];
+    // cell.textLabel.text = birthday.name;
+    // cell.detailTextLabel.text = birthday.birthdayTextToDisplay;
+    // cell.imageView.image = [UIImage imageWithData:birthday.imageData];
+    
+    // 커스텀 테이블 셀
+    
+    TableViewCell *tableCell = (TableViewCell *)cell;
+    tableCell.birthday = birthday;
+    if (birthday.imageData == nil)
+    {
+        tableCell.iconView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
+    }
+    else {
+        tableCell.iconView.image = [UIImage imageWithData:birthday.imageData];
+    }
     
     return cell;
 }
@@ -230,7 +245,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        return 200;
+        return 72;
     } else {
         return 72;
     }

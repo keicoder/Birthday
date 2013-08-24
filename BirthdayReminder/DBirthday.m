@@ -74,7 +74,7 @@
 }
 
 
-#pragma mark - 세 개의 읽기 전용 게터 메소드 (remainingDaysUntilNextBirthday, isBirthdayToday, birthdayNextToDisplay)
+#pragma mark - 세 개의 읽기 전용 게터 메소드 (remainingDaysUntilNextBirthday, isBirthdayToday, birthdayTextToDisplay)
 
 - (int) remainingDaysUntilNextBirthday
 {
@@ -96,7 +96,7 @@
 }
 
 
-- (NSString *) birthdayNextToDisplay
+- (NSString *) birthdayTextToDisplay
 {
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];

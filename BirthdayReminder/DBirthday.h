@@ -33,7 +33,7 @@
 
 
 @property (nonatomic, readonly) int remainingDaysUntilNextBirthday;
-@property (nonatomic, readonly) NSString *birthdayNextToDisplay;
+@property (nonatomic, readonly) NSString *birthdayTextToDisplay;
 @property (nonatomic, readonly) BOOL isBirthdayToday; // 생일이 오늘이면 카운트다운 대신 케이크 이미지를 보여줌
 
 

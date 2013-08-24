@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF31F62A17C920C900F06E96 /* icon-days-remaining.png in Resources */ = {isa = PBXBuildFile; fileRef = BF31F62817C920C900F06E96 /* icon-days-remaining.png */; };
+		BF31F62B17C920C900F06E96 /* icon-days-remaining@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF31F62917C920C900F06E96 /* icon-days-remaining@2x.png */; };
+		BF31F62F17C9242900F06E96 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF31F62E17C9242900F06E96 /* TableViewCell.m */; };
 		BF47BE6317C4635A003C209C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF47BE6217C4635A003C209C /* CoreData.framework */; };
 		BF47BE6717C4648E003C209C /* BirthdayReminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF47BE6517C4648E003C209C /* BirthdayReminder.xcdatamodeld */; };
 		BF47BE6A17C46AD8003C209C /* DBirthday.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47BE6917C46AD8003C209C /* DBirthday.m */; };
@@ -94,6 +97,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF31F62817C920C900F06E96 /* icon-days-remaining.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-days-remaining.png"; sourceTree = "<group>"; };
+		BF31F62917C920C900F06E96 /* icon-days-remaining@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-days-remaining@2x.png"; sourceTree = "<group>"; };
+		BF31F62D17C9242900F06E96 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		BF31F62E17C9242900F06E96 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		BF47BE6217C4635A003C209C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BF47BE6617C4648E003C209C /* BirthdayReminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirthdayReminder.xcdatamodel; sourceTree = "<group>"; };
 		BF47BE6817C46AD8003C209C /* DBirthday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBirthday.h; sourceTree = "<group>"; };
@@ -193,6 +200,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF31F62C17C923DC00F06E96 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				BF31F62D17C9242900F06E96 /* TableViewCell.h */,
+				BF31F62E17C9242900F06E96 /* TableViewCell.m */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
 		BF47BE6417C4641E003C209C /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,11 +318,12 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF31F62817C920C900F06E96 /* icon-days-remaining.png */,
+				BF31F62917C920C900F06E96 /* icon-days-remaining@2x.png */,
 				BFFA258017C9155400BB0173 /* app-background1.png */,
 				BFFA258117C9155400BB0173 /* app-background1@2x.png */,
 				BFFA258217C9155400BB0173 /* app-background.png */,
 				BFFA258317C9155400BB0173 /* app-background@2x.png */,
-				BFBC035717C1A513002E4687 /* Celebrity Pics */,
 				BFC1BBD917C09058007B8266 /* icon-birthday-cake.png */,
 				BFC1BBDA17C09058007B8266 /* icon-birthday-cake@2x.png */,
 				BFC1BBDB17C09058007B8266 /* thumbnail-background.png */,
@@ -321,6 +338,7 @@
 				BFC18BCE17BDB74400D49685 /* Icon-Small@2x.png */,
 				BFC18BCF17BDB74400D49685 /* Icon.png */,
 				BFC18BD017BDB74400D49685 /* Icon@2x.png */,
+				BFBC035717C1A513002E4687 /* Celebrity Pics */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -337,6 +355,7 @@
 		BFC18BF717BDD8BF00D49685 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF31F62C17C923DC00F06E96 /* components */,
 				BF6487E317BDEDE200202254 /* CoreViewController.h */,
 				BF6487E417BDEDE200202254 /* CoreViewController.m */,
 				BFC18BF817BDD96000D49685 /* HomeViewController.h */,
@@ -458,9 +477,11 @@
 				BFC18BDD17BDB74400D49685 /* Icon-Small@2x.png in Resources */,
 				BFFA258417C9155400BB0173 /* app-background1.png in Resources */,
 				BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */,
+				BF31F62A17C920C900F06E96 /* icon-days-remaining.png in Resources */,
 				BFBC036617C1A513002E4687 /* jamie-oliver.jpg in Resources */,
 				BFC1BBDE17C09058007B8266 /* icon-birthday-cake@2x.png in Resources */,
 				BFC18BD117BDB74400D49685 /* Default-568h@2x.png in Resources */,
+				BF31F62B17C920C900F06E96 /* icon-days-remaining@2x.png in Resources */,
 				BFC18B9D17BDAF2900D49685 /* InfoPlist.strings in Resources */,
 				BF6487F417BE0D9300202254 /* BRAppGuide01.png in Resources */,
 				BFC18BA617BDAF2900D49685 /* Main.storyboard in Resources */,
@@ -518,6 +539,7 @@
 				BF47BE6A17C46AD8003C209C /* DBirthday.m in Sources */,
 				BFA76B7617C5A70B00721697 /* DModel.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
+				BF31F62F17C9242900F06E96 /* TableViewCell.m in Sources */,
 				BF6487E117BDE90C00202254 /* EditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
