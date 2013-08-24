@@ -271,4 +271,26 @@
     // self.birthday.imageData = UIImageJPEGRepresentation(image, 1.f);
 }
 
+
+#pragma mark - Save나 Cancel 버튼을 탭했을 때 코어 데이터에 변경 사항 반영
+
+- (IBAction)saveAndDismiss:(id)sender
+{
+    // DModel에서 구현한 saveChanges public 메소드 호출
+    [[DModel sharedInstance] saveChanges];
+    
+    // CoreViewController에서 구현한 saveAndDismiss public 메소드 호출
+    [super saveAndDismiss:sender];
+}
+
+
+
+
+
+
+
+
+
+
+
 @end
