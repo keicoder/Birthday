@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum : int {
+    LabelTypeName = 0,
+    LabelTypeBirthdayDate,
+    LabelTypeDaysUntilBirthday,
+    LabelTypeDaysUntilBirthdaySubText,
+    LabelTypeLarge
+}LabelType;
+
+
 @interface StyleSheet : NSObject
+
++(void)styleLabel:(UILabel *)label withType:(LabelType)labelType;
++(void)styleRoundCorneredView:(UIView *)view;
+
 
 @end
