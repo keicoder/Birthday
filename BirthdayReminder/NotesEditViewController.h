@@ -13,7 +13,7 @@
 
 #import "CoreViewController.h"
 
-참조
+@class DBirthday;
 
 
 @interface NotesEditViewController : CoreViewController <UITextViewDelegate>
