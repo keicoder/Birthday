@@ -28,6 +28,10 @@
 		BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BF6487F917BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BF6487FB17BE3EDF00202254 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6487FA17BE3EDF00202254 /* QuartzCore.framework */; };
+		BF74AB3217C940940095F451 /* days_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3017C940940095F451 /* days_icon.png */; };
+		BF74AB3317C940940095F451 /* days_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3117C940940095F451 /* days_icon@2x.png */; };
+		BF74AB3917C944970095F451 /* days_icon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3817C944970095F451 /* days_icon1@2x.png */; };
+		BF74AB3B17C9449F0095F451 /* days_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3A17C9449F0095F451 /* days_icon1.png */; };
 		BF8B450417C93CA300B11EF7 /* cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8B450217C93CA300B11EF7 /* cell_background.png */; };
 		BF8B450517C93CA300B11EF7 /* cell_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8B450317C93CA300B11EF7 /* cell_background@2x.png */; };
 		BFA76B7617C5A70B00721697 /* DModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA76B7517C5A70B00721697 /* DModel.m */; };
@@ -121,6 +125,10 @@
 		BF6487F617BE0EB200202254 /* BuildGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildGuideViewController.h; sourceTree = "<group>"; };
 		BF6487F717BE0EB200202254 /* BuildGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildGuideViewController.m; sourceTree = "<group>"; };
 		BF6487FA17BE3EDF00202254 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BF74AB3017C940940095F451 /* days_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = days_icon.png; sourceTree = "<group>"; };
+		BF74AB3117C940940095F451 /* days_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "days_icon@2x.png"; sourceTree = "<group>"; };
+		BF74AB3817C944970095F451 /* days_icon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "days_icon1@2x.png"; sourceTree = "<group>"; };
+		BF74AB3A17C9449F0095F451 /* days_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = days_icon1.png; sourceTree = "<group>"; };
 		BF8B450217C93CA300B11EF7 /* cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background.png; sourceTree = "<group>"; };
 		BF8B450317C93CA300B11EF7 /* cell_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_background@2x.png"; sourceTree = "<group>"; };
 		BFA76B7417C5A70B00721697 /* DModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DModel.h; sourceTree = "<group>"; };
@@ -322,6 +330,10 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF74AB3A17C9449F0095F451 /* days_icon1.png */,
+				BF74AB3817C944970095F451 /* days_icon1@2x.png */,
+				BF74AB3017C940940095F451 /* days_icon.png */,
+				BF74AB3117C940940095F451 /* days_icon@2x.png */,
 				BF8B450217C93CA300B11EF7 /* cell_background.png */,
 				BF8B450317C93CA300B11EF7 /* cell_background@2x.png */,
 				BF31F62817C920C900F06E96 /* icon-days-remaining.png */,
@@ -482,6 +494,7 @@
 				BFC18BD917BDB74400D49685 /* Icon-72@2x.png in Resources */,
 				BF8B450417C93CA300B11EF7 /* cell_background.png in Resources */,
 				BFC18BDD17BDB74400D49685 /* Icon-Small@2x.png in Resources */,
+				BF74AB3317C940940095F451 /* days_icon@2x.png in Resources */,
 				BFFA258417C9155400BB0173 /* app-background1.png in Resources */,
 				BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */,
 				BF31F62A17C920C900F06E96 /* icon-days-remaining.png in Resources */,
@@ -496,11 +509,14 @@
 				BFBC036217C1A513002E4687 /* aloe-blacc.jpg in Resources */,
 				BFC18BD717BDB74400D49685 /* Icon-72.png in Resources */,
 				BFBC036917C1A513002E4687 /* olly-murs.jpg in Resources */,
+				BF74AB3B17C9449F0095F451 /* days_icon1.png in Resources */,
 				BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */,
 				BFFA258617C9155400BB0173 /* app-background.png in Resources */,
 				BFBC036817C1A513002E4687 /* katy-perry.jpg in Resources */,
 				BFC18BDF17BDB74400D49685 /* Icon.png in Resources */,
 				BFBC036517C1A513002E4687 /* christina-aguilera.jpg in Resources */,
+				BF74AB3917C944970095F451 /* days_icon1@2x.png in Resources */,
+				BF74AB3217C940940095F451 /* days_icon.png in Resources */,
 				BFBC036717C1A513002E4687 /* justin-bieber.jpg in Resources */,
 				BFBC036317C1A513002E4687 /* angelina-jolie.jpg in Resources */,
 				BFBC035617C1A4FE002E4687 /* birthdays.plist in Resources */,
