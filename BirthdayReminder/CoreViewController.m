@@ -23,6 +23,17 @@
 	// 상속받는 모든 뷰의 백그라운드 칼라 지정
     // self.view.backgroundColor = [UIColor lightGrayColor];
     self.view.backgroundColor = [UIColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f];
+    
+    // 상속받는 모든 뷰의 백그라운드 이미지 지정
+    // UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app-background.png"]];
+    // [self.view insertSubview:backgroundView atIndex:0];
+    
+    // 상속받는 모든 뷰의 백그라운드 이미지 지정
+    UIImage *img = [UIImage imageNamed:@"app-background1.png"];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:img];
+    backgroundView.frame = CGRectMake(backgroundView.frame.origin.x, backgroundView.frame.origin.y,
+                                 img.size.width, img.size.height);
+    [self.view insertSubview:backgroundView atIndex:0];
 }
 
 

@@ -77,6 +77,10 @@
 		BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC1BBDB17C09058007B8266 /* thumbnail-background.png */; };
 		BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC1BBDC17C09058007B8266 /* thumbnail-background@2x.png */; };
 		BFE00E3417C877A400DA6966 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE00E3317C877A400DA6966 /* UIImage+Thumbnail.m */; };
+		BFFA258417C9155400BB0173 /* app-background1.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFA258017C9155400BB0173 /* app-background1.png */; };
+		BFFA258517C9155400BB0173 /* app-background1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFA258117C9155400BB0173 /* app-background1@2x.png */; };
+		BFFA258617C9155400BB0173 /* app-background.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFA258217C9155400BB0173 /* app-background.png */; };
+		BFFA258717C9155400BB0173 /* app-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFA258317C9155400BB0173 /* app-background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +161,10 @@
 		BFC1BBDC17C09058007B8266 /* thumbnail-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail-background@2x.png"; sourceTree = "<group>"; };
 		BFE00E3217C877A400DA6966 /* UIImage+Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Thumbnail.h"; sourceTree = "<group>"; };
 		BFE00E3317C877A400DA6966 /* UIImage+Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Thumbnail.m"; sourceTree = "<group>"; };
+		BFFA258017C9155400BB0173 /* app-background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-background1.png"; sourceTree = "<group>"; };
+		BFFA258117C9155400BB0173 /* app-background1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-background1@2x.png"; sourceTree = "<group>"; };
+		BFFA258217C9155400BB0173 /* app-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-background.png"; sourceTree = "<group>"; };
+		BFFA258317C9155400BB0173 /* app-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +302,10 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BFFA258017C9155400BB0173 /* app-background1.png */,
+				BFFA258117C9155400BB0173 /* app-background1@2x.png */,
+				BFFA258217C9155400BB0173 /* app-background.png */,
+				BFFA258317C9155400BB0173 /* app-background@2x.png */,
 				BFBC035717C1A513002E4687 /* Celebrity Pics */,
 				BFC1BBD917C09058007B8266 /* icon-birthday-cake.png */,
 				BFC1BBDA17C09058007B8266 /* icon-birthday-cake@2x.png */,
@@ -433,15 +445,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFA258717C9155400BB0173 /* app-background@2x.png in Resources */,
 				BFC18BD517BDB74400D49685 /* Default@2x.png in Resources */,
 				BFC1BBDD17C09058007B8266 /* icon-birthday-cake.png in Resources */,
 				BFBC036417C1A513002E4687 /* brad-pitt.jpg in Resources */,
 				BFBC036B17C1A513002E4687 /* scarlett-johansson.jpg in Resources */,
 				BFBC036A17C1A513002E4687 /* russell-brand.jpg in Resources */,
 				BFC18BE117BDB74400D49685 /* Icon@2x.png in Resources */,
+				BFFA258517C9155400BB0173 /* app-background1@2x.png in Resources */,
 				BFC18BAB17BDAF2900D49685 /* Images.xcassets in Resources */,
 				BFC18BD917BDB74400D49685 /* Icon-72@2x.png in Resources */,
 				BFC18BDD17BDB74400D49685 /* Icon-Small@2x.png in Resources */,
+				BFFA258417C9155400BB0173 /* app-background1.png in Resources */,
 				BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */,
 				BFBC036617C1A513002E4687 /* jamie-oliver.jpg in Resources */,
 				BFC1BBDE17C09058007B8266 /* icon-birthday-cake@2x.png in Resources */,
@@ -453,6 +468,7 @@
 				BFC18BD717BDB74400D49685 /* Icon-72.png in Resources */,
 				BFBC036917C1A513002E4687 /* olly-murs.jpg in Resources */,
 				BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */,
+				BFFA258617C9155400BB0173 /* app-background.png in Resources */,
 				BFBC036817C1A513002E4687 /* katy-perry.jpg in Resources */,
 				BFC18BDF17BDB74400D49685 /* Icon.png in Resources */,
 				BFBC036517C1A513002E4687 /* christina-aguilera.jpg in Resources */,
