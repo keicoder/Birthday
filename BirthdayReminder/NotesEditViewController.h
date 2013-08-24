@@ -13,11 +13,16 @@
 
 #import "CoreViewController.h"
 
+참조
+
+
 @interface NotesEditViewController : CoreViewController <UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+// birthday 속성 추가
+@property (nonatomic, strong) DBirthday *birthday;
 
 
 @end
