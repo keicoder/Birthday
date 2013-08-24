@@ -9,6 +9,7 @@
 #import "EditViewController.h"
 #import "DBirthday.h"
 #import "DModel.h"
+#import "UIImage+Thumbnail.h" // 카테고리 임포트
 
 @interface EditViewController ()
 
@@ -256,10 +257,18 @@
     
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
-    self.photoView.image = image;
+    // 서
+    
+    CGFloat side = 71.f;
+    side *= [[UIScreen mainScreen] scale]; // 레티나 화면일 경우 스케일 값은 2, 일반은 1
+    
+    UIImage *thumbnail = [image creatThumbnailToFillSize:CGSizeMake(side, side)];
+    
+    self.photoView.image = thumbnail;
+    self.birthday.imageData = UIImageJPEGRepresentation(thumbnail, 1.f);
     
     // self.birthday[@"image"] = image;
-    self.birthday.imageData = UIImageJPEGRepresentation(image, 1.f);
+    // self.birthday.imageData = UIImageJPEGRepresentation(image, 1.f);
 }
 
 @end
