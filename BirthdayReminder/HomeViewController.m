@@ -17,7 +17,7 @@
 
 // birthdays.plist에서 로드한 생일 딕셔너리로 이뤄진 배열 생성
 // 이 배열 속성을 홈 뷰 컨트롤러.m의 private 인터페이스에 선언
-@property (nonatomic, strong) NSMutableArray *birthdays;
+// @property (nonatomic, strong) NSMutableArray *birthdays;
 
 // NSFetchedResultsController를 private 속성으로 선언
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
