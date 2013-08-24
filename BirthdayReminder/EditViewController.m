@@ -257,7 +257,7 @@
     
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
-    // 서
+    // UIImage+Thumbnail 카테고리를 이용 thumbnail 이미지 생성
     
     CGFloat side = 71.f;
     side *= [[UIScreen mainScreen] scale]; // 레티나 화면일 경우 스케일 값은 2, 일반은 1
