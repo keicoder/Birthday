@@ -7,6 +7,8 @@
 //
 
 #import "EditViewController.h"
+#import "DBirthday.h"
+#import "DModel.h"
 
 @interface EditViewController ()
 
@@ -17,6 +19,36 @@
 
 
 @implementation EditViewController
+
+@synthesize saveButton;
+@synthesize nameTextField;
+@synthesize includeYearLabel;
+@synthesize includeYearSwitch;
+@synthesize datePicker;
+@synthesize photoContainerView;
+@synthesize picPhotoLabel;
+@synthesize photoView;
+
+
+#pragma mark - 데이트 피커의 선택일을 분리하기 위한 private 메소드
+
+// 선택일을 분리하기 위해 NSDateComponents 클래스 사용
+// 사용자가 데이트 피커의 값을 바꾸거나 Year 스위치를 포함시킬 때마다 호출되어야 하므로 관련 메소드(didToggleSwitch:, didChangeDatePicker:)도 수정해야 함
+
+- (void)updateBirthdayDetails {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:self.datePicker.date];
+    self.birthday.birthMonth = @(components.month);
+    self.birthday.birthDay = @(components.day);
+    if (self.includeYearSwitch.on) {
+        self.birthday.birthYear = @(components.year);
+    }
+    else {
+        self.birthday.birthYear = @0;
+    }
+    [self.birthday updateNextBirthdayAndAge];
+}
+
 
 #pragma mark - 텍스트 필드 델리게이트 메소드 (필수 메소드는 없음 / UITextFieldDelegate)
 
@@ -29,22 +61,48 @@
 
 #pragma mark - 뷰 라이프 사이클
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 // updateSaveButton 메소드의 호출 지점 -->
 // viewWillAppear 및 didChangeNameText가 실행되는 시점
-// birthday 딕셔너리 - 딕셔너리의 키 값을 기반으로 하위 뷰 업데이트
 
+
+// DBirthday가 일, 월, 연도를 저장하는 방식에 맞춰 메소드 업데이트
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.nameTextField.text = self.birthday.name;
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:[NSDate date]];
+    
+    if ([self.birthday.birthDay intValue] > 0) components.day = [self.birthday.birthDay intValue];
+    if ([self.birthday.birthMonth intValue] > 0) components.month = [self.birthday.birthMonth intValue];
+    if ([self.birthday.birthYear intValue] > 0) {
+        components.year = [self.birthday.birthYear intValue];
+        self.includeYearSwitch.on = YES;
+    }
+    else {
+        self.includeYearSwitch.on = NO;
+    }
+    [self.birthday updateNextBirthdayAndAge];
+    self.datePicker.date = [calendar dateFromComponents:components];
+    
+    if (self.birthday.imageData == nil)
+    {
+        self.photoView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
+    }
+    else {
+        self.photoView.image = [UIImage imageWithData:self.birthday.imageData];
+    }
+    
+    [self updateSaveButton];
+    
+}
+
+/*
+// birthday 딕셔너리 - 딕셔너리의 키 값을 기반으로 하위 뷰 업데이트
+// DBirthday가 일, 월, 연도를 저장하는 방식에 맞춰 메소드 업데이트
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -63,7 +121,7 @@
         self.photoView.image = image;
     }
 }
-
+*/
 
 #pragma mark - 텍스트 필드의 텍스트 변경 추적 및 반응
 
@@ -72,10 +130,11 @@
 
 - (IBAction)didChangeNameText:(id)sender
 {
-    NSLog(@"The text was changed : %@", self.nameTextField.text);
-    [self updateSaveButton];
+    // NSLog(@"The text was changed : %@", self.nameTextField.text);
+    // self.birthday[@"name"] = self.nameTextField.text;
     
-    self.birthday[@"name"] = self.nameTextField.text;
+    self.birthday.name = self.nameTextField.text;
+    [self updateSaveButton];
 }
 
 
@@ -83,7 +142,7 @@
 
 - (void) updateSaveButton
 {
-    self.saveButton.enabled = self.nameTextField.text > 0;
+    self.saveButton.enabled = self.nameTextField.text.length > 0;
 }
 
 
@@ -91,11 +150,14 @@
 
 - (IBAction)didToggleSwitch:(id)sender
 {
+    /*
     if (self.includeYearSwitch.on) {
         NSLog(@"Sure, I'll share my age with you!");
     } else {
         NSLog(@"I'd prefer to keep my birthday year to myself. Thank you!");
     }
+    */
+    [self updateBirthdayDetails];
 }
 
 
@@ -106,9 +168,10 @@
 
 - (IBAction)didChangeDatePicker:(id)sender
 {
-    NSLog(@"New birthdate selected : %@", self.datePicker.date);
+    // NSLog(@"New birthdate selected : %@", self.datePicker.date);
     
-    self.birthday[@"birthdate"] = self.datePicker.date;
+    // self.birthday[@"birthdate"] = self.datePicker.date;
+    [self updateBirthdayDetails];
 }
 
 
@@ -195,11 +258,8 @@
     
     self.photoView.image = image;
     
-    self.birthday[@"image"] = image;
+    // self.birthday[@"image"] = image;
+    self.birthday.imageData = UIImageJPEGRepresentation(image, 1.f);
 }
-
-
-
-
 
 @end

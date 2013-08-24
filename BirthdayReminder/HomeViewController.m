@@ -245,7 +245,7 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"prepareForSegue!");
+    // NSLog(@"prepareForSegue!");
     
     // 홈 뷰의 테이블 뷰 셀을 탭할 때 호출되는 세그웨이(Segues)
     
@@ -254,7 +254,10 @@
     if ([identifier isEqualToString:@"ToDetailViewSegue"]) { // 세그웨이 식별자 ToDetailViewSegue
         // 먼저 데이터를 가져옴
         NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
-        NSMutableDictionary *birthday = self.birthdays[selectedIndexPath.row];
+        // NSMutableDictionary *birthday = self.birthdays[selectedIndexPath.row];
+        
+        // DBirthday에서 가져옴
+        DBirthday *birthday = [self.fetchedResultsController objectAtIndexPath:selectedIndexPath];
         
         DetailViewController *detailViewController = segue.destinationViewController;
         detailViewController.birthday = birthday;
@@ -267,11 +270,18 @@
            이 내비게이션 컨트롤러에 대한 참조를 통해 생일 편집 뷰 컨트롤러에 대한 참조도 가져올 수 있다. 
            생일 편집 뷰 컨트롤러에 대한 참조를 가져온 후에는 생일 편집 뷰 컨트롤러의 birthday 속성값에 새로 생성한 birthday 딕셔너리를 설정한다. */
         
-        NSMutableDictionary *birthday = [NSMutableDictionary dictionary];
+        // NSMutableDictionary *birthday = [NSMutableDictionary dictionary];
         
-        birthday[@"name"] = @"My Friend";
-        birthday[@"birthdate"] = [NSDate date];
-        [self.birthdays addObject:birthday];
+        // birthday[@"name"] = @"My Friend";
+        // birthday[@"birthdate"] = [NSDate date];
+        // [self.birthdays addObject:birthday];
+        
+        // DBirthday에서 가져옴
+        
+        NSManagedObjectContext *context = [DModel sharedInstance].managedObjectContext;
+        DBirthday *birthday = [NSEntityDescription insertNewObjectForEntityForName:@"DBirthday" inManagedObjectContext:context];
+        
+        [birthday updateWithDefaults];
         
         UINavigationController *navigationController = segue.destinationViewController;
         

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreViewController.h"
-
+@class DBirthday;
 
 #pragma mark - 편집 뷰 컨트롤러를 텍스트 필드의 델리게이트로 설정 <UITextFieldDelegate>
 #pragma mark 액션 시트 구현을 위해 <UIActionSheetDelegate> 프로토콜 구현 선언
@@ -23,7 +23,10 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 // birthday 딕셔너리 - 딕셔너리의 키 값을 기반으로 하위 뷰 업데이트
-@property (nonatomic, strong) NSMutableDictionary *birthday;
+// @property (nonatomic, strong) NSMutableDictionary *birthday;
+
+// 생일 클래스 타입을 DBirthday로 대체
+@property (nonatomic, strong) DBirthday *birthday;
 
 #pragma mark - 좌측상단 포토 이미지 속성
 @property (weak, nonatomic) IBOutlet UIView *photoContainerView;

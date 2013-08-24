@@ -40,4 +40,7 @@
 #pragma mark - updateNextBirthdayAndAge (nextBirthday와 nextBirthdayAge를 업데이트하는데 이용)
 - (void) updateNextBirthdayAndAge;
 
+#pragma mark - updateWithDefaults (Add 버튼을 탭할 때 호출)
+- (void) updateWithDefaults;
+
 @end
