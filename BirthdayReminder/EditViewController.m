@@ -274,22 +274,26 @@
 
 #pragma mark - Save나 Cancel 버튼을 탭했을 때 코어 데이터에 변경 사항 반영
 
+// CoreViewController에서 구현한 saveAndDismiss public 메소드 오버라이드
+// 모달 뷰 dismiss 및 코어 데이터에 저장 혹은 취소
+
 - (IBAction)saveAndDismiss:(id)sender
 {
     // DModel에서 구현한 saveChanges public 메소드 호출
     [[DModel sharedInstance] saveChanges];
     
-    // CoreViewController에서 구현한 saveAndDismiss public 메소드 호출
+    
     [super saveAndDismiss:sender];
 }
 
 
-
-
-
-
-
-
+- (IBAction)cancelAndDismiss:(id)sender
+{
+    // DModel에서 구현한 cancelChanges public 메소드 호출
+    [[DModel sharedInstance] cancelChanges];
+    
+    [super cancelAndDismiss:sender];
+}
 
 
 

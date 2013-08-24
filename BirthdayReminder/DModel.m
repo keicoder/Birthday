@@ -131,6 +131,16 @@ static DModel *_sharedInstance = nil;
 }
 
 
+#pragma mark - 코어 데이터 저장 취소 기능 - public 인스턴스 메소드이므로 DModel.h에 선언
+
+- (void) cancelChanges
+{
+    // 관리 객체 컨텍스트의 rollback 메소드를 호출하면 마지막 저장 시점 이후 코어 데이터 모델의 모든 변경 사항이 제거된다.
+    [self.managedObjectContext rollback];
+}
+
+
+
 #pragma mark - 중복 엔티티 검사
 
 // getExistingBirthdaysWithUIDs: 메소드는 생일 엔티티의 고유 id를 키로 사용해 기존 생일 엔티티의 수정 가능 딕셔너리를 반환한다.

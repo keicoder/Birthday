@@ -35,6 +35,8 @@
 #pragma mark - 코어 데이터 저장소 채우기 - public 인스턴스 메소드이므로 DModel.h에 선언
 - (void) saveChanges;
 
+#pragma mark - 코어 데이터 저장 취소 기능 - public 인스턴스 메소드이므로 DModel.h에 선언
+- (void) cancelChanges;
 
 #pragma mark - 중복 엔티티 검사
 - (NSMutableDictionary *) getExistingBirthdaysWithUIDs:(NSArray *)uids;
