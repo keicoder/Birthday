@@ -8,6 +8,7 @@
 
 #import "TableViewCell.h"
 #import "DBirthday.h"
+#import "StyleSheet.h"
 
 @implementation TableViewCell
 
@@ -36,6 +37,59 @@
     
     self.birthdayLabel.text = _birthday.birthdayTextToDisplay;
     
+}
+
+
+// 스타일시트 적용
+/*
+ 테이블 뷰  셀 클래스는 뷰 클래스이지 쀼 컨트롤러 클래스가 아니다.
+ 따라서 viewDidLoad 메소드를 통해 인터페이스 빌더의 아웃렛 속성을 변경할 수 없다.
+ * 커스텀 테이블 뷰 셀의 이미지 뷰와 라벨에 스타일을 적용할 때는 iOS에서 이들 아웃렛을 처음 생성할 때 한번만 코드를 실행해야 한다.
+ * 따라서 스타일 적용 코드를 추가하기에 적합한 위치는 바로 아웃렛 접근자 세터다.
+ * 아웃렛 접근자 세터를 오버라이드해 스타일을 적용한다.
+*/
+
+
+/*
+-(void) setIconView:(UIImageView *)iconView
+{
+    _iconView = iconView;
+    if (_iconView) {
+        [StyleSheet styleRoundCorneredView:_iconView];
+    }
+}
+
+-(void) setNameLabel:(UILabel *)nameLabel
+{
+    _nameLabel = nameLabel;
+    if (_nameLabel) {
+        [StyleSheet styleLabel:_nameLabel withType:LabelTypeName];
+    }
+}
+
+-(void) setBirthdayLabel:(UILabel *)birthdayLabel
+{
+    _birthdayLabel = birthdayLabel;
+    if (_birthdayLabel) {
+        [StyleSheet styleLabel:_birthdayLabel withType:LabelTypeBirthdayDate];
+    }
+}
+*/
+
+-(void) setRemainingDaysLabel:(UILabel *)remainingDaysLabel
+{
+    _remainingDaysLabel = remainingDaysLabel;
+    if (_remainingDaysLabel) {
+        [StyleSheet styleLabel:_remainingDaysLabel withType:LabelTypeDaysUntilBirthday];
+    }
+}
+
+-(void) setRemainingDaysSubTextLabel:(UILabel *)remainingDaysSubTextLabel
+{
+    _remainingDaysSubTextLabel = remainingDaysSubTextLabel;
+    if (_remainingDaysSubTextLabel) {
+        [StyleSheet styleLabel:_remainingDaysSubTextLabel withType:LabelTypeDaysUntilBirthdaySubText];
+    }
 }
 
 
