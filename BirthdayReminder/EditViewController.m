@@ -10,7 +10,7 @@
 #import "DBirthday.h"
 #import "DModel.h"
 #import "UIImage+Thumbnail.h" // 카테고리 임포트
-#import "적용"        // 스타일 적용
+#import "StyleSheet.h"        // 스타일 적용
 
 @interface EditViewController ()
 
