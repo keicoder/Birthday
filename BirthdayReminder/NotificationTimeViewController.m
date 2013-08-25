@@ -1,4 +1,4 @@
-//
+수정//
 //  NotificationTimeViewController.m
 //  BirthdayReminder
 //
@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     // StyleSheet 클래스 임포트 후 styleLabel 메소드 호출
-	[StyleSheet styleLabel:self.whatTimeLabel withType:LabelTypeLarge];
+	[StyleSheet styleLabel:self.whatTimeLabel withType:LabelTypeDaysUntilBirthday];
 }
 
 - (void)didReceiveMemoryWarning
