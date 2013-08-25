@@ -28,6 +28,14 @@
 		BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BF6487F917BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BF6487FB17BE3EDF00202254 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6487FA17BE3EDF00202254 /* QuartzCore.framework */; };
+		BF74A02D17C9AE8A0052E26F /* icon-add-new.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A02B17C9AE8A0052E26F /* icon-add-new.png */; };
+		BF74A02E17C9AE8A0052E26F /* icon-add-new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A02C17C9AE8A0052E26F /* icon-add-new@2x.png */; };
+		BF74A03117C9AE950052E26F /* icon-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A02F17C9AE950052E26F /* icon-settings.png */; };
+		BF74A03217C9AE950052E26F /* icon-settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A03017C9AE950052E26F /* icon-settings@2x.png */; };
+		BF74A03517C9B9100052E26F /* iOS_NavigationBar_BackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A03317C9B9100052E26F /* iOS_NavigationBar_BackgroundImage.png */; };
+		BF74A03617C9B9100052E26F /* iOS_NavigationBar_BackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A03417C9B9100052E26F /* iOS_NavigationBar_BackgroundImage@2x.png */; };
+		BF74A03D17C9BE240052E26F /* iOS_ToolBar_BackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A03B17C9BE240052E26F /* iOS_ToolBar_BackgroundImage.png */; };
+		BF74A03E17C9BE240052E26F /* iOS_ToolBar_BackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A03C17C9BE240052E26F /* iOS_ToolBar_BackgroundImage@2x.png */; };
 		BF74AB3217C940940095F451 /* days_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3017C940940095F451 /* days_icon.png */; };
 		BF74AB3317C940940095F451 /* days_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3117C940940095F451 /* days_icon@2x.png */; };
 		BF74AB3917C944970095F451 /* days_icon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3817C944970095F451 /* days_icon1@2x.png */; };
@@ -126,6 +134,14 @@
 		BF6487F617BE0EB200202254 /* BuildGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildGuideViewController.h; sourceTree = "<group>"; };
 		BF6487F717BE0EB200202254 /* BuildGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildGuideViewController.m; sourceTree = "<group>"; };
 		BF6487FA17BE3EDF00202254 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BF74A02B17C9AE8A0052E26F /* icon-add-new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-add-new.png"; sourceTree = "<group>"; };
+		BF74A02C17C9AE8A0052E26F /* icon-add-new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-add-new@2x.png"; sourceTree = "<group>"; };
+		BF74A02F17C9AE950052E26F /* icon-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-settings.png"; sourceTree = "<group>"; };
+		BF74A03017C9AE950052E26F /* icon-settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-settings@2x.png"; sourceTree = "<group>"; };
+		BF74A03317C9B9100052E26F /* iOS_NavigationBar_BackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS_NavigationBar_BackgroundImage.png; sourceTree = "<group>"; };
+		BF74A03417C9B9100052E26F /* iOS_NavigationBar_BackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS_NavigationBar_BackgroundImage@2x.png"; sourceTree = "<group>"; };
+		BF74A03B17C9BE240052E26F /* iOS_ToolBar_BackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS_ToolBar_BackgroundImage.png; sourceTree = "<group>"; };
+		BF74A03C17C9BE240052E26F /* iOS_ToolBar_BackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS_ToolBar_BackgroundImage@2x.png"; sourceTree = "<group>"; };
 		BF74AB3017C940940095F451 /* days_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = days_icon.png; sourceTree = "<group>"; };
 		BF74AB3117C940940095F451 /* days_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "days_icon@2x.png"; sourceTree = "<group>"; };
 		BF74AB3817C944970095F451 /* days_icon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "days_icon1@2x.png"; sourceTree = "<group>"; };
@@ -290,11 +306,11 @@
 			children = (
 				BF47BE6417C4641E003C209C /* data */,
 				BFC18BF617BDD8A400D49685 /* interface */,
-				BFC18BC717BDB74400D49685 /* images */,
 				BFC18BA117BDAF2900D49685 /* AppDelegate.h */,
 				BFC18BA217BDAF2900D49685 /* AppDelegate.m */,
 				BFC18BA417BDAF2900D49685 /* Main.storyboard */,
 				BFC18BAA17BDAF2900D49685 /* Images.xcassets */,
+				BFC18BC717BDB74400D49685 /* images */,
 				BFC18B9917BDAF2900D49685 /* Supporting Files */,
 			);
 			path = BirthdayReminder;
@@ -333,6 +349,14 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF74A03B17C9BE240052E26F /* iOS_ToolBar_BackgroundImage.png */,
+				BF74A03C17C9BE240052E26F /* iOS_ToolBar_BackgroundImage@2x.png */,
+				BF74A03317C9B9100052E26F /* iOS_NavigationBar_BackgroundImage.png */,
+				BF74A03417C9B9100052E26F /* iOS_NavigationBar_BackgroundImage@2x.png */,
+				BF74A02F17C9AE950052E26F /* icon-settings.png */,
+				BF74A03017C9AE950052E26F /* icon-settings@2x.png */,
+				BF74A02B17C9AE8A0052E26F /* icon-add-new.png */,
+				BF74A02C17C9AE8A0052E26F /* icon-add-new@2x.png */,
 				BF74AB3A17C9449F0095F451 /* days_icon1.png */,
 				BF74AB3817C944970095F451 /* days_icon1@2x.png */,
 				BF74AB3017C940940095F451 /* days_icon.png */,
@@ -493,16 +517,19 @@
 				BFBC036417C1A513002E4687 /* brad-pitt.jpg in Resources */,
 				BFBC036B17C1A513002E4687 /* scarlett-johansson.jpg in Resources */,
 				BFBC036A17C1A513002E4687 /* russell-brand.jpg in Resources */,
+				BF74A03E17C9BE240052E26F /* iOS_ToolBar_BackgroundImage@2x.png in Resources */,
 				BFC18BE117BDB74400D49685 /* Icon@2x.png in Resources */,
 				BFFA258517C9155400BB0173 /* app-background1@2x.png in Resources */,
 				BFC18BAB17BDAF2900D49685 /* Images.xcassets in Resources */,
 				BFC18BD917BDB74400D49685 /* Icon-72@2x.png in Resources */,
+				BF74A02D17C9AE8A0052E26F /* icon-add-new.png in Resources */,
 				BF8B450417C93CA300B11EF7 /* cell_background.png in Resources */,
 				BFC18BDD17BDB74400D49685 /* Icon-Small@2x.png in Resources */,
 				BF74AB3317C940940095F451 /* days_icon@2x.png in Resources */,
 				BFFA258417C9155400BB0173 /* app-background1.png in Resources */,
 				BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */,
 				BF31F62A17C920C900F06E96 /* icon-days-remaining.png in Resources */,
+				BF74A03117C9AE950052E26F /* icon-settings.png in Resources */,
 				BFBC036617C1A513002E4687 /* jamie-oliver.jpg in Resources */,
 				BFC1BBDE17C09058007B8266 /* icon-birthday-cake@2x.png in Resources */,
 				BFC18BD117BDB74400D49685 /* Default-568h@2x.png in Resources */,
@@ -513,19 +540,24 @@
 				BF8B450517C93CA300B11EF7 /* cell_background@2x.png in Resources */,
 				BFBC036217C1A513002E4687 /* aloe-blacc.jpg in Resources */,
 				BFC18BD717BDB74400D49685 /* Icon-72.png in Resources */,
+				BF74A03217C9AE950052E26F /* icon-settings@2x.png in Resources */,
 				BFBC036917C1A513002E4687 /* olly-murs.jpg in Resources */,
 				BF74AB3B17C9449F0095F451 /* days_icon1.png in Resources */,
 				BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */,
+				BF74A03617C9B9100052E26F /* iOS_NavigationBar_BackgroundImage@2x.png in Resources */,
 				BFFA258617C9155400BB0173 /* app-background.png in Resources */,
 				BFBC036817C1A513002E4687 /* katy-perry.jpg in Resources */,
 				BFC18BDF17BDB74400D49685 /* Icon.png in Resources */,
+				BF74A03D17C9BE240052E26F /* iOS_ToolBar_BackgroundImage.png in Resources */,
 				BFBC036517C1A513002E4687 /* christina-aguilera.jpg in Resources */,
+				BF74A03517C9B9100052E26F /* iOS_NavigationBar_BackgroundImage.png in Resources */,
 				BF74AB3917C944970095F451 /* days_icon1@2x.png in Resources */,
 				BF74AB3217C940940095F451 /* days_icon.png in Resources */,
 				BFBC036717C1A513002E4687 /* justin-bieber.jpg in Resources */,
 				BFBC036317C1A513002E4687 /* angelina-jolie.jpg in Resources */,
 				BFBC035617C1A4FE002E4687 /* birthdays.plist in Resources */,
 				BFC18BD317BDB74400D49685 /* Default.png in Resources */,
+				BF74A02E17C9AE8A0052E26F /* icon-add-new@2x.png in Resources */,
 				BFC18BDB17BDB74400D49685 /* Icon-Small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

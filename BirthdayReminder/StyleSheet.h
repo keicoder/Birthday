@@ -19,8 +19,11 @@ typedef enum : int {
 
 @interface StyleSheet : NSObject
 
+#pragma mark - 홈 테이블 뷰의 커스텀 테이블 뷰 셀에 적용할 스타일 시트 public 클래스 메소드
 +(void)styleLabel:(UILabel *)label withType:(LabelType)labelType;
 +(void)styleRoundCorneredView:(UIView *)view;
 
+#pragma mark - 네비게이션 바와 툴바 외양에 적용할 스타일 시트 public 클래스 메소드
++(void)initStyles;
 
 @end

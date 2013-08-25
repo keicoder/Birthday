@@ -123,12 +123,12 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Mx7-ZR-uDX"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Birthdays" id="ocA-Us-sDF">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="Kgx-CB-Xhq">
+                        <barButtonItem key="leftBarButtonItem" image="icon-settings.png" id="Kgx-CB-Xhq">
                             <connections>
                                 <segue destination="zla-CH-eRh" kind="modal" modalTransitionStyle="flipHorizontal" id="8CH-q1-gZ6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="WOd-SV-Ml1">
+                        <barButtonItem key="rightBarButtonItem" image="icon-add-new.png" id="WOd-SV-Ml1">
                             <connections>
                                 <segue destination="fG4-6S-L59" kind="modal" identifier="ToAddBirthdaySegue" id="4ZG-yo-WKQ"/>
                             </connections>
@@ -543,7 +543,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
+        <image name="icon-add-new.png" width="19" height="19"/>
         <image name="icon-birthday-cake.png" width="55" height="55"/>
+        <image name="icon-settings.png" width="19" height="19"/>
         <image name="thumbnail-background.png" width="71" height="71"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

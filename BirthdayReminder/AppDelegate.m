@@ -7,12 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "StyleSheet.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // StyleSheet 클래스에서 구현한 네비게이션 바와 툴바 외양에 적용할 스타일 시트 public 클래스 메소드 호출
+    [StyleSheet initStyles];
+    
     return YES;
 }
 							
