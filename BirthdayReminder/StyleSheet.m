@@ -33,7 +33,7 @@
 
 @implementation StyleSheet
 
-#pragma mark - 홈 테이블 뷰의 커스텀 테이블 뷰 셀에 적용할 스타일 시트 public 클래스 메소드
+#pragma mark - 홈 테이블 뷰외 셀 및 다양한 뷰의 라벨, 뷰에 적용할 스타일 시트 public 클래스 메소드
 
 +(void)styleLabel:(UILabel *)label withType:(LabelType)labelType
 {
@@ -79,6 +79,9 @@
     view.layer.masksToBounds = YES;
     view.clipsToBounds = YES;
 }
+
+
+#pragma mark - 메모 편집 뷰외 텍스트 뷰에 적용할 스타일 시트 public 클래스 메소드
 
 +(void)styleTextView:(UITextView *)textView
 {
@@ -159,9 +162,6 @@
     [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
     [[UITableViewCell appearance] setSelectionStyle:UITableViewCellSelectionStyleNone];
     [[UITableView appearance] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    
-    
-    
 }
 
 
