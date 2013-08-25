@@ -10,6 +10,7 @@
 #import "DBirthday.h"
 #import "DModel.h"
 #import "UIImage+Thumbnail.h" // 카테고리 임포트
+#import "적용"        // 스타일 적용
 
 @interface EditViewController ()
 
@@ -60,7 +61,8 @@
 }
 
 
-#pragma mark - 뷰 라이프 사이클
+#pragma mark - 뷰 라이프 사이클 
+#pragma mark viewWillAppear (DBirthday가 일, 월, 연도를 저장하는 방식에 맞춰 메소드 업데이트)
 
 // updateSaveButton 메소드의 호출 지점 -->
 // viewWillAppear 및 didChangeNameText가 실행되는 시점
@@ -123,6 +125,23 @@
     }
 }
 */
+
+
+#pragma mark viewDidLoad (StyleSheet 클래스의 스타일 적용)
+
+- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // 스타일 적용
+    [StyleSheet styleLabel:self.includeYearLabel withType:LabelTypeLarge];
+    
+    [StyleSheet styleRoundCorneredView:self.photoContainerView];
+}
+
+
+
+
 
 #pragma mark - 텍스트 필드의 텍스트 변경 추적 및 반응
 

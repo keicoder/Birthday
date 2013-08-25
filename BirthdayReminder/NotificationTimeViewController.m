@@ -1,4 +1,4 @@
-수정//
+//
 //  NotificationTimeViewController.m
 //  BirthdayReminder
 //
