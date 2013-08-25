@@ -7,6 +7,7 @@
 //
 
 #import "NotificationTimeViewController.h"
+#import "StyleSheet.h"
 
 @interface NotificationTimeViewController ()
 
@@ -20,7 +21,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    // StyleSheet 클래스 임포트 후 styleLabel 메소드 호출
+	[StyleSheet styleLabel:self.whatTimeLabel withType:LabelTypeLarge];
 }
 
 - (void)didReceiveMemoryWarning
