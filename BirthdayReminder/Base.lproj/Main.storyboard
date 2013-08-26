@@ -123,6 +123,9 @@
                                         <state key="normal" title="Address Book" image="icon-addressbook.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="importFromAddressBookTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LcB-BY-PMl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dNs-Gy-3Q5" customClass="ActionButton">
                                         <rect key="frame" x="7" y="215" width="307" height="60"/>
@@ -130,6 +133,9 @@
                                         <state key="normal" title="Facebook" image="icon-facebook.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="importFromFacebookTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LkA-cS-uxm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -139,9 +145,17 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="58q-3F-Qhf"/>
-                        <barButtonItem title="Address Book" id="qqW-He-IAo"/>
+                        <barButtonItem title="Address Book" id="qqW-He-IAo">
+                            <connections>
+                                <action selector="importFromAddressBookTapped:" destination="vXZ-lx-hvc" id="YcL-sR-35S"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="UF8-xT-H6B"/>
-                        <barButtonItem title="Facebook" id="u4q-Rg-1Sv"/>
+                        <barButtonItem title="Facebook" id="u4q-Rg-1Sv">
+                            <connections>
+                                <action selector="importFromFacebookTapped:" destination="vXZ-lx-hvc" id="ecw-XN-HnF"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="2er-Te-cY8"/>
                         <barButtonItem title="Guide" id="M3B-EZ-Ua9">
                             <connections>
@@ -163,6 +177,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addressBookButton" destination="MBT-gD-qci" id="cgk-1z-6ND"/>
+                        <outlet property="facebookButton" destination="dNs-Gy-3Q5" id="ulL-Zl-xUO"/>
+                        <outlet property="importLabel" destination="BuR-ef-8ll" id="EF8-Xh-pil"/>
                         <outlet property="tableView" destination="dAa-OV-sSj" id="TBh-53-UHa"/>
                     </connections>
                 </viewController>
