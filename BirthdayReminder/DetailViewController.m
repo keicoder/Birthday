@@ -54,10 +54,26 @@
     NSLog(@"dealloc");
 }
 
+
+#pragma mark 스타일 시트 적용
+
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    
+    // 스타일 시트 적용
+    
+    [StyleSheet styleRoundCorneredView:self.photoView];
+    
+    // [StyleSheet styleLabel:self.birthdayLabel withType:LabelTypeLarge];
+    // [StyleSheet styleLabel:self.notesTitleLabel withType:LabelTypeLarge];
+    // [StyleSheet styleLabel:self.notesTextLabel withType:LabelTypeLarge];
+    [StyleSheet styleLabel:self.remainingDaysLabel withType:LabelTypeDaysUntilBirthday];
+    [StyleSheet styleLabel:self.remainingDaysSubTextLabel withType:LabelTypeDaysUntilBirthdaySubText];
 }
+
+
+#pragma mark 생일 컨텐츠 추가 및 메모 라벨의 컨텐츠 높이를 동적으로 계산
 
 -(void) viewWillAppear:(BOOL)animated
 {
@@ -81,6 +97,59 @@
     } else {
         self.photoView.image = image;
     }
+    
+    int days = self.birthday.remainingDaysUntilNextBirthday;
+    
+    if (days == 0) {
+        // 생일이 오늘이다!
+        self.remainingDaysLabel.text = self.remainingDaysSubTextLabel.text = @"";
+        self.remainingDaysImageView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
+    } else {
+        self.remainingDaysLabel.text = [NSString stringWithFormat:@"%d",days];
+        self.remainingDaysSubTextLabel.text = (days == 1) ? @"more day" : @"more days";
+        self.remainingDaysImageView.image = [UIImage imageNamed:@"days_icon1.png"];
+    }
+    
+    self.birthdayLabel.text = self.birthday.birthdayTextToDisplay;
+    
+    
+    // 메모 라벨의 컨텐츠 높이를 동적으로 계산
+    
+    NSString *notes = (self.birthday.notes && self.birthday.notes.length > 0) ? self.birthday.notes : @"";
+    
+    CGFloat cY = self.notesTextLabel.frame.origin.y;
+    
+    // 필요한 높이를 계산
+    CGSize notesLabelSize = [notes sizeWithFont:self.notesTextLabel.font constrainedToSize:CGSizeMake(300.f, 300.f) lineBreakMode:NSLineBreakByWordWrapping];
+    
+    CGRect frame = self.notesTextLabel.frame;
+    frame.size.height = notesLabelSize.height;
+    self.notesTextLabel.frame = frame;
+    
+    self.notesTextLabel.text = notes;
+    
+    cY += frame.size.height;
+    cY += 10.f;
+    
+    CGFloat buttonGap = 6.f;
+    
+    cY += buttonGap * 2;
+    
+    NSMutableArray *buttonsToShow = [NSMutableArray arrayWithObjects:self.facebookButton, self.callButton, self.smsButton, self.emailButton, self.deleteButton, nil];
+    
+    UIButton *button;
+    
+    int i;
+    
+    for (i=0; i<[buttonsToShow count]; i++) {
+        button = [buttonsToShow objectAtIndex:i];
+        frame = button.frame;
+        frame.origin.y = cY;
+        button.frame = frame;
+        cY += button.frame.size.height + buttonGap;
+    }
+    
+    self.scrollView.contentSize = CGSizeMake(320, cY);
 }
 
 -(void) viewDidAppear:(BOOL)animated
