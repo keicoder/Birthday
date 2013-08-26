@@ -119,6 +119,7 @@
 		BFE0859617CAF5C200F10909 /* actionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0859217CAF5C200F10909 /* actionButton.png */; };
 		BFE0859717CAF5C200F10909 /* deleteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0859317CAF5C200F10909 /* deleteButton@2x.png */; };
 		BFE0859817CAF5C200F10909 /* actionButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0859417CAF5C200F10909 /* actionButton@2x.png */; };
+		BFE685E717CB87BF00613921 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE685E617CB87BF00613921 /* AddressBook.framework */; };
 		BFEC52F917CB82A700C543C6 /* ImportAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEC52F817CB82A700C543C6 /* ImportAddressBookViewController.m */; };
 		BFF71CAE17C946AE009E28A4 /* StyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF71CAD17C946AE009E28A4 /* StyleSheet.m */; };
 		BFFA258417C9155400BB0173 /* app-background1.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFA258017C9155400BB0173 /* app-background1.png */; };
@@ -251,6 +252,7 @@
 		BFE0859217CAF5C200F10909 /* actionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionButton.png; sourceTree = "<group>"; };
 		BFE0859317CAF5C200F10909 /* deleteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteButton@2x.png"; sourceTree = "<group>"; };
 		BFE0859417CAF5C200F10909 /* actionButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "actionButton@2x.png"; sourceTree = "<group>"; };
+		BFE685E617CB87BF00613921 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		BFEC52F717CB82A700C543C6 /* ImportAddressBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportAddressBookViewController.h; sourceTree = "<group>"; };
 		BFEC52F817CB82A700C543C6 /* ImportAddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportAddressBookViewController.m; sourceTree = "<group>"; };
 		BFF71CAC17C946AE009E28A4 /* StyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleSheet.h; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE685E717CB87BF00613921 /* AddressBook.framework in Frameworks */,
 				BF47BE6317C4635A003C209C /* CoreData.framework in Frameworks */,
 				BF6487FB17BE3EDF00202254 /* QuartzCore.framework in Frameworks */,
 				BFC18B9517BDAF2900D49685 /* CoreGraphics.framework in Frameworks */,
@@ -351,6 +354,7 @@
 		BFC18B9117BDAF2900D49685 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFE685E617CB87BF00613921 /* AddressBook.framework */,
 				BF47BE6217C4635A003C209C /* CoreData.framework */,
 				BF6487FA17BE3EDF00202254 /* QuartzCore.framework */,
 				BFC18B9217BDAF2900D49685 /* Foundation.framework */,
