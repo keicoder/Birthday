@@ -6,7 +6,10 @@
 //  Copyright (c) 2013년 jun. All rights reserved.
 //
 
+// ** ImportViewController의 하위 클래스
+
 #import "ImportAddressBookViewController.h"
+#import "DModel.h"
 
 @interface ImportAddressBookViewController ()
 
@@ -14,25 +17,18 @@
 
 @implementation ImportAddressBookViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+// 스텁 코드 제거
+
+#pragma mark - 뷰 라이프 사이클
+
+- (void) viewWillAppear:(BOOL)animated
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [super viewWillAppear:animated];
+    
+    // [[DModel sharedInstance] fetchAddressBookBirthdays];
+    
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
