@@ -221,7 +221,8 @@
 
 - (IBAction)importFromAddressBookTapped:(id)sender
 {
-    
+    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"ImportAddressBook"];
+    [self.navigationController presentViewController:navigationController animated:YES completion:nil];
 }
 
 
