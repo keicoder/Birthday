@@ -217,6 +217,20 @@
 }
 
 
+#pragma mark - 최초 친구의 정보를 가져오기 위한 버튼 액션 메소드
+
+- (IBAction)importFromAddressBookTapped:(id)sender
+{
+    
+}
+
+
+- (IBAction)importFromFacebookTapped:(id)sender
+{
+    
+}
+
+
 #pragma mark - 테이블 뷰 데이터 소스 메소드 (Table view data source)
 
 
