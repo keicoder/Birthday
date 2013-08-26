@@ -39,6 +39,9 @@
 // getExistingBirthdaysWithUIDs: 메소드는 생일 엔티티의 고유 id를 키로 사용해 기존 생일 엔티티의 수정 가능 딕셔너리를 반환한다.
 // 이 수정 가능 딕셔너리는 생일 딕셔너리를 불러올 때마다 매번 참조할 수 있다.
 
+
+// 코어 데이터 활용 - initWithCoder 메소드 삭제
+/*
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -108,7 +111,7 @@
     }
     return self;
 }
-
+*/
 
 /*
 - (id)initWithCoder:(NSCoder *)aDecoder
