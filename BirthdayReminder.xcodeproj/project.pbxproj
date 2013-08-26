@@ -108,6 +108,14 @@
 		BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC1BBDB17C09058007B8266 /* thumbnail-background.png */; };
 		BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC1BBDC17C09058007B8266 /* thumbnail-background@2x.png */; };
 		BFE00E3417C877A400DA6966 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE00E3317C877A400DA6966 /* UIImage+Thumbnail.m */; };
+		BFE0858D17CAF2D200F10909 /* button-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0858917CAF2D200F10909 /* button-blue.png */; };
+		BFE0858E17CAF2D200F10909 /* button-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0858A17CAF2D200F10909 /* button-blue@2x.png */; };
+		BFE0858F17CAF2D200F10909 /* button-red.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0858B17CAF2D200F10909 /* button-red.png */; };
+		BFE0859017CAF2D200F10909 /* button-red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0858C17CAF2D200F10909 /* button-red@2x.png */; };
+		BFE0859517CAF5C200F10909 /* deleteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0859117CAF5C200F10909 /* deleteButton.png */; };
+		BFE0859617CAF5C200F10909 /* actionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0859217CAF5C200F10909 /* actionButton.png */; };
+		BFE0859717CAF5C200F10909 /* deleteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0859317CAF5C200F10909 /* deleteButton@2x.png */; };
+		BFE0859817CAF5C200F10909 /* actionButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0859417CAF5C200F10909 /* actionButton@2x.png */; };
 		BFF71CAE17C946AE009E28A4 /* StyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF71CAD17C946AE009E28A4 /* StyleSheet.m */; };
 		BFFA258417C9155400BB0173 /* app-background1.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFA258017C9155400BB0173 /* app-background1.png */; };
 		BFFA258517C9155400BB0173 /* app-background1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFA258117C9155400BB0173 /* app-background1@2x.png */; };
@@ -227,6 +235,14 @@
 		BFC1BBDC17C09058007B8266 /* thumbnail-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail-background@2x.png"; sourceTree = "<group>"; };
 		BFE00E3217C877A400DA6966 /* UIImage+Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Thumbnail.h"; sourceTree = "<group>"; };
 		BFE00E3317C877A400DA6966 /* UIImage+Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Thumbnail.m"; sourceTree = "<group>"; };
+		BFE0858917CAF2D200F10909 /* button-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-blue.png"; sourceTree = "<group>"; };
+		BFE0858A17CAF2D200F10909 /* button-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-blue@2x.png"; sourceTree = "<group>"; };
+		BFE0858B17CAF2D200F10909 /* button-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-red.png"; sourceTree = "<group>"; };
+		BFE0858C17CAF2D200F10909 /* button-red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-red@2x.png"; sourceTree = "<group>"; };
+		BFE0859117CAF5C200F10909 /* deleteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleteButton.png; sourceTree = "<group>"; };
+		BFE0859217CAF5C200F10909 /* actionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionButton.png; sourceTree = "<group>"; };
+		BFE0859317CAF5C200F10909 /* deleteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteButton@2x.png"; sourceTree = "<group>"; };
+		BFE0859417CAF5C200F10909 /* actionButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "actionButton@2x.png"; sourceTree = "<group>"; };
 		BFF71CAC17C946AE009E28A4 /* StyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleSheet.h; sourceTree = "<group>"; };
 		BFF71CAD17C946AE009E28A4 /* StyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleSheet.m; sourceTree = "<group>"; };
 		BFFA258017C9155400BB0173 /* app-background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-background1.png"; sourceTree = "<group>"; };
@@ -383,6 +399,14 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BFE0859117CAF5C200F10909 /* deleteButton.png */,
+				BFE0859217CAF5C200F10909 /* actionButton.png */,
+				BFE0859317CAF5C200F10909 /* deleteButton@2x.png */,
+				BFE0859417CAF5C200F10909 /* actionButton@2x.png */,
+				BFE0858917CAF2D200F10909 /* button-blue.png */,
+				BFE0858A17CAF2D200F10909 /* button-blue@2x.png */,
+				BFE0858B17CAF2D200F10909 /* button-red.png */,
+				BFE0858C17CAF2D200F10909 /* button-red@2x.png */,
 				BF43C38817C9FF2700AFA63A /* icon-delete.png */,
 				BF43C38917C9FF2700AFA63A /* icon-delete@2x.png */,
 				BF55AF5017C9FEBA009E5A38 /* icon-call.png */,
@@ -563,6 +587,8 @@
 				BFC1BBDD17C09058007B8266 /* icon-birthday-cake.png in Resources */,
 				BFBC036417C1A513002E4687 /* brad-pitt.jpg in Resources */,
 				BFBC036B17C1A513002E4687 /* scarlett-johansson.jpg in Resources */,
+				BFE0858D17CAF2D200F10909 /* button-blue.png in Resources */,
+				BFE0859617CAF5C200F10909 /* actionButton.png in Resources */,
 				BFBC036A17C1A513002E4687 /* russell-brand.jpg in Resources */,
 				BF74A03E17C9BE240052E26F /* iOS_ToolBar_BackgroundImage@2x.png in Resources */,
 				BFC18BE117BDB74400D49685 /* Icon@2x.png in Resources */,
@@ -574,6 +600,7 @@
 				BF2C2E3317C9F5B5001E5014 /* icon-sms.png in Resources */,
 				BFC18BDD17BDB74400D49685 /* Icon-Small@2x.png in Resources */,
 				BF2C2E3017C9F5A4001E5014 /* icon-facebook@2x.png in Resources */,
+				BFE0858E17CAF2D200F10909 /* button-blue@2x.png in Resources */,
 				BF74AB3317C940940095F451 /* days_icon@2x.png in Resources */,
 				BF2C2E2D17C9F5A4001E5014 /* icon-email.png in Resources */,
 				BFFA258417C9155400BB0173 /* app-background1.png in Resources */,
@@ -588,6 +615,7 @@
 				BF43C38A17C9FF2700AFA63A /* icon-delete.png in Resources */,
 				BF31F62B17C920C900F06E96 /* icon-days-remaining@2x.png in Resources */,
 				BFC18B9D17BDAF2900D49685 /* InfoPlist.strings in Resources */,
+				BFE0859817CAF5C200F10909 /* actionButton@2x.png in Resources */,
 				BF6487F417BE0D9300202254 /* BRAppGuide01.png in Resources */,
 				BF43C38B17C9FF2700AFA63A /* icon-delete@2x.png in Resources */,
 				BFC18BA617BDAF2900D49685 /* Main.storyboard in Resources */,
@@ -595,7 +623,9 @@
 				BF8B450517C93CA300B11EF7 /* cell_background@2x.png in Resources */,
 				BFBC036217C1A513002E4687 /* aloe-blacc.jpg in Resources */,
 				BFC18BD717BDB74400D49685 /* Icon-72.png in Resources */,
+				BFE0858F17CAF2D200F10909 /* button-red.png in Resources */,
 				BF74A03217C9AE950052E26F /* icon-settings@2x.png in Resources */,
+				BFE0859517CAF5C200F10909 /* deleteButton.png in Resources */,
 				BFBC036917C1A513002E4687 /* olly-murs.jpg in Resources */,
 				BF74AB3B17C9449F0095F451 /* days_icon1.png in Resources */,
 				BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */,
@@ -604,7 +634,9 @@
 				BFBC036817C1A513002E4687 /* katy-perry.jpg in Resources */,
 				BF2C2E2717C9EC67001E5014 /* icon-notes@2x.png in Resources */,
 				BFC18BDF17BDB74400D49685 /* Icon.png in Resources */,
+				BFE0859017CAF2D200F10909 /* button-red@2x.png in Resources */,
 				BF74A03D17C9BE240052E26F /* iOS_ToolBar_BackgroundImage.png in Resources */,
+				BFE0859717CAF5C200F10909 /* deleteButton@2x.png in Resources */,
 				BFBC036517C1A513002E4687 /* christina-aguilera.jpg in Resources */,
 				BF74A03517C9B9100052E26F /* iOS_NavigationBar_BackgroundImage.png in Resources */,
 				BF74AB3917C944970095F451 /* days_icon1@2x.png in Resources */,

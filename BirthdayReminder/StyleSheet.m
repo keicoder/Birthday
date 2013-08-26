@@ -8,6 +8,8 @@
 
 #import "StyleSheet.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ActionButton.h"
+#import "DeleteButton.h"
 
 #define kFontLightOnDarkTextColour [UIColor colorWithRed:255.0/255 green:251.0/255 blue:218.0/255 alpha:1.0]
 #define kFontDarkOnLightTextColour [UIColor colorWithRed:1.0/255 green:1.0/255 blue:1.0/255 alpha:1.0]
@@ -157,6 +159,17 @@
     barButtonItemTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor grayColor], UITextAttributeTextColor,nil];
     [[UIBarButtonItem appearanceWhenContainedIn:[UIToolbar class], nil]
      setTitleTextAttributes:barButtonItemTextAttributes forState:UIControlStateNormal];
+    
+    // 버튼 (상세 뷰의 ActionButton 및 DeleteButton)
+    // 새로만든 ActionButton 및 ActionButton의 하위 클래스인 DeleteButton 클래스 임포트
+    //*** ActionButton의 제목 색상을 구현하면 하위 클래스인 DeleteButton도 이 스타일을 상속하게 됨
+    [[ActionButton appearance] setBackgroundImage:[UIImage imageNamed:@"actionButton.png"] forState:UIControlStateNormal];
+    [[ActionButton appearance] setTitleColor:kLargeButtonTextColour forState:UIControlStateNormal];
+    // [[ActionButton appearance] setFont:kFontLarge];
+    
+    [[DeleteButton appearance] setBackgroundImage:[UIImage imageNamed:@"deleteButton.png"] forState:UIControlStateNormal];
+    [[DeleteButton appearance] setTitleColor:kLargeButtonTextColour forState:UIControlStateNormal];
+    // [[DeleteButton appearance] setFont:kFontLarge];
     
     // 테이블 뷰
     [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
