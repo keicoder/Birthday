@@ -41,4 +41,11 @@
 #pragma mark - 중복 엔티티 검사
 - (NSMutableDictionary *) getExistingBirthdaysWithUIDs:(NSArray *)uids;
 
+#pragma mark - 데이터 조회 메소드 (생일이 있는 연락처만 필터링하는 데이터 모델)
+// 연락처 가져오기 뷰 컨트롤러는 모델의 이 메소드 호출, 이 메소드는 다시 연락처 접근 가능 여부를 검사한다.
+// 주소록 프레임워크는 C로 작성됨. 따라서 ARC 기능이 없다. 개발자 스스로 메모리 누수를 막아야 한다.
+- (void) fetchAddressBookBirthdays;
+
+
+
 @end

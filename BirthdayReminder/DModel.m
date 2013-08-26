@@ -19,6 +19,7 @@
 
 #import "DModel.h"
 #import "DBirthday.h"
+#import <AddressBook/AddressBook.h>
 
 @implementation DModel
 
@@ -193,5 +194,56 @@ static DModel *_sharedInstance = nil;
     
     return tmpDict;
 }
+
+
+
+#pragma mark - 데이터 조회 메소드 (생일이 있는 연락처만 필터링하는 데이터 모델)
+// 연락처 가져오기 뷰 컨트롤러는 모델의 이 메소드 호출, 이 메소드는 다시 연락처 접근 가능 여부를 검사한다.
+// 주소록 프레임워크는 C로 작성됨. 따라서 ARC 기능이 없다. 개발자 스스로 메모리 누수를 막아야 한다.
+
+- (void) fetchAddressBookBirthdays
+{
+    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
+    
+    switch (ABAddressBookGetAuthorizationStatus()) {
+        
+        // 사용자가 승인하지 않았거나 거부한 경우
+        case kABAuthorizationStatusNotDetermined:
+        {
+            ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
+                if (granted) {
+                    NSLog(@"Access to the Address Book has been granted");
+                }
+                else {
+                    NSLog(@"Access to the Address Book has been denied");
+                }
+            });
+            break;
+        }
+        
+        case kABAuthorizationStatusAuthorized:
+        {
+            NSLog(@"User has already granted access to the Address Book");
+            break;
+        }
+        
+        // 사용자가 시스템에 대한 접근을 제한한 경우 (부모 통제 기능 등)
+        case kABAuthorizationStatusRestricted:
+        {
+            NSLog(@"User has restricted access to Address Book possibly due to parental controls");
+            break;
+        }
+        
+        case kABAuthorizationStatusDenied:
+        {
+            NSLog(@"User has denied access to the Address Book");
+            break;
+        }
+    }
+    
+    CFRelease(addressBook);
+}
+
+
 
 @end
