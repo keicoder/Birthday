@@ -658,10 +658,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="152" y="-714"/>
         </scene>
-        <!--Import View Controller - Address Book-->
+        <!--Import Address Book View Controller - Address Book-->
         <scene sceneID="zg8-Ne-Xre">
             <objects>
-                <viewController id="ZCU-23-Hcr" customClass="ImportViewController" sceneMemberID="viewController">
+                <viewController id="ZCU-23-Hcr" customClass="ImportAddressBookViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zqe-T6-H43">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -834,6 +834,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="icon-call.png" width="30" height="30"/>
         <image name="icon-delete.png" width="30" height="30"/>
         <image name="icon-email.png" width="30" height="30"/>
+        <image name="icon-facebook.png" width="30" height="30"/>
         <image name="icon-facebook.png" width="30" height="30"/>
         <image name="icon-notes.png" width="22" height="22"/>
         <image name="icon-settings.png" width="19" height="19"/>
