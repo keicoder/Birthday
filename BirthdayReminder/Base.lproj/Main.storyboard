@@ -106,6 +106,34 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="o08-Ek-F6U"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" id="YJp-Hr-c2N">
+                                <rect key="frame" x="0.0" y="66" width="320" height="464"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import Birthdays from ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BuR-ef-8ll">
+                                        <rect key="frame" x="20" y="83" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MBT-gD-qci" customClass="ActionButton">
+                                        <rect key="frame" x="7" y="147" width="307" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Address Book" image="icon-addressbook.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dNs-Gy-3Q5" customClass="ActionButton">
+                                        <rect key="frame" x="7" y="215" width="307" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Facebook" image="icon-facebook.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -660,10 +688,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="Icon-72.png" width="72" height="72"/>
         <image name="days_icon1.png" width="72" height="72"/>
         <image name="icon-add-new.png" width="19" height="19"/>
+        <image name="icon-addressbook.png" width="30" height="30"/>
         <image name="icon-birthday-cake.png" width="55" height="55"/>
         <image name="icon-call.png" width="30" height="30"/>
         <image name="icon-delete.png" width="30" height="30"/>
         <image name="icon-email.png" width="30" height="30"/>
+        <image name="icon-facebook.png" width="30" height="30"/>
         <image name="icon-facebook.png" width="30" height="30"/>
         <image name="icon-notes.png" width="22" height="22"/>
         <image name="icon-settings.png" width="19" height="19"/>
@@ -676,6 +706,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rJU-Rv-1EP"/>
+        <segue reference="4ZG-yo-WKQ"/>
     </inferredMetricsTieBreakers>
 </document>

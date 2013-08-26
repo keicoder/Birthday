@@ -18,6 +18,8 @@
 		BF31F62A17C920C900F06E96 /* icon-days-remaining.png in Resources */ = {isa = PBXBuildFile; fileRef = BF31F62817C920C900F06E96 /* icon-days-remaining.png */; };
 		BF31F62B17C920C900F06E96 /* icon-days-remaining@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF31F62917C920C900F06E96 /* icon-days-remaining@2x.png */; };
 		BF31F62F17C9242900F06E96 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF31F62E17C9242900F06E96 /* TableViewCell.m */; };
+		BF38708117CB050100C05D98 /* icon-addressbook.png in Resources */ = {isa = PBXBuildFile; fileRef = BF38707F17CB050100C05D98 /* icon-addressbook.png */; };
+		BF38708217CB050100C05D98 /* icon-addressbook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF38708017CB050100C05D98 /* icon-addressbook@2x.png */; };
 		BF43C38A17C9FF2700AFA63A /* icon-delete.png in Resources */ = {isa = PBXBuildFile; fileRef = BF43C38817C9FF2700AFA63A /* icon-delete.png */; };
 		BF43C38B17C9FF2700AFA63A /* icon-delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF43C38917C9FF2700AFA63A /* icon-delete@2x.png */; };
 		BF47BE6317C4635A003C209C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF47BE6217C4635A003C209C /* CoreData.framework */; };
@@ -146,6 +148,8 @@
 		BF31F62917C920C900F06E96 /* icon-days-remaining@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-days-remaining@2x.png"; sourceTree = "<group>"; };
 		BF31F62D17C9242900F06E96 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		BF31F62E17C9242900F06E96 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		BF38707F17CB050100C05D98 /* icon-addressbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-addressbook.png"; sourceTree = "<group>"; };
+		BF38708017CB050100C05D98 /* icon-addressbook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-addressbook@2x.png"; sourceTree = "<group>"; };
 		BF43C38817C9FF2700AFA63A /* icon-delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-delete.png"; sourceTree = "<group>"; };
 		BF43C38917C9FF2700AFA63A /* icon-delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-delete@2x.png"; sourceTree = "<group>"; };
 		BF47BE6217C4635A003C209C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -399,6 +403,8 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF38707F17CB050100C05D98 /* icon-addressbook.png */,
+				BF38708017CB050100C05D98 /* icon-addressbook@2x.png */,
 				BFE0859117CAF5C200F10909 /* deleteButton.png */,
 				BFE0859217CAF5C200F10909 /* actionButton.png */,
 				BFE0859317CAF5C200F10909 /* deleteButton@2x.png */,
@@ -626,6 +632,7 @@
 				BFE0858F17CAF2D200F10909 /* button-red.png in Resources */,
 				BF74A03217C9AE950052E26F /* icon-settings@2x.png in Resources */,
 				BFE0859517CAF5C200F10909 /* deleteButton.png in Resources */,
+				BF38708217CB050100C05D98 /* icon-addressbook@2x.png in Resources */,
 				BFBC036917C1A513002E4687 /* olly-murs.jpg in Resources */,
 				BF74AB3B17C9449F0095F451 /* days_icon1.png in Resources */,
 				BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */,
@@ -646,6 +653,7 @@
 				BFBC035617C1A4FE002E4687 /* birthdays.plist in Resources */,
 				BF55AF5317C9FEBA009E5A38 /* icon-call@2x.png in Resources */,
 				BFC18BD317BDB74400D49685 /* Default.png in Resources */,
+				BF38708117CB050100C05D98 /* icon-addressbook.png in Resources */,
 				BF2C2E3417C9F5B5001E5014 /* icon-sms@2x.png in Resources */,
 				BF74A02E17C9AE8A0052E26F /* icon-add-new@2x.png in Resources */,
 				BFC18BDB17BDB74400D49685 /* Icon-Small.png in Resources */,
