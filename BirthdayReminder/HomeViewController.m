@@ -12,6 +12,7 @@
 #import "DBirthday.h"
 #import "DModel.h"
 #import "TableViewCell.h"
+#import "StyleSheet.h"
 
 
 @interface HomeViewController ()
@@ -23,12 +24,23 @@
 // NSFetchedResultsController를 private 속성으로 선언
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
+// 코어 데이터 저장소에 생일이 없을 경우에만 importView(컨테이너 뷰)를 보여줌, private 속성
+@property (nonatomic) BOOL hasFriends;
+
+
 @end
 
 
 @implementation HomeViewController
 
 @synthesize tableView;
+
+@synthesize importLabel;
+@synthesize addressBookButton;
+@synthesize facebookButton;
+@synthesize importView;
+
+
 
 #pragma mark - 지정 초기자 오버라이드
 
@@ -161,7 +173,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    // 컨테이너 뷰인 importView에 클리어 컬러 적용
+    // self.importView.backgroundColor = [UIColor clearColor];
+    [importView setBackgroundColor:[UIColor clearColor]];
+    
+    
+    // Import Birthdays from ... 라벨에 스타일 시트 적용
+    [StyleSheet styleLabel:self.importLabel withType:LabelTypeJun];
+    
 }
 
 
@@ -177,8 +197,24 @@
     // Add/Edit 버튼을 통해 생성/편집한 모델(생일의 배열)을 홈 뷰 컨트롤러가 나타나려는 시점마다 재로드
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+    
+    // 코어 데이터 저장소에 생일이 없을 경우에만 importView(컨테이너 뷰)를 보여줌, BOOL 값 확인
+    self.hasFriends = [self.fetchedResultsController.fetchedObjects count] > 0;
 }
 
+
+#pragma mark - 코어 데이터 저장소에 생일이 없을 경우에만 importView(컨테이너 뷰)를 보여줌, private 속성, 세터 메소드 오버라이드
+
+-(void) setHasFriends:(BOOL)hasFriends
+{
+    _hasFriends = hasFriends;
+    self.importView.hidden = _hasFriends;
+    self.tableView.hidden = !_hasFriends;
+    
+    if (self.navigationController.topViewController == self) {
+        [self.navigationController setToolbarHidden:!_hasFriends animated:NO];
+    }
+}
 
 
 #pragma mark - 테이블 뷰 데이터 소스 메소드 (Table view data source)

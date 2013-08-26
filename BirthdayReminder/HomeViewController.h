@@ -34,13 +34,13 @@
 
 #pragma mark - 최초 친구의 정보를 가져오기 위한 액션 메소드
 
-- (IBAction)importFromAddressBookTapped:(id)sender;
-- (IBAction)importFromFacebookTapped:(id)sender;
+// - (IBAction)importFromAddressBookTapped:(id)sender;
+// - (IBAction)importFromFacebookTapped:(id)sender;
 
 
 #pragma mark - Segue 메소드
 
--(IBAction)unwindBackToHomeViewController:(UIStoryboardSegue *)segue;
+// -(IBAction)unwindBackToHomeViewController:(UIStoryboardSegue *)segue;
 
 
 

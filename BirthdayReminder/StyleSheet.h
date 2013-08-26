@@ -13,7 +13,8 @@ typedef enum : int {
     LabelTypeBirthdayDate,
     LabelTypeDaysUntilBirthday,
     LabelTypeDaysUntilBirthdaySubText,
-    LabelTypeLarge
+    LabelTypeLarge,
+    LabelTypeJun
 }LabelType;
 
 

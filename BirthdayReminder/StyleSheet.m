@@ -32,6 +32,9 @@
 #define kFontPicPhoto [UIFont fontWithName:@"HelveticaNeue-Bold" size:12.f]
 #define kFontDropShadowColour [UIColor colorWithRed:1.0/255 green:1.0/255 blue:1.0/255 alpha:0.75]
 
+#define kFontJun [UIFont fontWithName:@"HelveticaNeue-Bold" size:18.f]
+#define kFontJunTextColour [UIColor colorWithRed:47.f/255 green:79.f/255 blue:79.f/255 alpha:1.0] // dark slate gray
+
 
 @implementation StyleSheet
 
@@ -66,6 +69,10 @@
             label.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
             label.layer.shadowRadius = 0.0f;
             label.layer.masksToBounds = NO;
+            break;
+        case LabelTypeJun:
+            label.font = kFontJun;
+            label.textColor = kFontJunTextColour;
             break;
         default:
             label.textColor = kFontLightOnDarkTextColour;
