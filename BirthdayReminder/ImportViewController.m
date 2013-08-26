@@ -35,4 +35,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+#pragma mark - 테이블 뷰 데이터 소스 메소드 (Table view data source)
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.birthdays count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    return cell;
+}
+
+
+
+#pragma mark - 버튼 액션 메소드
+
+- (IBAction)didTapImportButton:(id)sender
+{
+    
+}
+
+
+- (IBAction)didTapSelectAllButton:(id)sender
+{
+    
+}
+
+
+- (IBAction)didTapSelectNoneButton:(id)sender
+{
+    
+}
+
+
+
 @end

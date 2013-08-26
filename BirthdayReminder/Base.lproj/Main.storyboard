@@ -498,7 +498,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7l-LZ-QFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="-20"/>
+            <point key="canvasLocation" x="678" y="-20"/>
         </scene>
         <!--Notification Time View Controller - Alert Time-->
         <scene sceneID="Mq4-p0-yte">
@@ -557,7 +557,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQs-ci-YXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="570" y="-20"/>
+            <point key="canvasLocation" x="1096" y="-20"/>
         </scene>
         <!--Notes Edit View Controller - Edit Notes-->
         <scene sceneID="M9u-Hk-n9Z">
@@ -659,6 +659,115 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="152" y="-714"/>
         </scene>
+        <!--Import View Controller - Address Book-->
+        <scene sceneID="zg8-Ne-Xre">
+            <objects>
+                <viewController id="ZCU-23-Hcr" customClass="ImportViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zqe-T6-H43">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="22" sectionFooterHeight="22" id="fLa-Oi-ipU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="72" id="sBb-0O-3i7" customClass="TableViewCell">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sBb-0O-3i7" id="3sP-Kh-ZBG">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QRK-Mw-nuS">
+                                                    <rect key="frame" x="20" y="-1" width="72" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="hyY-wm-xvd">
+                                                    <rect key="frame" x="228" y="0.0" width="72" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AS7-Q4-g3e">
+                                                    <rect key="frame" x="100" y="20" width="120" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eYd-Th-0QJ">
+                                                    <rect key="frame" x="100" y="39" width="120" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="5Y3-Zu-q6u">
+                                                    <rect key="frame" x="236" y="20" width="59" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GYw-UM-9ZV">
+                                                    <rect key="frame" x="236" y="39" width="59" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="birthdayLabel" destination="eYd-Th-0QJ" id="CX7-AQ-c7w"/>
+                                            <outlet property="iconView" destination="QRK-Mw-nuS" id="tX7-0j-u9R"/>
+                                            <outlet property="nameLabel" destination="AS7-Q4-g3e" id="ekH-OH-Ele"/>
+                                            <outlet property="remainingDaysImageView" destination="hyY-wm-xvd" id="pN5-pX-eB1"/>
+                                            <outlet property="remainingDaysLabel" destination="5Y3-Zu-q6u" id="laS-FQ-JDb"/>
+                                            <outlet property="remainingDaysSubTextLabel" destination="GYw-UM-9ZV" id="MsY-4g-9Rt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZCU-23-Hcr" id="GKd-Ww-9w7"/>
+                                    <outlet property="delegate" destination="ZCU-23-Hcr" id="EFk-Df-anQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wpU-Y7-3D0"/>
+                        <barButtonItem title="Select All" id="CDG-8T-pPx">
+                            <connections>
+                                <action selector="didTapSelectAllButton:" destination="ZCU-23-Hcr" id="rrk-oh-wG4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="R7I-X5-lzJ"/>
+                        <barButtonItem title="Select None" id="vPb-Fw-Ct3">
+                            <connections>
+                                <action selector="didTapSelectNoneButton:" destination="ZCU-23-Hcr" id="E0j-Ac-yFI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Zmy-XL-Iht"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Address Book" id="dRq-T9-Oqg">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="tDk-N6-JYB">
+                            <connections>
+                                <action selector="cancelAndDismiss:" destination="ZCU-23-Hcr" id="fql-am-2fx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Import" id="VWd-dH-bsh">
+                            <connections>
+                                <action selector="didTapImportButton:" destination="ZCU-23-Hcr" id="7i2-zZ-PJt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="importButton" destination="VWd-dH-bsh" id="1aC-87-EUg"/>
+                        <outlet property="tableView" destination="fLa-Oi-ipU" id="Rb3-1A-1aF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guq-i5-SBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-515" y="-20"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ijv-Oo-xnP">
             <objects>
@@ -675,7 +784,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWp-dp-BnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-317" y="-20"/>
+            <point key="canvasLocation" x="209" y="-20"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AHK-5t-7Ev">
@@ -694,6 +803,28 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="429-3c-ELj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1185" y="-1399"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b26-kx-MEh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="hIS-aE-nXr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dWX-pD-bXn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3eO-2U-Mr9">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="ZCU-23-Hcr" kind="relationship" relationship="rootViewController" id="70v-ry-UDB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Txt-4C-GFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-953" y="-20"/>
         </scene>
     </scenes>
     <resources>
