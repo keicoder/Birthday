@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2C2E2717C9EC67001E5014 /* icon-notes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2E2517C9EC67001E5014 /* icon-notes@2x.png */; };
+		BF2C2E2817C9EC67001E5014 /* icon-notes.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2E2617C9EC67001E5014 /* icon-notes.png */; };
+		BF2C2E2D17C9F5A4001E5014 /* icon-email.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2E2917C9F5A4001E5014 /* icon-email.png */; };
+		BF2C2E2E17C9F5A4001E5014 /* icon-email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2E2A17C9F5A4001E5014 /* icon-email@2x.png */; };
+		BF2C2E2F17C9F5A4001E5014 /* icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2E2B17C9F5A4001E5014 /* icon-facebook.png */; };
+		BF2C2E3017C9F5A4001E5014 /* icon-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2E2C17C9F5A4001E5014 /* icon-facebook@2x.png */; };
+		BF2C2E3317C9F5B5001E5014 /* icon-sms.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2E3117C9F5B5001E5014 /* icon-sms.png */; };
+		BF2C2E3417C9F5B5001E5014 /* icon-sms@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2C2E3217C9F5B5001E5014 /* icon-sms@2x.png */; };
 		BF31F62A17C920C900F06E96 /* icon-days-remaining.png in Resources */ = {isa = PBXBuildFile; fileRef = BF31F62817C920C900F06E96 /* icon-days-remaining.png */; };
 		BF31F62B17C920C900F06E96 /* icon-days-remaining@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF31F62917C920C900F06E96 /* icon-days-remaining@2x.png */; };
 		BF31F62F17C9242900F06E96 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF31F62E17C9242900F06E96 /* TableViewCell.m */; };
+		BF43C38A17C9FF2700AFA63A /* icon-delete.png in Resources */ = {isa = PBXBuildFile; fileRef = BF43C38817C9FF2700AFA63A /* icon-delete.png */; };
+		BF43C38B17C9FF2700AFA63A /* icon-delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF43C38917C9FF2700AFA63A /* icon-delete@2x.png */; };
 		BF47BE6317C4635A003C209C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF47BE6217C4635A003C209C /* CoreData.framework */; };
 		BF47BE6717C4648E003C209C /* BirthdayReminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF47BE6517C4648E003C209C /* BirthdayReminder.xcdatamodeld */; };
 		BF47BE6A17C46AD8003C209C /* DBirthday.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47BE6917C46AD8003C209C /* DBirthday.m */; };
+		BF55AF5217C9FEBA009E5A38 /* icon-call.png in Resources */ = {isa = PBXBuildFile; fileRef = BF55AF5017C9FEBA009E5A38 /* icon-call.png */; };
+		BF55AF5317C9FEBA009E5A38 /* icon-call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF55AF5117C9FEBA009E5A38 /* icon-call@2x.png */; };
 		BF6487E117BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E217BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
@@ -112,14 +124,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF2C2E2517C9EC67001E5014 /* icon-notes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-notes@2x.png"; sourceTree = "<group>"; };
+		BF2C2E2617C9EC67001E5014 /* icon-notes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-notes.png"; sourceTree = "<group>"; };
+		BF2C2E2917C9F5A4001E5014 /* icon-email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-email.png"; sourceTree = "<group>"; };
+		BF2C2E2A17C9F5A4001E5014 /* icon-email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-email@2x.png"; sourceTree = "<group>"; };
+		BF2C2E2B17C9F5A4001E5014 /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-facebook.png"; sourceTree = "<group>"; };
+		BF2C2E2C17C9F5A4001E5014 /* icon-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-facebook@2x.png"; sourceTree = "<group>"; };
+		BF2C2E3117C9F5B5001E5014 /* icon-sms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sms.png"; sourceTree = "<group>"; };
+		BF2C2E3217C9F5B5001E5014 /* icon-sms@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sms@2x.png"; sourceTree = "<group>"; };
 		BF31F62817C920C900F06E96 /* icon-days-remaining.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-days-remaining.png"; sourceTree = "<group>"; };
 		BF31F62917C920C900F06E96 /* icon-days-remaining@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-days-remaining@2x.png"; sourceTree = "<group>"; };
 		BF31F62D17C9242900F06E96 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		BF31F62E17C9242900F06E96 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		BF43C38817C9FF2700AFA63A /* icon-delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-delete.png"; sourceTree = "<group>"; };
+		BF43C38917C9FF2700AFA63A /* icon-delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-delete@2x.png"; sourceTree = "<group>"; };
 		BF47BE6217C4635A003C209C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BF47BE6617C4648E003C209C /* BirthdayReminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirthdayReminder.xcdatamodel; sourceTree = "<group>"; };
 		BF47BE6817C46AD8003C209C /* DBirthday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBirthday.h; sourceTree = "<group>"; };
 		BF47BE6917C46AD8003C209C /* DBirthday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBirthday.m; sourceTree = "<group>"; };
+		BF55AF5017C9FEBA009E5A38 /* icon-call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-call.png"; sourceTree = "<group>"; };
+		BF55AF5117C9FEBA009E5A38 /* icon-call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-call@2x.png"; sourceTree = "<group>"; };
 		BF6487DF17BDE90C00202254 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		BF6487E017BDE90C00202254 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		BF6487E317BDEDE200202254 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
@@ -349,6 +373,18 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF43C38817C9FF2700AFA63A /* icon-delete.png */,
+				BF43C38917C9FF2700AFA63A /* icon-delete@2x.png */,
+				BF55AF5017C9FEBA009E5A38 /* icon-call.png */,
+				BF55AF5117C9FEBA009E5A38 /* icon-call@2x.png */,
+				BF2C2E3117C9F5B5001E5014 /* icon-sms.png */,
+				BF2C2E3217C9F5B5001E5014 /* icon-sms@2x.png */,
+				BF2C2E2917C9F5A4001E5014 /* icon-email.png */,
+				BF2C2E2A17C9F5A4001E5014 /* icon-email@2x.png */,
+				BF2C2E2B17C9F5A4001E5014 /* icon-facebook.png */,
+				BF2C2E2C17C9F5A4001E5014 /* icon-facebook@2x.png */,
+				BF2C2E2517C9EC67001E5014 /* icon-notes@2x.png */,
+				BF2C2E2617C9EC67001E5014 /* icon-notes.png */,
 				BF74A03B17C9BE240052E26F /* iOS_ToolBar_BackgroundImage.png */,
 				BF74A03C17C9BE240052E26F /* iOS_ToolBar_BackgroundImage@2x.png */,
 				BF74A03317C9B9100052E26F /* iOS_NavigationBar_BackgroundImage.png */,
@@ -511,6 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2C2E2E17C9F5A4001E5014 /* icon-email@2x.png in Resources */,
 				BFFA258717C9155400BB0173 /* app-background@2x.png in Resources */,
 				BFC18BD517BDB74400D49685 /* Default@2x.png in Resources */,
 				BFC1BBDD17C09058007B8266 /* icon-birthday-cake.png in Resources */,
@@ -524,19 +561,27 @@
 				BFC18BD917BDB74400D49685 /* Icon-72@2x.png in Resources */,
 				BF74A02D17C9AE8A0052E26F /* icon-add-new.png in Resources */,
 				BF8B450417C93CA300B11EF7 /* cell_background.png in Resources */,
+				BF2C2E3317C9F5B5001E5014 /* icon-sms.png in Resources */,
 				BFC18BDD17BDB74400D49685 /* Icon-Small@2x.png in Resources */,
+				BF2C2E3017C9F5A4001E5014 /* icon-facebook@2x.png in Resources */,
 				BF74AB3317C940940095F451 /* days_icon@2x.png in Resources */,
+				BF2C2E2D17C9F5A4001E5014 /* icon-email.png in Resources */,
 				BFFA258417C9155400BB0173 /* app-background1.png in Resources */,
 				BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */,
 				BF31F62A17C920C900F06E96 /* icon-days-remaining.png in Resources */,
+				BF2C2E2817C9EC67001E5014 /* icon-notes.png in Resources */,
 				BF74A03117C9AE950052E26F /* icon-settings.png in Resources */,
 				BFBC036617C1A513002E4687 /* jamie-oliver.jpg in Resources */,
 				BFC1BBDE17C09058007B8266 /* icon-birthday-cake@2x.png in Resources */,
 				BFC18BD117BDB74400D49685 /* Default-568h@2x.png in Resources */,
+				BF2C2E2F17C9F5A4001E5014 /* icon-facebook.png in Resources */,
+				BF43C38A17C9FF2700AFA63A /* icon-delete.png in Resources */,
 				BF31F62B17C920C900F06E96 /* icon-days-remaining@2x.png in Resources */,
 				BFC18B9D17BDAF2900D49685 /* InfoPlist.strings in Resources */,
 				BF6487F417BE0D9300202254 /* BRAppGuide01.png in Resources */,
+				BF43C38B17C9FF2700AFA63A /* icon-delete@2x.png in Resources */,
 				BFC18BA617BDAF2900D49685 /* Main.storyboard in Resources */,
+				BF55AF5217C9FEBA009E5A38 /* icon-call.png in Resources */,
 				BF8B450517C93CA300B11EF7 /* cell_background@2x.png in Resources */,
 				BFBC036217C1A513002E4687 /* aloe-blacc.jpg in Resources */,
 				BFC18BD717BDB74400D49685 /* Icon-72.png in Resources */,
@@ -547,6 +592,7 @@
 				BF74A03617C9B9100052E26F /* iOS_NavigationBar_BackgroundImage@2x.png in Resources */,
 				BFFA258617C9155400BB0173 /* app-background.png in Resources */,
 				BFBC036817C1A513002E4687 /* katy-perry.jpg in Resources */,
+				BF2C2E2717C9EC67001E5014 /* icon-notes@2x.png in Resources */,
 				BFC18BDF17BDB74400D49685 /* Icon.png in Resources */,
 				BF74A03D17C9BE240052E26F /* iOS_ToolBar_BackgroundImage.png in Resources */,
 				BFBC036517C1A513002E4687 /* christina-aguilera.jpg in Resources */,
@@ -556,7 +602,9 @@
 				BFBC036717C1A513002E4687 /* justin-bieber.jpg in Resources */,
 				BFBC036317C1A513002E4687 /* angelina-jolie.jpg in Resources */,
 				BFBC035617C1A4FE002E4687 /* birthdays.plist in Resources */,
+				BF55AF5317C9FEBA009E5A38 /* icon-call@2x.png in Resources */,
 				BFC18BD317BDB74400D49685 /* Default.png in Resources */,
+				BF2C2E3417C9F5B5001E5014 /* icon-sms@2x.png in Resources */,
 				BF74A02E17C9AE8A0052E26F /* icon-add-new@2x.png in Resources */,
 				BFC18BDB17BDB74400D49685 /* Icon-Small.png in Resources */,
 			);

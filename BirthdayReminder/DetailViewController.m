@@ -10,6 +10,7 @@
 #import "EditViewController.h"
 #import "DBirthday.h"
 #import "NotesEditViewController.h"
+#import "StyleSheet.h"
 
 @interface DetailViewController ()
 
@@ -17,6 +18,20 @@
 
 
 @implementation DetailViewController
+
+@synthesize photoView;
+@synthesize scrollView;
+@synthesize birthdayLabel;
+@synthesize remainingDaysLabel;
+@synthesize remainingDaysSubTextLabel;
+@synthesize notesTitleLabel;
+@synthesize notesTextLabel;
+@synthesize remainingDaysImageView;
+@synthesize facebookButton;
+@synthesize callButton;
+@synthesize smsButton;
+@synthesize emailButton;
+@synthesize deleteButton;
 
 
 #pragma mark - 스토리보드 지정 초기자
@@ -121,6 +136,33 @@
     }
 }
 
+
+#pragma mark - 버튼 액션
+
+- (IBAction)facebookButtonTapped:(id)sender
+{
+    
+}
+
+- (IBAction)callButtonTapped:(id)sender
+{
+    
+}
+
+- (IBAction)smsButtonTapped:(id)sender
+{
+    
+}
+
+- (IBAction)emailButtonTapped:(id)sender
+{
+    
+}
+
+- (IBAction)deleteButtonTapped:(id)sender
+{
+    
+}
 
 
 @end

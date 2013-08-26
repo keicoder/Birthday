@@ -21,4 +21,28 @@
 // DBirthday 관리 객체에 대한 참조
 @property (nonatomic, strong) DBirthday *birthday;
 
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *birthdayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *remainingDaysLabel;
+@property (weak, nonatomic) IBOutlet UILabel *remainingDaysSubTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *notesTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *notesTextLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *remainingDaysImageView;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+@property (weak, nonatomic) IBOutlet UIButton *callButton;
+@property (weak, nonatomic) IBOutlet UIButton *smsButton;
+@property (weak, nonatomic) IBOutlet UIButton *emailButton;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+
+- (IBAction)facebookButtonTapped:(id)sender;
+- (IBAction)callButtonTapped:(id)sender;
+- (IBAction)smsButtonTapped:(id)sender;
+- (IBAction)emailButtonTapped:(id)sender;
+- (IBAction)deleteButtonTapped:(id)sender;
+
+
+
+
+
 @end
