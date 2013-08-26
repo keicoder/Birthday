@@ -40,6 +40,8 @@
 		BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BF6487F917BE0EB200202254 /* BuildGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F717BE0EB200202254 /* BuildGuideViewController.m */; };
 		BF6487FB17BE3EDF00202254 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6487FA17BE3EDF00202254 /* QuartzCore.framework */; };
+		BF66039017CAEE6400E0C6C3 /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF66038F17CAEE6400E0C6C3 /* ActionButton.m */; };
+		BF66039317CAEE8500E0C6C3 /* DeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF66039217CAEE8500E0C6C3 /* DeleteButton.m */; };
 		BF74A02D17C9AE8A0052E26F /* icon-add-new.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A02B17C9AE8A0052E26F /* icon-add-new.png */; };
 		BF74A02E17C9AE8A0052E26F /* icon-add-new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A02C17C9AE8A0052E26F /* icon-add-new@2x.png */; };
 		BF74A03117C9AE950052E26F /* icon-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74A02F17C9AE950052E26F /* icon-settings.png */; };
@@ -158,6 +160,10 @@
 		BF6487F617BE0EB200202254 /* BuildGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildGuideViewController.h; sourceTree = "<group>"; };
 		BF6487F717BE0EB200202254 /* BuildGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildGuideViewController.m; sourceTree = "<group>"; };
 		BF6487FA17BE3EDF00202254 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BF66038E17CAEE6400E0C6C3 /* ActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionButton.h; sourceTree = "<group>"; };
+		BF66038F17CAEE6400E0C6C3 /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
+		BF66039117CAEE8500E0C6C3 /* DeleteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteButton.h; sourceTree = "<group>"; };
+		BF66039217CAEE8500E0C6C3 /* DeleteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteButton.m; sourceTree = "<group>"; };
 		BF74A02B17C9AE8A0052E26F /* icon-add-new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-add-new.png"; sourceTree = "<group>"; };
 		BF74A02C17C9AE8A0052E26F /* icon-add-new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-add-new@2x.png"; sourceTree = "<group>"; };
 		BF74A02F17C9AE950052E26F /* icon-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-settings.png"; sourceTree = "<group>"; };
@@ -260,6 +266,10 @@
 			children = (
 				BF31F62D17C9242900F06E96 /* TableViewCell.h */,
 				BF31F62E17C9242900F06E96 /* TableViewCell.m */,
+				BF66038E17CAEE6400E0C6C3 /* ActionButton.h */,
+				BF66038F17CAEE6400E0C6C3 /* ActionButton.m */,
+				BF66039117CAEE8500E0C6C3 /* DeleteButton.h */,
+				BF66039217CAEE8500E0C6C3 /* DeleteButton.m */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -635,7 +645,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF66039317CAEE8500E0C6C3 /* DeleteButton.m in Sources */,
 				BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */,
+				BF66039017CAEE6400E0C6C3 /* ActionButton.m in Sources */,
 				BFF71CAE17C946AE009E28A4 /* StyleSheet.m in Sources */,
 				BF6487F117BE091C00202254 /* NotificationTimeViewController.m in Sources */,
 				BFC18BFE17BDD98600D49685 /* DetailViewController.m in Sources */,
