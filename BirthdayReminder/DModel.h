@@ -18,6 +18,10 @@
  DModel의 sharedInstance 메소드는 DModel의 싱클톤 인스턴스를 생성하거나 이미 존재할 경우 이를 그냥 반환함
 */
 
+
+// 싱글톤 모델에서 내보낼 알림명
+#define NotificationAddressBookBirthdaysDidUpdate @"NotificationAddressBookBirthdaysDidUpdate"
+
 #import <Foundation/Foundation.h>
 
 @interface DModel : NSObject

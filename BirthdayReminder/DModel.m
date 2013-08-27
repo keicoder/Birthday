@@ -49,7 +49,6 @@ static DModel *_sharedInstance = nil;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 
-
 #pragma mark - 코어 데이터 스택 (Core Data stack)
 
 // managed object context 반환
@@ -213,6 +212,12 @@ static DModel *_sharedInstance = nil;
             ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
                 if (granted) {
                     NSLog(@"Access to the Address Book has been granted");
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        // 완료 핸들러는 백그라운드 스레드에서 실행될 수 있으며 이 호출은 메인 스레드에서 UI를 업데이트한다.
+                        // completion handler can occur in a background thread and this call will update the UI on the main thread
+                        [self extractBirthdaysFromAddressBook:ABAddressBookCreateWithOptions(NULL, NULL)];
+                        });
                 }
                 else {
                     NSLog(@"Access to the Address Book has been denied");
@@ -224,6 +229,8 @@ static DModel *_sharedInstance = nil;
         case kABAuthorizationStatusAuthorized:
         {
             NSLog(@"User has already granted access to the Address Book");
+            // 이미 승인한 경우
+            [self extractBirthdaysFromAddressBook:addressBook];
             break;
         }
         
@@ -242,6 +249,52 @@ static DModel *_sharedInstance = nil;
     }
     
     CFRelease(addressBook);
+}
+
+
+
+#pragma mark - 연락처에서 생일을 가져옴 (사용자가 승인한 경우 fetchAddressBookBirthdays: 호출 이후 바로 호출 됨)
+// 주소록 프레임워크는 코어 파운데이션에 포함되며 Copy나 Create가 들어 있는 C함수를 사용할 때는 항상 작업을 마친 객체 참조를 릴리즈해야 한다.
+
+
+
+-(void) extractBirthdaysFromAddressBook:(ABAddressBookRef)addressBook
+{
+    NSLog(@"extractBirthdaysFromAddressBook");
+    CFArrayRef people = ABAddressBookCopyArrayOfAllPeople(addressBook);
+    
+    CFIndex peopleCount = ABAddressBookGetPersonCount(addressBook);
+    
+    // 현재는 선언만 해둠. 이 배열은 나중에 채운다.
+    // this is just a placeholder for now - we'll get the array populated later in the chapter
+    NSMutableArray *birthdays = [NSMutableArray array];
+    
+    for (int i = 0; i < peopleCount; i++)
+    {
+        ABRecordRef addressBookRecord = CFArrayGetValueAtIndex(people, i);
+        // kABPersonBirthdayProperty 속성은 연락처에 지정한 생일을 나타냄
+        // 이 값을 이용 생일이 지정된 연락처만 추출
+        CFDateRef birthdate  = ABRecordCopyValue(addressBookRecord, kABPersonBirthdayProperty);
+        if (birthdate == nil) continue;
+        CFStringRef firstName = ABRecordCopyValue(addressBookRecord, kABPersonFirstNameProperty);
+        if (firstName == nil) {
+            CFRelease(birthdate);
+            continue;
+        }
+        NSLog(@"Found contact with birthday: %@, %@",firstName,birthdate);
+        
+        
+        CFRelease(firstName);
+        CFRelease(birthdate);
+    }
+    
+    CFRelease(people);
+    
+    // 생일 객체 배열이 들어 있는 알림을 전달
+    //dispatch a notification with an array of birthday objects
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:birthdays,@"birthdays", nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationAddressBookBirthdaysDidUpdate object:self userInfo:userInfo];
 }
 
 
