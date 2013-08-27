@@ -68,6 +68,7 @@
 		BF8B450517C93CA300B11EF7 /* cell_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8B450317C93CA300B11EF7 /* cell_background@2x.png */; };
 		BFA76B7617C5A70B00721697 /* DModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA76B7517C5A70B00721697 /* DModel.m */; };
 		BFAB5F2117CB1CDE00247146 /* ImportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAB5F2017CB1CDE00247146 /* ImportViewController.m */; };
+		BFABE57317CC565F0011FE8E /* DBirthdayImport.m in Sources */ = {isa = PBXBuildFile; fileRef = BFABE57217CC565F0011FE8E /* DBirthdayImport.m */; };
 		BFBC035617C1A4FE002E4687 /* birthdays.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFBC035517C1A4FE002E4687 /* birthdays.plist */; };
 		BFBC036217C1A513002E4687 /* aloe-blacc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC035817C1A513002E4687 /* aloe-blacc.jpg */; };
 		BFBC036317C1A513002E4687 /* angelina-jolie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC035917C1A513002E4687 /* angelina-jolie.jpg */; };
@@ -201,6 +202,8 @@
 		BFA76B7517C5A70B00721697 /* DModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DModel.m; sourceTree = "<group>"; };
 		BFAB5F1F17CB1CDE00247146 /* ImportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportViewController.h; sourceTree = "<group>"; };
 		BFAB5F2017CB1CDE00247146 /* ImportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportViewController.m; sourceTree = "<group>"; };
+		BFABE57117CC565F0011FE8E /* DBirthdayImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBirthdayImport.h; sourceTree = "<group>"; };
+		BFABE57217CC565F0011FE8E /* DBirthdayImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBirthdayImport.m; sourceTree = "<group>"; };
 		BFBC035517C1A4FE002E4687 /* birthdays.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = birthdays.plist; sourceTree = "<group>"; };
 		BFBC035817C1A513002E4687 /* aloe-blacc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aloe-blacc.jpg"; sourceTree = "<group>"; };
 		BFBC035917C1A513002E4687 /* angelina-jolie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "angelina-jolie.jpg"; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 				BF47BE6917C46AD8003C209C /* DBirthday.m */,
 				BFA76B7417C5A70B00721697 /* DModel.h */,
 				BFA76B7517C5A70B00721697 /* DModel.m */,
+				BFABE57117CC565F0011FE8E /* DBirthdayImport.h */,
+				BFABE57217CC565F0011FE8E /* DBirthdayImport.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -714,6 +719,7 @@
 				BFA76B7617C5A70B00721697 /* DModel.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
 				BF31F62F17C9242900F06E96 /* TableViewCell.m in Sources */,
+				BFABE57317CC565F0011FE8E /* DBirthdayImport.m in Sources */,
 				BF6487E117BDE90C00202254 /* EditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
