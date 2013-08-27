@@ -115,7 +115,7 @@
     else {
         self.remainingDaysLabel.text = [NSString stringWithFormat:@"%d",days];
         self.remainingDaysSubTextLabel.text = (days == 1) ? @"more day" : @"more days";
-        self.remainingDaysImageView.image = [UIImage imageNamed:@"icon-days-remaining.png"];
+        self.remainingDaysImageView.image = [UIImage imageNamed:@"days_icon1.png"];
     }
     
     self.birthdayLabel.text = _birthdayImport.birthdayTextToDisplay;

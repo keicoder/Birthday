@@ -27,6 +27,10 @@
 		BF47BE6A17C46AD8003C209C /* DBirthday.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47BE6917C46AD8003C209C /* DBirthday.m */; };
 		BF55AF5217C9FEBA009E5A38 /* icon-call.png in Resources */ = {isa = PBXBuildFile; fileRef = BF55AF5017C9FEBA009E5A38 /* icon-call.png */; };
 		BF55AF5317C9FEBA009E5A38 /* icon-call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF55AF5117C9FEBA009E5A38 /* icon-call@2x.png */; };
+		BF5AD05C17CC71A9001F9A24 /* icon-import-not-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5AD05817CC71A9001F9A24 /* icon-import-not-selected.png */; };
+		BF5AD05D17CC71A9001F9A24 /* icon-import-not-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5AD05917CC71A9001F9A24 /* icon-import-not-selected@2x.png */; };
+		BF5AD05E17CC71A9001F9A24 /* icon-import-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5AD05A17CC71A9001F9A24 /* icon-import-selected.png */; };
+		BF5AD05F17CC71A9001F9A24 /* icon-import-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5AD05B17CC71A9001F9A24 /* icon-import-selected@2x.png */; };
 		BF6487E117BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E217BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
@@ -158,6 +162,10 @@
 		BF47BE6917C46AD8003C209C /* DBirthday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBirthday.m; sourceTree = "<group>"; };
 		BF55AF5017C9FEBA009E5A38 /* icon-call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-call.png"; sourceTree = "<group>"; };
 		BF55AF5117C9FEBA009E5A38 /* icon-call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-call@2x.png"; sourceTree = "<group>"; };
+		BF5AD05817CC71A9001F9A24 /* icon-import-not-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-import-not-selected.png"; sourceTree = "<group>"; };
+		BF5AD05917CC71A9001F9A24 /* icon-import-not-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-import-not-selected@2x.png"; sourceTree = "<group>"; };
+		BF5AD05A17CC71A9001F9A24 /* icon-import-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-import-selected.png"; sourceTree = "<group>"; };
+		BF5AD05B17CC71A9001F9A24 /* icon-import-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-import-selected@2x.png"; sourceTree = "<group>"; };
 		BF6487DF17BDE90C00202254 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		BF6487E017BDE90C00202254 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		BF6487E317BDEDE200202254 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
@@ -416,6 +424,10 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF5AD05817CC71A9001F9A24 /* icon-import-not-selected.png */,
+				BF5AD05917CC71A9001F9A24 /* icon-import-not-selected@2x.png */,
+				BF5AD05A17CC71A9001F9A24 /* icon-import-selected.png */,
+				BF5AD05B17CC71A9001F9A24 /* icon-import-selected@2x.png */,
 				BF6D140217CB9D8500DEC148 /* Icon-72.png */,
 				BF6D140317CB9D8500DEC148 /* Icon-72@2x.png */,
 				BF6D140417CB9D8500DEC148 /* Icon-Small-50.png */,
@@ -633,6 +645,7 @@
 				BF2C2E2817C9EC67001E5014 /* icon-notes.png in Resources */,
 				BF74A03117C9AE950052E26F /* icon-settings.png in Resources */,
 				BFBC036617C1A513002E4687 /* jamie-oliver.jpg in Resources */,
+				BF5AD05F17CC71A9001F9A24 /* icon-import-selected@2x.png in Resources */,
 				BFC1BBDE17C09058007B8266 /* icon-birthday-cake@2x.png in Resources */,
 				BFC18BD117BDB74400D49685 /* Default-568h@2x.png in Resources */,
 				BF2C2E2F17C9F5A4001E5014 /* icon-facebook.png in Resources */,
@@ -653,9 +666,11 @@
 				BF74A03217C9AE950052E26F /* icon-settings@2x.png in Resources */,
 				BFE0859517CAF5C200F10909 /* deleteButton.png in Resources */,
 				BF38708217CB050100C05D98 /* icon-addressbook@2x.png in Resources */,
+				BF5AD05D17CC71A9001F9A24 /* icon-import-not-selected@2x.png in Resources */,
 				BF6D140D17CB9D8500DEC148 /* Icon-Small.png in Resources */,
 				BFBC036917C1A513002E4687 /* olly-murs.jpg in Resources */,
 				BF74AB3B17C9449F0095F451 /* days_icon1.png in Resources */,
+				BF5AD05C17CC71A9001F9A24 /* icon-import-not-selected.png in Resources */,
 				BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */,
 				BF74A03617C9B9100052E26F /* iOS_NavigationBar_BackgroundImage@2x.png in Resources */,
 				BFFA258617C9155400BB0173 /* app-background.png in Resources */,
@@ -676,6 +691,7 @@
 				BFC18BD317BDB74400D49685 /* Default.png in Resources */,
 				BF6D140A17CB9D8500DEC148 /* Icon-72.png in Resources */,
 				BF38708117CB050100C05D98 /* icon-addressbook.png in Resources */,
+				BF5AD05E17CC71A9001F9A24 /* icon-import-selected.png in Resources */,
 				BF2C2E3417C9F5B5001E5014 /* icon-sms@2x.png in Resources */,
 				BF74A02E17C9AE8A0052E26F /* icon-add-new@2x.png in Resources */,
 			);
