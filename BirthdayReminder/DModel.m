@@ -312,4 +312,72 @@ static DModel *_sharedInstance = nil;
 
 
 
+#pragma mark - 연락처 불러오기 뷰에서 다중 선택한 DBirthdayImport 인스턴스를 코어 데이터 엔티티로 불러오기
+
+// 임의의 생일 id 목록을 지정해 id가 일치하는 생일을 가져오는 메소드와 동일한 로직
+// 로직
+// 1. 불러올 생일을 모두 순회하며 고유 id를 모은다.
+// 2. 고유 id 배열을 getExistingBirthdaysWithUIDs:로 넘겨줌으로서 id가 일치하는 기존 생일 엔티티로 이뤄진 수정 가능 딕셔너리를 가져온다.
+// 3. 불러올 생일을 다시 모두 순회하며 코어 데이터 생일 엔티티를 생성하거나 저장된 코어 데이터 생일 엔티티를 업데이트 한다.
+// 4. 변경 사항을 저장한다.
+
+-(void) importBirthdays:(NSArray *)birthdaysToImport
+{
+    int i;
+    int max = [birthdaysToImport count];
+    
+    DBirthday *importBirthday;
+    DBirthday *birthday;
+    
+    NSString *uid;
+    NSMutableArray *newUIDs = [NSMutableArray array];
+    
+    for (i=0;i<max;i++)
+    {
+        importBirthday = birthdaysToImport[i];
+        uid = importBirthday.uid;
+        [newUIDs addObject:uid];
+    }
+    
+    // DModel의 유틸리티 메소드를 사용해 불러올 생일 배열과 ID가 일치하는 기존 생일을 조회한다.
+    NSMutableDictionary *existingBirthdays = [self getExistingBirthdaysWithUIDs:newUIDs];
+    
+    NSManagedObjectContext *context = [DModel sharedInstance].managedObjectContext;
+    
+    for (i=0;i<max;i++)
+    {
+        importBirthday = birthdaysToImport[i];
+        uid = importBirthday.uid;
+        
+        birthday = existingBirthdays[uid];
+        if (birthday) {
+            // 이 udid를 갖고 있는 생일이 코어 데이터에 이미 존재하므로 중복 데이터를 생성하지 않는다.
+        }
+        else {
+            birthday = [NSEntityDescription insertNewObjectForEntityForName:@"DBirthday" inManagedObjectContext:context];
+            birthday.uid = uid;
+            existingBirthdays[uid] = birthday;
+        }
+        
+        // 새로운 생일 엔티티나 기존에 저장한 생일 엔티티를 업데이트한다.
+        birthday.name = importBirthday.name;
+        birthday.uid = importBirthday.uid;
+        birthday.picURL = importBirthday.picURL;
+        birthday.imageData = importBirthday.imageData;
+        birthday.addressBookID = importBirthday.addressBookID;
+        birthday.facebookID = importBirthday.facebookID;
+        
+        birthday.birthDay = importBirthday.birthDay;
+        birthday.birthMonth = importBirthday.birthMonth;
+        birthday.birthYear = importBirthday.birthYear;
+        
+        [birthday updateNextBirthdayAndAge];
+    }
+    
+    // 새로 추가한 내용이나 변경 사항을 코어 데이터 저장소에 저장한다.
+    [self saveChanges];
+    
+}
+
+
 @end

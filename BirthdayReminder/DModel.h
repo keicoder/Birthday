@@ -50,6 +50,9 @@
 // 주소록 프레임워크는 C로 작성됨. 따라서 ARC 기능이 없다. 개발자 스스로 메모리 누수를 막아야 한다.
 - (void) fetchAddressBookBirthdays;
 
+#pragma mark - 연락처 불러오기 뷰에서 다중 선택한 DBirthdayImport 인스턴스를 코어 데이터 엔티티로 불러오기
+-(void) importBirthdays:(NSArray *)birthdaysToImport;
+
 
 
 @end
