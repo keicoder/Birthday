@@ -20,6 +20,7 @@
 #import "DModel.h"
 #import "DBirthday.h"
 #import <AddressBook/AddressBook.h>
+#import "DBirthdayImport.h"
 
 @implementation DModel
 
@@ -265,6 +266,8 @@ static DModel *_sharedInstance = nil;
     
     CFIndex peopleCount = ABAddressBookGetPersonCount(addressBook);
     
+    DBirthdayImport *birthday;
+    
     // 현재는 선언만 해둠. 이 배열은 나중에 채운다.
     // this is just a placeholder for now - we'll get the array populated later in the chapter
     NSMutableArray *birthdays = [NSMutableArray array];
@@ -281,7 +284,10 @@ static DModel *_sharedInstance = nil;
             CFRelease(birthdate);
             continue;
         }
-        NSLog(@"Found contact with birthday: %@, %@",firstName,birthdate);
+        // NSLog(@"Found contact with birthday: %@, %@",firstName,birthdate);
+        
+        birthday = [[DBirthdayImport alloc] initWithAddressBookRecord:addressBookRecord];
+        [birthdays addObject:birthday];
         
         
         CFRelease(firstName);
@@ -290,7 +296,14 @@ static DModel *_sharedInstance = nil;
     
     CFRelease(people);
     
-    // 생일 객체 배열이 들어 있는 알림을 전달
+    // 생일을 이름 알파벳순으로 정렬
+    // order the birthdays alphabetically by name
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    [birthdays sortUsingDescriptors:sortDescriptors];
+    
+    
+    // 생일 객체 배열이 들어 있는 알림을 내보냄(전달)
     //dispatch a notification with an array of birthday objects
     NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:birthdays,@"birthdays", nil];
     
