@@ -181,7 +181,7 @@
     // 테이블 뷰
     [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
     [[UITableViewCell appearance] setSelectionStyle:UITableViewCellSelectionStyleNone];
-    [[UITableView appearance] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [[UITableView appearance] setSeparatorStyle:UITableViewCellSeparatorStyleSingleLineEtched];
 }
 
 
