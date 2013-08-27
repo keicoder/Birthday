@@ -25,8 +25,37 @@
 {
     [super viewWillAppear:animated];
     
-    // [[DModel sharedInstance] fetchAddressBookBirthdays];
+    // ImportAddressBookViewController가 DModel의 NotificationAddressBookBirthdaysDidUpdate 알림을 수신해 처리하게 함.
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAddressBookBirthdaysDidUpdate:) name:NotificationAddressBookBirthdaysDidUpdate object:[DModel sharedInstance]];
+
+    [[DModel sharedInstance] fetchAddressBookBirthdays];
+    
+}
+
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationAddressBookBirthdaysDidUpdate object:[DModel sharedInstance]];
+}
+
+
+
+#pragma mark - handleAddressBookBirthdaysDidUpdate
+
+-(void)handleAddressBookBirthdaysDidUpdate:(NSNotification *)notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    
+    self.birthdays = [userInfo objectForKey:@"birthdays"];
+    [self.tableView reloadData];
+    
+    if ([self.birthdays count] == 0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Sorry, No birthdays found in your address book" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+    }
 }
 
 
