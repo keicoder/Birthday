@@ -14,6 +14,7 @@
 #import "ImportViewController.h"
 #import "DBirthdayImport.h"
 #import "TableViewCell.h"
+#import "DModel.h"
 
 
 
@@ -191,9 +192,14 @@
 
 #pragma mark - 버튼 액션 메소드
 
+// 연락처 불러오기 뷰에서 다중 선택한 DBirthdayImport 인스턴스를 코어 데이터 엔티티로 불러오기
+// DModel의 importBirthdays: 메소드 호출
+
 - (IBAction)didTapImportButton:(id)sender
 {
-    
+    NSArray *birthdaysToImport = [self.selectedIndexPathToBirthday allValues];
+    [[DModel sharedInstance] importBirthdays:birthdaysToImport];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
