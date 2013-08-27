@@ -9,6 +9,8 @@
 #import "TableViewCell.h"
 #import "DBirthday.h"
 #import "StyleSheet.h"
+#import "DBirthdayImport.h"
+
 
 @implementation TableViewCell
 
@@ -91,6 +93,35 @@
         [StyleSheet styleLabel:_remainingDaysSubTextLabel withType:LabelTypeDaysUntilBirthdaySubText];
     }
 }
+
+
+#pragma mark - 연락처 임포트 뷰의 데이블 뷰로 연락처 사진 및 데이터 불러오기
+
+// birthdayImport 세터 오버라이드
+// 생일 관리 객체의 세터와 거의 동일
+
+-(void) setBirthdayImport:(DBirthdayImport *)birthdayImport
+{
+    _birthdayImport = birthdayImport;
+    self.nameLabel.text = _birthdayImport.name;
+    
+    int days = _birthdayImport.remainingDaysUntilNextBirthday;
+    
+    if (days == 0) {
+        // 생일이 오늘!
+        self.remainingDaysLabel.text = self.remainingDaysSubTextLabel.text = @"";
+        self.remainingDaysImageView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
+    }
+    else {
+        self.remainingDaysLabel.text = [NSString stringWithFormat:@"%d",days];
+        self.remainingDaysSubTextLabel.text = (days == 1) ? @"more day" : @"more days";
+        self.remainingDaysImageView.image = [UIImage imageNamed:@"icon-days-remaining.png"];
+    }
+    
+    self.birthdayLabel.text = _birthdayImport.birthdayTextToDisplay;
+    
+}
+
 
 
 @end

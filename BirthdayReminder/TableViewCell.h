@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class DBirthday;
+@class DBirthdayImport;
 
 
 @interface TableViewCell : UITableViewCell
 
+
 @property (nonatomic, strong) DBirthday *birthday;
+@property (nonatomic, strong) DBirthdayImport *birthdayImport;
+
 @property (nonatomic, weak) IBOutlet UIImageView *iconView;
 @property (nonatomic, weak) IBOutlet UIImageView *remainingDaysImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
