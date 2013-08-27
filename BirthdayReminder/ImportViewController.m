@@ -197,16 +197,39 @@
 }
 
 
+#pragma mark SelectAll 버튼 액션 메소드
+
 - (IBAction)didTapSelectAllButton:(id)sender
 {
+    DBirthdayImport *birthdayImport;
     
+    int maxLoop = [self.birthdays count];
+    
+    NSIndexPath *indexPath;
+    
+    for (int i=0;i<maxLoop;i++) {
+        
+        // 생일 불러오기 객체를 모두 순회
+        birthdayImport = self.birthdays[i];
+        indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+        
+        // 선택 항목에 대한 참조를 생성
+        self.selectedIndexPathToBirthday[indexPath] = birthdayImport;
+    }
+    
+    [self.tableView reloadData];
+    [self updateImportButton];
 }
 
 
-- (IBAction)didTapSelectNoneButton:(id)sender
-{
-    
+#pragma mark 구현
+
+- (IBAction)didTapSelectNoneButton:(id)sender {
+    [self.selectedIndexPathToBirthday removeAllObjects];
+    [self.tableView reloadData];
+    [self updateImportButton];
 }
+
 
 
 
