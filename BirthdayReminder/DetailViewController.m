@@ -12,6 +12,7 @@
 #import "NotesEditViewController.h"
 #import "StyleSheet.h"
 #import <AddressBook/AddressBook.h> // 전화, SMS, 이메일 등 데이터 불러오기
+#import "DModel.h" // Delete 버튼을 눌렀을 때 코어 데이터 엔티티 삭제
 
 @interface DetailViewController ()
 
@@ -385,5 +386,29 @@
                                                     otherButtonTitles:nil];
     [actionSheet showInView:self.view];
 }
+
+
+
+#pragma mark - 액션 시트 델리게이트 메소드 (UIActionSheetDelegate)
+
+// 엔티티가 다른 엔티티와 관계가 없을 때는 코어 데이터 엔티티를 쉽게 제거할 수 있다.
+
+- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    //check whether the user cancelled the delete instruction via the action sheet cancel button
+    if (buttonIndex == actionSheet.cancelButtonIndex) return;
+    
+    //grab a reference to the Core Data managed object context
+    NSManagedObjectContext *context = [DModel sharedInstance].managedObjectContext;
+    //delete this birthday entity from the managed object context
+    [context deleteObject:self.birthday];
+    //save our delete change to the persistent Core Data store
+    [[DModel sharedInstance] saveChanges];
+    
+    //pop this view controller off the stack and slide back to the home screen
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 
 @end
