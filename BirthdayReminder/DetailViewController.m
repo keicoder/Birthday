@@ -11,6 +11,7 @@
 #import "DBirthday.h"
 #import "NotesEditViewController.h"
 #import "StyleSheet.h"
+#import <AddressBook/AddressBook.h> // 전화, SMS, 이메일 등 데이터 불러오기
 
 @interface DetailViewController ()
 
@@ -203,6 +204,102 @@
         NotesEditViewController *notesEditViewController = (NotesEditViewController *) navigationController.topViewController;
         notesEditViewController.birthday = self.birthday;
     }
+}
+
+
+
+#pragma mark - Address Book contact helper methods
+
+// 현재 연락처 레코드에 대한 참조를 가져와 kABPersonPhoneProperty (전화번호) 속성의 존재 여부 검사
+// ** 애플에서 제공하는 URL Scheme을 이용하면 다른 앱에서 우리 앱을 연결할 수 있게 정의할 수 있다 (info plist를 통해)
+
+-(NSString *)telephoneNumber
+{
+    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
+    
+    ABRecordRef record =  ABAddressBookGetPersonWithRecordID (addressBook,(ABRecordID)[self.birthday.addressBookID intValue]);
+    
+    ABMultiValueRef multi = ABRecordCopyValue(record, kABPersonPhoneProperty);
+    
+    NSString *telephone = nil;
+    
+    if (ABMultiValueGetCount(multi) > 0) {
+        telephone = (__bridge_transfer NSString*)ABMultiValueCopyValueAtIndex(multi, 0);
+        telephone = [telephone stringByReplacingOccurrencesOfString:@" " withString:@""]; // 번호에서 공백을 모두 제거
+    }
+    CFRelease(multi);
+    CFRelease(addressBook);
+    
+    return telephone;
+}
+
+
+-(NSString *)callLink
+
+// canOpenURL: 메소드를 사용해 생성하는 시스템 링크가 기기와 호환하는지 검사 -> 연결하려는 앱을 사용자가 설치했는지 확인할 수 있다.
+
+{
+    if (!self.birthday.addressBookID || [self.birthday.addressBookID intValue]==0) return nil;
+    NSString *telephoneNumber = [self telephoneNumber];
+    if (!telephoneNumber) return nil;
+    
+    NSString *callLink = [NSString stringWithFormat:@"tel:%@",telephoneNumber];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:callLink]]) return callLink;
+    
+    return nil;
+}
+
+
+-(NSString *)smsLink
+
+// canOpenURL: 메소드를 사용해 생성하는 시스템 링크가 기기와 호환하는지 검사 -> 연결하려는 앱을 사용자가 설치했는지 확인할 수 있다.
+
+{
+    if (!self.birthday.addressBookID || [self.birthday.addressBookID intValue]==0) return nil;
+    NSString *telephoneNumber = [self telephoneNumber];
+    if (!telephoneNumber) return nil;
+    
+    NSString *smsLink = [NSString stringWithFormat:@"sms:%@",telephoneNumber];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:smsLink]]) return smsLink;
+    
+    return nil;
+}
+
+
+-(NSString *)emailLink
+
+// telephoneNumber 메소드와 거의 유사
+// 현재 연락처 레코드에 대한 참조를 가져와 kABPersonEmailProperty (email) 속성의 존재 여부 검사
+
+{
+    if (!self.birthday.addressBookID || [self.birthday.addressBookID intValue]==0) return nil;
+    
+    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
+    
+    ABRecordRef record =  ABAddressBookGetPersonWithRecordID (addressBook,(ABRecordID)[self.birthday.addressBookID intValue]);
+    
+    ABMultiValueRef multi = ABRecordCopyValue(record, kABPersonEmailProperty);
+    
+    NSString *email = nil;
+    if (ABMultiValueGetCount(multi) > 0) {//check if the contact has 1 or more emails assigned
+        email = (__bridge_transfer NSString*)ABMultiValueCopyValueAtIndex(multi, 0);
+    }
+    CFRelease(multi);
+    CFRelease(addressBook);
+    
+    if (email) {
+        NSString *emailLink = [NSString stringWithFormat:@"mailto:%@",email];
+        
+        // 이메일의 제목은 Happy Birthday로 미리 채울 수 있다.
+        // we can pre-populate the email subject with the words Happy Birthday
+        emailLink = [emailLink stringByAppendingString:@"?subject=Happy%20Birthday"];
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:emailLink]]) return emailLink;
+    }
+    
+    
+    return nil;
 }
 
 
