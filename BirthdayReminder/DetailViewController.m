@@ -395,17 +395,19 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    //check whether the user cancelled the delete instruction via the action sheet cancel button
+    // 사용자가 취소 버튼을 눌러 삭제 명령을 취소했는지 확인
     if (buttonIndex == actionSheet.cancelButtonIndex) return;
     
-    //grab a reference to the Core Data managed object context
+    // 코어 데이터 관리 객체 컨텍스트에 대한 참조를 가져옴
     NSManagedObjectContext *context = [DModel sharedInstance].managedObjectContext;
-    //delete this birthday entity from the managed object context
+    
+    // 관리 객체 컨텍스트를 통해 생일 엔티티를 삭제함
     [context deleteObject:self.birthday];
-    //save our delete change to the persistent Core Data store
+    
+    // 삭제 변경 사항을 코어 데이터 저장소에 저장
     [[DModel sharedInstance] saveChanges];
     
-    //pop this view controller off the stack and slide back to the home screen
+    // 이 뷰 컨트롤러를 스택에서 꺼내고 홈 화면으로 돌아감
     [self.navigationController popViewControllerAnimated:YES];
 }
 
