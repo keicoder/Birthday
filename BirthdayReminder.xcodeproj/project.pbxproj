@@ -122,6 +122,10 @@
 		BFE0859717CAF5C200F10909 /* deleteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0859317CAF5C200F10909 /* deleteButton@2x.png */; };
 		BFE0859817CAF5C200F10909 /* actionButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE0859417CAF5C200F10909 /* actionButton@2x.png */; };
 		BFE685E717CB87BF00613921 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE685E617CB87BF00613921 /* AddressBook.framework */; };
+		BFEB03ED17CDB98E000BA938 /* background_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = BFEB03EB17CDB98E000BA938 /* background_banner.png */; };
+		BFEB03EE17CDB98E000BA938 /* background_banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFEB03EC17CDB98E000BA938 /* background_banner@2x.png */; };
+		BFEB03F017CDC00C000BA938 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEB03EF17CDC00C000BA938 /* Accounts.framework */; };
+		BFEB03F217CDC017000BA938 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEB03F117CDC017000BA938 /* Social.framework */; };
 		BFEC52F917CB82A700C543C6 /* ImportAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEC52F817CB82A700C543C6 /* ImportAddressBookViewController.m */; };
 		BFF71CAE17C946AE009E28A4 /* StyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF71CAD17C946AE009E28A4 /* StyleSheet.m */; };
 		BFFA258417C9155400BB0173 /* app-background1.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFA258017C9155400BB0173 /* app-background1.png */; };
@@ -265,6 +269,10 @@
 		BFE0859317CAF5C200F10909 /* deleteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteButton@2x.png"; sourceTree = "<group>"; };
 		BFE0859417CAF5C200F10909 /* actionButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "actionButton@2x.png"; sourceTree = "<group>"; };
 		BFE685E617CB87BF00613921 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		BFEB03EB17CDB98E000BA938 /* background_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_banner.png; sourceTree = "<group>"; };
+		BFEB03EC17CDB98E000BA938 /* background_banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_banner@2x.png"; sourceTree = "<group>"; };
+		BFEB03EF17CDC00C000BA938 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		BFEB03F117CDC017000BA938 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BFEC52F717CB82A700C543C6 /* ImportAddressBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportAddressBookViewController.h; sourceTree = "<group>"; };
 		BFEC52F817CB82A700C543C6 /* ImportAddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportAddressBookViewController.m; sourceTree = "<group>"; };
 		BFF71CAC17C946AE009E28A4 /* StyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleSheet.h; sourceTree = "<group>"; };
@@ -280,6 +288,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEB03F217CDC017000BA938 /* Social.framework in Frameworks */,
+				BFEB03F017CDC00C000BA938 /* Accounts.framework in Frameworks */,
 				BFE685E717CB87BF00613921 /* AddressBook.framework in Frameworks */,
 				BF47BE6317C4635A003C209C /* CoreData.framework in Frameworks */,
 				BF6487FB17BE3EDF00202254 /* QuartzCore.framework in Frameworks */,
@@ -368,6 +378,8 @@
 		BFC18B9117BDAF2900D49685 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFEB03F117CDC017000BA938 /* Social.framework */,
+				BFEB03EF17CDC00C000BA938 /* Accounts.framework */,
 				BFE685E617CB87BF00613921 /* AddressBook.framework */,
 				BF47BE6217C4635A003C209C /* CoreData.framework */,
 				BF6487FA17BE3EDF00202254 /* QuartzCore.framework */,
@@ -427,6 +439,8 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BFEB03EB17CDB98E000BA938 /* background_banner.png */,
+				BFEB03EC17CDB98E000BA938 /* background_banner@2x.png */,
 				BF5AD05817CC71A9001F9A24 /* icon-import-not-selected.png */,
 				BF5AD05917CC71A9001F9A24 /* icon-import-not-selected@2x.png */,
 				BF5AD05A17CC71A9001F9A24 /* icon-import-selected.png */,
@@ -625,6 +639,7 @@
 			files = (
 				BF2C2E2E17C9F5A4001E5014 /* icon-email@2x.png in Resources */,
 				BFFA258717C9155400BB0173 /* app-background@2x.png in Resources */,
+				BFEB03ED17CDB98E000BA938 /* background_banner.png in Resources */,
 				BFC18BD517BDB74400D49685 /* Default@2x.png in Resources */,
 				BFC1BBDD17C09058007B8266 /* icon-birthday-cake.png in Resources */,
 				BFBC036417C1A513002E4687 /* brad-pitt.jpg in Resources */,
@@ -636,6 +651,7 @@
 				BFFA258517C9155400BB0173 /* app-background1@2x.png in Resources */,
 				BFC18BAB17BDAF2900D49685 /* Images.xcassets in Resources */,
 				BF6D140F17CB9D8500DEC148 /* Icon.png in Resources */,
+				BFEB03EE17CDB98E000BA938 /* background_banner@2x.png in Resources */,
 				BF74A02D17C9AE8A0052E26F /* icon-add-new.png in Resources */,
 				BF6D140C17CB9D8500DEC148 /* Icon-Small-50.png in Resources */,
 				BF8B450417C93CA300B11EF7 /* cell_background.png in Resources */,

@@ -683,7 +683,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="days_icon1.png" id="hyY-wm-xvd">
-                                                    <rect key="frame" x="227.99999907612795" y="0.0" width="72" height="72"/>
+                                                    <rect key="frame" x="227.99999856750165" y="0.0" width="72" height="72"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AS7-Q4-g3e">
@@ -825,10 +825,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-1661" y="34"/>
         </scene>
-        <!--Import Address Book View Controller - Facebook-->
+        <!--Import Facebook View Controller - Facebook-->
         <scene sceneID="w5A-vk-lbj">
             <objects>
-                <viewController id="D7S-kg-Kt0" customClass="ImportAddressBookViewController" sceneMemberID="viewController">
+                <viewController id="D7S-kg-Kt0" customClass="ImportFacebookViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yb0-l9-ICO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -850,7 +850,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="days_icon1.png" id="cXu-vo-RuO">
-                                                    <rect key="frame" x="227.99999856750165" y="0.0" width="72" height="72"/>
+                                                    <rect key="frame" x="228" y="0.0" width="72" height="72"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r5l-1c-sBI">

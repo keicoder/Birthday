@@ -271,7 +271,10 @@
     
     // 테이블 셀 배경 이미지 적용
     
-    UIImage *backgroundImage = (indexPath.row == 0) ? [UIImage imageNamed:@"cell_background.png"] : [UIImage imageNamed:@"cell_background.png"];
+    //UIImage *backgroundImage = (indexPath.row == 0) ? [UIImage imageNamed:@"background_banner.png"] : [UIImage imageNamed:@"background_banner.png"];
+    //UIImage *backgroundImage = [UIImage imageNamed:@"background_banner.png"];
+    
+    UIImage *backgroundImage = [UIImage imageNamed:@"cell_background.png"];
     tableCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
     
     return cell;

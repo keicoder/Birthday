@@ -21,6 +21,25 @@
 #import "DBirthday.h"
 #import <AddressBook/AddressBook.h>
 #import "DBirthdayImport.h"
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
+
+
+typedef enum : int
+{
+    FacebookActionGetFriendsBirthdays = 1,
+    FacebookActionPostToWall
+}FacebookAction;
+
+
+
+@interface DModel()
+
+@property (strong) ACAccount *facebookAccount;  // 인증된 페이스북 계정에 대한 참조
+@property FacebookAction currentFacebookAction; // 현재 진행 중인 페이스북 그래프 API 액션을 추적하기 위한 속성
+
+@end
+
 
 @implementation DModel
 
@@ -378,6 +397,73 @@ static DModel *_sharedInstance = nil;
     [self saveChanges];
     
 }
+
+
+
+#pragma mark - 페이스북 불러오기
+
+-(void) fetchFacebookBirthdays
+{
+    NSLog(@"fetchFacebookBirthdays");
+    if (self.facebookAccount == nil) {
+        self.currentFacebookAction = FacebookActionGetFriendsBirthdays;
+        [self authenticateWithFacebook];
+        return;
+    }
+    // 여기까지 오면 페이스북 계정이 이미 인증된 상태이다.
+}
+
+
+#pragma mark - 페이스북 인증 메소드
+
+- (void)authenticateWithFacebook {
+    
+    // 앱에서는 ACAccountStore를 통해 트위터, 페이스북, 시나 웨이보 계정에 접근할 수 있다.
+    // Centralized iOS user Twitter, Facebook and Sina Weibo accounts are accessed by apps via the ACAccountStore
+    
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    
+    ACAccountType *accountTypeFacebook = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
+    
+    // 페이스북 앱 ID
+    // Replace with your Facebook.com app ID
+    NSDictionary *options = @{ACFacebookAppIdKey: @"318108061668153",
+                              ACFacebookPermissionsKey: @[@"publish_stream",@"friends_birthday"],ACFacebookAudienceKey:ACFacebookAudienceFriends};
+    
+    // requestAccessToAccountsWithType: 메소드를 호출할 때는 사용자가 계정 접근 요청에 반응해 허용 안함이나 승인을 탭할 때 호출할 코드 블록을 인자로 넘김
+    [accountStore requestAccessToAccountsWithType:accountTypeFacebook options:options completion:^(BOOL granted, NSError *error) {
+        if(granted) {
+            
+            // 완료 핸들러는 메인 스레드에서 실행되지 않을 수도 있다.
+            // The completition handler may not fire in the main thread and as we are going to
+            NSLog(@"Facebook Authorized!");
+            NSArray *accounts = [accountStore accountsWithAccountType:accountTypeFacebook];
+            self.facebookAccount = [accounts lastObject];
+            
+            // 인증 성공 후 사용자가 하려는 페이스북 작업을 마무리할 수 있게 인증을 처리하기 전에 사용자가 하려는 행동을 확인한다.
+            // By checking what Facebook action the user was trying to perform before the authorization process we can complete the Facebook action when the authorization succeeds
+            switch (self.currentFacebookAction) {
+                case FacebookActionGetFriendsBirthdays:
+                    [self fetchFacebookBirthdays];
+                    break;
+                case FacebookActionPostToWall:
+                    // 할일 : 친구의 페이스북 담벼락에 글 남기기
+                    // TODO : post to a friend's Facebook Wall
+                    // [self postToFacebookWall:self.postToFacebookMessage withFacebookID:self.postToFacebookID];
+                    break;
+            }
+        } else {
+            
+            if ([error code] == ACErrorAccountNotFound) {
+                NSLog(@"No Facebook Account Found");
+            }
+            else {
+                NSLog(@"Facebook SSO Authentication Failed: %@",error);
+            }
+        }
+    }];
+}
+
 
 
 @end

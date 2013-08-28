@@ -7,6 +7,7 @@
 //
 
 #import "ImportFacebookViewController.h"
+#import "DModel.h"
 
 @interface ImportFacebookViewController ()
 
@@ -14,14 +15,9 @@
 
 @implementation ImportFacebookViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
+
+#pragma mark - 뷰 라이프 사이클
 
 - (void)viewDidLoad
 {
@@ -29,10 +25,21 @@
 	// Do any additional setup after loading the view.
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // 뷰가 화면에 보일 때마다 fetchAddressBookBirthdays 메소드 호출
+    [[DModel sharedInstance] fetchAddressBookBirthdays];
+}
+
 
 @end

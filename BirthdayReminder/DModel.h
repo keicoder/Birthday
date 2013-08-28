@@ -53,6 +53,9 @@
 #pragma mark - 연락처 불러오기 뷰에서 다중 선택한 DBirthdayImport 인스턴스를 코어 데이터 엔티티로 불러오기
 -(void) importBirthdays:(NSArray *)birthdaysToImport;
 
+#pragma mark - 페이스북 불러오기
+-(void) fetchFacebookBirthdays;
+
 
 
 @end
