@@ -228,7 +228,8 @@
 
 - (IBAction)importFromFacebookTapped:(id)sender
 {
-    
+    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"ImportFacebook"];
+    [self.navigationController presentViewController:navigationController animated:YES completion:nil];
 }
 
 

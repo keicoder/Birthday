@@ -18,6 +18,7 @@
 		BF31F62A17C920C900F06E96 /* icon-days-remaining.png in Resources */ = {isa = PBXBuildFile; fileRef = BF31F62817C920C900F06E96 /* icon-days-remaining.png */; };
 		BF31F62B17C920C900F06E96 /* icon-days-remaining@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF31F62917C920C900F06E96 /* icon-days-remaining@2x.png */; };
 		BF31F62F17C9242900F06E96 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF31F62E17C9242900F06E96 /* TableViewCell.m */; };
+		BF38352217CDB3EB0053EB59 /* ImportFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF38352117CDB3EB0053EB59 /* ImportFacebookViewController.m */; };
 		BF38708117CB050100C05D98 /* icon-addressbook.png in Resources */ = {isa = PBXBuildFile; fileRef = BF38707F17CB050100C05D98 /* icon-addressbook.png */; };
 		BF38708217CB050100C05D98 /* icon-addressbook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF38708017CB050100C05D98 /* icon-addressbook@2x.png */; };
 		BF43C38A17C9FF2700AFA63A /* icon-delete.png in Resources */ = {isa = PBXBuildFile; fileRef = BF43C38817C9FF2700AFA63A /* icon-delete.png */; };
@@ -152,6 +153,8 @@
 		BF31F62917C920C900F06E96 /* icon-days-remaining@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-days-remaining@2x.png"; sourceTree = "<group>"; };
 		BF31F62D17C9242900F06E96 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		BF31F62E17C9242900F06E96 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		BF38352017CDB3EB0053EB59 /* ImportFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportFacebookViewController.h; sourceTree = "<group>"; };
+		BF38352117CDB3EB0053EB59 /* ImportFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportFacebookViewController.m; sourceTree = "<group>"; };
 		BF38707F17CB050100C05D98 /* icon-addressbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-addressbook.png"; sourceTree = "<group>"; };
 		BF38708017CB050100C05D98 /* icon-addressbook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-addressbook@2x.png"; sourceTree = "<group>"; };
 		BF43C38817C9FF2700AFA63A /* icon-delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-delete.png"; sourceTree = "<group>"; };
@@ -526,6 +529,8 @@
 				BFAB5F2017CB1CDE00247146 /* ImportViewController.m */,
 				BFEC52F717CB82A700C543C6 /* ImportAddressBookViewController.h */,
 				BFEC52F817CB82A700C543C6 /* ImportAddressBookViewController.m */,
+				BF38352017CDB3EB0053EB59 /* ImportFacebookViewController.h */,
+				BF38352117CDB3EB0053EB59 /* ImportFacebookViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -735,6 +740,7 @@
 				BFA76B7617C5A70B00721697 /* DModel.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
 				BF31F62F17C9242900F06E96 /* TableViewCell.m in Sources */,
+				BF38352217CDB3EB0053EB59 /* ImportFacebookViewController.m in Sources */,
 				BFABE57317CC565F0011FE8E /* DBirthdayImport.m in Sources */,
 				BF6487E117BDE90C00202254 /* EditViewController.m in Sources */,
 			);
