@@ -138,6 +138,51 @@
     
     NSMutableArray *buttonsToShow = [NSMutableArray arrayWithObjects:self.facebookButton, self.callButton, self.smsButton, self.emailButton, self.deleteButton, nil];
     
+    
+    // 해당 사항이 없을 경우 버튼을 보여주지 않음
+    
+    NSMutableArray *buttonsToHide = [NSMutableArray array];
+    
+    if (self.birthday.facebookID == nil) {
+        [buttonsToShow removeObject:self.facebookButton];
+        [buttonsToHide addObject:self.facebookButton];
+    }
+    
+    if ([self callLink] == nil) {
+        [buttonsToShow removeObject:self.callButton];
+        [buttonsToHide addObject:self.callButton];
+    }
+    
+    if ([self smsLink] == nil) {
+        [buttonsToShow removeObject:self.smsButton];
+        [buttonsToHide addObject:self.smsButton];
+    }
+    
+    if ([self emailLink] == nil) {
+        [buttonsToShow removeObject:self.emailButton];
+        [buttonsToHide addObject:self.emailButton];
+    }
+    
+    UIButton *button;
+    
+    for (button in buttonsToHide) {
+        button.hidden = YES;
+    }
+    
+    int i;
+    
+    for (i=0;i<[buttonsToShow count];i++) {
+        button = [buttonsToShow objectAtIndex:i];
+        button.hidden = NO;
+        frame = button.frame;
+        frame.origin.y = cY;
+        button.frame = frame;
+        cY += button.frame.size.height + buttonGap;
+    }
+    
+    self.scrollView.contentSize = CGSizeMake(320, cY);
+    
+    /*
     UIButton *button;
     
     int i;
@@ -151,6 +196,8 @@
     }
     
     self.scrollView.contentSize = CGSizeMake(320, cY);
+    */
+     
 }
 
 -(void) viewDidAppear:(BOOL)animated
