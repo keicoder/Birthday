@@ -10,7 +10,7 @@
 #import "CoreViewController.h"
 @class DBirthday;
 
-@interface DetailViewController : CoreViewController
+@interface DetailViewController : CoreViewController <UIActionSheetDelegate>
 
 // 상세 뷰에서 보여질 사진 뷰 속성
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;

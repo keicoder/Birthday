@@ -350,7 +350,7 @@
 }
 
 
-#pragma mark - 버튼 액션
+#pragma mark - 구현
 
 - (IBAction)facebookButtonTapped:(id)sender
 {
@@ -359,23 +359,31 @@
 
 - (IBAction)callButtonTapped:(id)sender
 {
-    
+    NSString *link = [self callLink];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link]];
 }
 
 - (IBAction)smsButtonTapped:(id)sender
 {
-    
+    NSString *link = [self smsLink];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link]];
 }
 
 - (IBAction)emailButtonTapped:(id)sender
 {
-    
+    NSString *link = [self emailLink];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link]];
 }
 
 - (IBAction)deleteButtonTapped:(id)sender
 {
+    // 삭제하기전 사용자에게 확인 -> 액션 시트 활용
     
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:[NSString stringWithFormat:@"Delete %@",self.birthday.name]
+                                                    otherButtonTitles:nil];
+    [actionSheet showInView:self.view];
 }
-
 
 @end
