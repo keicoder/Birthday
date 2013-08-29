@@ -18,4 +18,11 @@
 @implementation SettingsViewController
 
 
+- (IBAction)didClickDoneButton:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
 @end

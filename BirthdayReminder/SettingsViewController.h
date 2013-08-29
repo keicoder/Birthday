@@ -10,4 +10,11 @@
 
 @interface SettingsViewController : UITableViewController
 
+
+@property (weak, nonatomic) IBOutlet UITableViewCell *tableCellDaysBefore;
+@property (weak, nonatomic) IBOutlet UITableViewCell *tableCellNotificationTime;
+
+- (IBAction)didClickDoneButton:(id)sender;
+
+
 @end
