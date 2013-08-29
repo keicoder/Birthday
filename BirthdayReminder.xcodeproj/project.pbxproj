@@ -38,8 +38,6 @@
 		BF6487E617BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
 		BF6487E917BE02EF00202254 /* NotesEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E817BE02EF00202254 /* NotesEditViewController.m */; };
 		BF6487EA17BE02EF00202254 /* NotesEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E817BE02EF00202254 /* NotesEditViewController.m */; };
-		BF6487ED17BE070100202254 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487EC17BE070100202254 /* SettingsViewController.m */; };
-		BF6487EE17BE070100202254 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487EC17BE070100202254 /* SettingsViewController.m */; };
 		BF6487F117BE091C00202254 /* NotificationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F017BE091C00202254 /* NotificationTimeViewController.m */; };
 		BF6487F217BE091C00202254 /* NotificationTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487F017BE091C00202254 /* NotificationTimeViewController.m */; };
 		BF6487F417BE0D9300202254 /* BRAppGuide01.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6487F317BE0D9300202254 /* BRAppGuide01.png */; };
@@ -70,6 +68,7 @@
 		BF74AB3917C944970095F451 /* days_icon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3817C944970095F451 /* days_icon1@2x.png */; };
 		BF74AB3B17C9449F0095F451 /* days_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3A17C9449F0095F451 /* days_icon1.png */; };
 		BF79440217CEF90700459C2E /* PostToFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF79440117CEF90700459C2E /* PostToFacebookViewController.m */; };
+		BF7ABF2D17CF18C0002441A1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ABF2C17CF18C0002441A1 /* SettingsViewController.m */; };
 		BF8B450417C93CA300B11EF7 /* cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8B450217C93CA300B11EF7 /* cell_background.png */; };
 		BF8B450517C93CA300B11EF7 /* cell_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8B450317C93CA300B11EF7 /* cell_background@2x.png */; };
 		BFA76B7617C5A70B00721697 /* DModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA76B7517C5A70B00721697 /* DModel.m */; };
@@ -181,8 +180,6 @@
 		BF6487E417BDEDE200202254 /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
 		BF6487E717BE02EF00202254 /* NotesEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesEditViewController.h; sourceTree = "<group>"; };
 		BF6487E817BE02EF00202254 /* NotesEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesEditViewController.m; sourceTree = "<group>"; };
-		BF6487EB17BE070100202254 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		BF6487EC17BE070100202254 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BF6487EF17BE091C00202254 /* NotificationTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationTimeViewController.h; sourceTree = "<group>"; };
 		BF6487F017BE091C00202254 /* NotificationTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationTimeViewController.m; sourceTree = "<group>"; };
 		BF6487F317BE0D9300202254 /* BRAppGuide01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BRAppGuide01.png; sourceTree = "<group>"; };
@@ -215,6 +212,8 @@
 		BF74AB3A17C9449F0095F451 /* days_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = days_icon1.png; sourceTree = "<group>"; };
 		BF79440017CEF90700459C2E /* PostToFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostToFacebookViewController.h; sourceTree = "<group>"; };
 		BF79440117CEF90700459C2E /* PostToFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostToFacebookViewController.m; sourceTree = "<group>"; };
+		BF7ABF2B17CF18C0002441A1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BF7ABF2C17CF18C0002441A1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BF8B450217C93CA300B11EF7 /* cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background.png; sourceTree = "<group>"; };
 		BF8B450317C93CA300B11EF7 /* cell_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_background@2x.png"; sourceTree = "<group>"; };
 		BFA76B7417C5A70B00721697 /* DModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DModel.h; sourceTree = "<group>"; };
@@ -539,8 +538,6 @@
 				BF6487E017BDE90C00202254 /* EditViewController.m */,
 				BF6487E717BE02EF00202254 /* NotesEditViewController.h */,
 				BF6487E817BE02EF00202254 /* NotesEditViewController.m */,
-				BF6487EB17BE070100202254 /* SettingsViewController.h */,
-				BF6487EC17BE070100202254 /* SettingsViewController.m */,
 				BF6487EF17BE091C00202254 /* NotificationTimeViewController.h */,
 				BF6487F017BE091C00202254 /* NotificationTimeViewController.m */,
 				BF6487F617BE0EB200202254 /* BuildGuideViewController.h */,
@@ -553,6 +550,8 @@
 				BF38352117CDB3EB0053EB59 /* ImportFacebookViewController.m */,
 				BF79440017CEF90700459C2E /* PostToFacebookViewController.h */,
 				BF79440117CEF90700459C2E /* PostToFacebookViewController.m */,
+				BF7ABF2B17CF18C0002441A1 /* SettingsViewController.h */,
+				BF7ABF2C17CF18C0002441A1 /* SettingsViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -750,13 +749,13 @@
 				BF66039317CAEE8500E0C6C3 /* DeleteButton.m in Sources */,
 				BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */,
 				BF66039017CAEE6400E0C6C3 /* ActionButton.m in Sources */,
+				BF7ABF2D17CF18C0002441A1 /* SettingsViewController.m in Sources */,
 				BFF71CAE17C946AE009E28A4 /* StyleSheet.m in Sources */,
 				BF6487F117BE091C00202254 /* NotificationTimeViewController.m in Sources */,
 				BFEC52F917CB82A700C543C6 /* ImportAddressBookViewController.m in Sources */,
 				BFC18BFE17BDD98600D49685 /* DetailViewController.m in Sources */,
 				BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */,
 				BFC18BA317BDAF2900D49685 /* AppDelegate.m in Sources */,
-				BF6487ED17BE070100202254 /* SettingsViewController.m in Sources */,
 				BFE00E3417C877A400DA6966 /* UIImage+Thumbnail.m in Sources */,
 				BF6487E917BE02EF00202254 /* NotesEditViewController.m in Sources */,
 				BFAB5F2117CB1CDE00247146 /* ImportViewController.m in Sources */,
@@ -786,7 +785,6 @@
 				BFC18BFB17BDD96000D49685 /* HomeViewController.m in Sources */,
 				BF6487F917BE0EB200202254 /* BuildGuideViewController.m in Sources */,
 				BFC18BFF17BDD98600D49685 /* DetailViewController.m in Sources */,
-				BF6487EE17BE070100202254 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
