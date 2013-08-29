@@ -22,6 +22,8 @@
 // 싱글톤 모델에서 내보낼 알림명
 #define NotificationAddressBookBirthdaysDidUpdate @"NotificationAddressBookBirthdaysDidUpdate"
 #define NotificationFacebookBirthdaysDidUpdate @"NotificationFacebookBirthdaysDidUpdate"
+#define NotificationCachedBirthdaysDidUpdate @"NotificationCachedBirthdaysDidUpdate"
+
 
 #import <Foundation/Foundation.h>
 
@@ -61,6 +63,9 @@
 
 #pragma mark - 페이스북 담벼락에 글 남기기
 - (void)postToFacebookWall:(NSString *)message withFacebookID:(NSString *)facebookID;
+
+#pragma mark - 생일 엔티티의 데이터베이스를 순회하고 시간이 지난 nextBirthday 값을 업데이트
+-(void) updateCachedBirthdays;
 
 
 

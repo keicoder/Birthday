@@ -575,4 +575,65 @@ static DModel *_sharedInstance = nil;
 }
 
 
+
+#pragma mark - 생일 엔티티의 데이터베이스를 순회하고 시간이 지난 nextBirthday 값을 업데이트
+
+-(void) updateCachedBirthdays
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSManagedObjectContext *context = self.managedObjectContext;
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"DBirthday" inManagedObjectContext:context];
+    fetchRequest.entity = entity;
+    
+    // 다음 생일 순서대로 모든 생일 엔티티를 가져옴
+    // Fetch all the birthday entities in order of next birthday
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"nextBirthday" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    fetchRequest.sortDescriptors = sortDescriptors;
+    
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
+    
+    NSError *error = nil;
+    if (![fetchedResultsController performFetch:&error]) {
+        
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    NSArray *fetchedObjects = fetchedResultsController.fetchedObjects;
+    NSInteger resultCount = [fetchedObjects count];
+    
+    DBirthday *birthday;
+    
+    NSDate *now = [NSDate date];
+    NSDateComponents *dateComponentsToday = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:now];
+    
+    // 오늘 00:00에 해당하는 날짜를 생성
+    // This creates a date with time 00:00 today
+    NSDate *today = [[NSCalendar currentCalendar] dateFromComponents:dateComponentsToday];
+    
+    for (int i = 0; i < resultCount; i++) {
+        birthday = (DBirthday *) fetchedObjects[i];
+        
+        // 다음 생일이 이미 지났다면 생일 엔티티를 업데이트해야 한다.
+        // if next birthday has past then we'll need to update the birthday entity
+        if ([today compare:birthday.nextBirthday] == NSOrderedDescending) {
+            
+            // 이제 다음 생일이 정확하지 않고 이미 지났다.
+            // next birthday is now incorrect and is in the past...
+            [birthday updateNextBirthdayAndAge];
+            }
+    }
+    
+    [self saveChanges];
+    
+    // 데이터베이스에서 생일 정보가 업데이트됐음을 옵저버에게 모두 알려준다.
+    // Let any observer's know that the birthdays in our database have been updated
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationCachedBirthdaysDidUpdate object:self userInfo:nil];
+}
+
+
+
 @end
