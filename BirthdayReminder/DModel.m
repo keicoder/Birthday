@@ -402,6 +402,8 @@ static DModel *_sharedInstance = nil;
 
 #pragma mark - 페이스북 불러오기
 
+
+
 -(void) fetchFacebookBirthdays
 {
     NSLog(@"fetchFacebookBirthdays");
@@ -411,6 +413,68 @@ static DModel *_sharedInstance = nil;
         return;
     }
     // 여기까지 오면 페이스북 계정이 이미 인증된 상태이다.
+    
+    NSURL *requestURL = [NSURL URLWithString:@"https://graph.facebook.com/me/friends"];
+    
+    // 애플 소셜 프레임워크의 SLRequest 클래스를 활용해 페이스북 그래프 API의 me/friends 경로를 호출하면서 친구 딕셔너리 배열 중 name, id, birthday 필드만을 요청한다.
+    // 페이스북 전체 API는 //developers.facebook.com/docs/reference/api에서 참고할 수 있다.
+    NSDictionary *params = @{ @"fields" : @"name,id,birthday"};
+    
+    SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeFacebook requestMethod:SLRequestMethodGET URL:requestURL parameters:params];
+    
+    request.account = self.facebookAccount;
+    
+    [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+        if (error != nil) {
+            NSLog(@"Error getting my Facebook friend birthdays: %@",error);
+        }
+        else
+        {
+            // 페이스의 me/friends 그래프 API는 루트 딕셔너리를 반환한다.
+            // Facebook's me/friends Graph API returns a root dictionary
+            NSDictionary *resultD = (NSDictionary *) [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+            NSLog(@"Facebook returned friends: %@",resultD);
+            
+            // 'data' 키를 사용하면 페이스북 친구 딕셔너리의 배열이 반환된다.
+            // with a 'data' key - an array of Facebook friend dictionaries
+            NSArray *birthdayDictionaries = resultD[@"data"];
+            
+            int birthdayCount = [birthdayDictionaries count];
+            NSDictionary *facebookDictionary;
+            
+            NSMutableArray *birthdays = [NSMutableArray array];
+            DBirthdayImport *birthday;
+            NSString *birthDateS;
+            
+            for (int i = 0; i < birthdayCount; i++)
+            {
+                facebookDictionary = birthdayDictionaries[i];
+                birthDateS = facebookDictionary[@"birthday"];
+                if (!birthDateS) continue;
+                
+                // DBirthdayImport의 인스턴스를 생성
+                // create an instance of DBirthdayImport
+                NSLog(@"Found a Facebook Birthday: %@",facebookDictionary);
+                
+                // 할 일 - DBirthdayImport 인스턴스를 생성 (DBirthdayImport 클래스에서 initWithFacebookDictionary: 메소드 선언/구현)
+                birthday = [[DBirthdayImport alloc] initWithFacebookDictionary:facebookDictionary];
+                [birthdays addObject: birthday];
+            }
+            
+            // 생일을 이름순으로 정렬
+            // Order the birthdays by name
+            NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+            NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+            [birthdays sortUsingDescriptors:sortDescriptors];
+            
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                // 메인 스레드에서 뷰를 업데이트
+                // update the view on the main thread
+                NSDictionary *userInfo = @{@"birthdays":birthdays};
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationFacebookBirthdaysDidUpdate object:self userInfo:userInfo];
+            });
+        }
+    }];
 }
 
 

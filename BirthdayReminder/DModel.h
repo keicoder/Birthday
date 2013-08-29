@@ -21,6 +21,7 @@
 
 // 싱글톤 모델에서 내보낼 알림명
 #define NotificationAddressBookBirthdaysDidUpdate @"NotificationAddressBookBirthdaysDidUpdate"
+#define NotificationFacebookBirthdaysDidUpdate  @"NotificationFacebookBirthdaysDidUpdate"
 
 #import <Foundation/Foundation.h>
 

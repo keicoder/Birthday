@@ -41,5 +41,8 @@
 
 -(id)initWithAddressBookRecord:(ABRecordRef)addressBookRecord;
 
+#pragma mark 커스텀 초기자 메소드 (페이스북 사용자 딕셔너리로부터 DBirthdayImport 인스턴스를 생성하는 초기자)
+
+-(id)initWithFacebookDictionary:(NSDictionary *)facebookDictionary;
 
 @end

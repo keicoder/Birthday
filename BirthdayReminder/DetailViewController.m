@@ -121,8 +121,10 @@
     
     CGFloat cY = self.notesTextLabel.frame.origin.y;
     
+    
     // 필요한 높이를 계산
-    CGSize notesLabelSize = [notes sizeWithFont:self.notesTextLabel.font constrainedToSize:CGSizeMake(300.f, 300.f) lineBreakMode:NSLineBreakByWordWrapping];
+    
+    CGSize notesLabelSize = [notes sizeWithFont:self.notesTextLabel.font constrainedToSize:CGSizeMake(300.f, 900.f) lineBreakMode:NSLineBreakByWordWrapping];
     
     CGRect frame = self.notesTextLabel.frame;
     frame.size.height = notesLabelSize.height;

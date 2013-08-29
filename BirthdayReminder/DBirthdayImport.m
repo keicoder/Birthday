@@ -95,6 +95,42 @@
 
 
 
+#pragma mark 커스텀 초기자 메소드 (페이스북 사용자 딕셔너리로부터 DBirthdayImport 인스턴스를 생성하는 초기자)
+
+-(id)initWithFacebookDictionary:(NSDictionary *)facebookDictionary
+{
+    self = [super init];
+    if (self) {
+        self.name = [facebookDictionary objectForKey:@"name"];
+        self.uid = [NSString stringWithFormat:@"fb-%@",facebookDictionary[@"id"]];
+        self.facebookID = [NSString stringWithFormat:@"%@",facebookDictionary[@"id"]];
+        
+        // 페이스북은 페이스북 ID를 통해 페이스북 프로필 사진에 쉽게 접근할 수 있게 편의 URL을 제공한다.
+        // Facebook provides a convenience URL for Facebook profile pics as long as you have the Facebook ID
+        self.picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large",self.facebookID];
+        
+        // 페이스북은 [월]/[일]/[연도] 또는 [월]/[일] 문자열 형태의 생일을 반환한다.
+        // Facebook returns birthdays in the string format [month]/[day]/[year] or [month]/[day]
+        NSString *birthDateString = [facebookDictionary objectForKey:@"birthday"];
+        NSArray *birthdaySegments = [birthDateString componentsSeparatedByString:@"/"];
+        
+        self.birthDay =  [NSNumber numberWithInt:[birthdaySegments[1] intValue]];
+        self.birthMonth = [NSNumber numberWithInt:[birthdaySegments[0] intValue]];
+        
+        if ([birthdaySegments count] > 2) {
+            // 연도 포함
+            // includes year
+            self.birthYear = [NSNumber numberWithInt:[birthdaySegments[2] intValue]];
+        }
+        
+        [self updateNextBirthdayAndAge];
+    }
+    return self;
+}
+
+
+
+
 // DBirthday.m 에서 복사한 코드
 
 #pragma mark - updateNextBirthdayAndAge (nextBirthday와 nextBirthdayAge를 업데이트하는데 이용)
