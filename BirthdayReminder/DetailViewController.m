@@ -15,6 +15,7 @@
 #import "DModel.h" // Delete 버튼을 눌렀을 때 코어 데이터 엔티티 삭제
 #import "UIImageView+RemoteFile.h" // 원격지 이미지 내려받기 및 렌더링
 
+
 @interface DetailViewController ()
 
 @end
@@ -374,7 +375,8 @@
 
 - (IBAction)facebookButtonTapped:(id)sender
 {
-    
+    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"PostToFacebookWall"];
+    [self.navigationController presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (IBAction)callButtonTapped:(id)sender

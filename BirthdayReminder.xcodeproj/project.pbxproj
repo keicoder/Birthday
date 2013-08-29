@@ -69,6 +69,7 @@
 		BF74AB3317C940940095F451 /* days_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3117C940940095F451 /* days_icon@2x.png */; };
 		BF74AB3917C944970095F451 /* days_icon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3817C944970095F451 /* days_icon1@2x.png */; };
 		BF74AB3B17C9449F0095F451 /* days_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF74AB3A17C9449F0095F451 /* days_icon1.png */; };
+		BF79440217CEF90700459C2E /* PostToFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF79440117CEF90700459C2E /* PostToFacebookViewController.m */; };
 		BF8B450417C93CA300B11EF7 /* cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8B450217C93CA300B11EF7 /* cell_background.png */; };
 		BF8B450517C93CA300B11EF7 /* cell_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8B450317C93CA300B11EF7 /* cell_background@2x.png */; };
 		BFA76B7617C5A70B00721697 /* DModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA76B7517C5A70B00721697 /* DModel.m */; };
@@ -212,6 +213,8 @@
 		BF74AB3117C940940095F451 /* days_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "days_icon@2x.png"; sourceTree = "<group>"; };
 		BF74AB3817C944970095F451 /* days_icon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "days_icon1@2x.png"; sourceTree = "<group>"; };
 		BF74AB3A17C9449F0095F451 /* days_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = days_icon1.png; sourceTree = "<group>"; };
+		BF79440017CEF90700459C2E /* PostToFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostToFacebookViewController.h; sourceTree = "<group>"; };
+		BF79440117CEF90700459C2E /* PostToFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostToFacebookViewController.m; sourceTree = "<group>"; };
 		BF8B450217C93CA300B11EF7 /* cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background.png; sourceTree = "<group>"; };
 		BF8B450317C93CA300B11EF7 /* cell_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_background@2x.png"; sourceTree = "<group>"; };
 		BFA76B7417C5A70B00721697 /* DModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DModel.h; sourceTree = "<group>"; };
@@ -548,6 +551,8 @@
 				BFEC52F817CB82A700C543C6 /* ImportAddressBookViewController.m */,
 				BF38352017CDB3EB0053EB59 /* ImportFacebookViewController.h */,
 				BF38352117CDB3EB0053EB59 /* ImportFacebookViewController.m */,
+				BF79440017CEF90700459C2E /* PostToFacebookViewController.h */,
+				BF79440117CEF90700459C2E /* PostToFacebookViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -761,6 +766,7 @@
 				BFA76B7617C5A70B00721697 /* DModel.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
 				BFC15B4F17CEE586004545B1 /* UIImageView+RemoteFile.m in Sources */,
+				BF79440217CEF90700459C2E /* PostToFacebookViewController.m in Sources */,
 				BF31F62F17C9242900F06E96 /* TableViewCell.m in Sources */,
 				BF38352217CDB3EB0053EB59 /* ImportFacebookViewController.m in Sources */,
 				BFABE57317CC565F0011FE8E /* DBirthdayImport.m in Sources */,
