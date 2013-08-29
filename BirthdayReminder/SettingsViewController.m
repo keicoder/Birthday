@@ -32,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // 백그라운드 이미지 설정
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app-background1.png"]];
     self.tableView.backgroundView = backgroundView;
 }
