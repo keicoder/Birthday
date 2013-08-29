@@ -7,6 +7,8 @@
 //
 
 #import "PostToFacebookViewController.h"
+#import "StyleSheet.h"
+#import "UIImageView+RemoteFile.h"
 
 @interface PostToFacebookViewController ()
 
@@ -23,18 +25,53 @@
     return self;
 }
 
-- (void)viewDidLoad
+-(void) viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [StyleSheet styleRoundCorneredView:self.photoView];
+    [StyleSheet styleTextView:self.textView];
 }
 
-- (void)didReceiveMemoryWarning
+
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    
+    NSString *facebookPicURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large",self.facebookID];
+    
+    [self.photoView setImageWithRemoteFileURL:facebookPicURL placeHolderImage:[UIImage imageNamed:@"icon-birthday-cake.png"]];
+    self.textView.text = self.initialPostText;
+    
+    [self.textView becomeFirstResponder];
+    
+    [self updatePostButton];
 }
+
+
 
 - (IBAction)postToFacebook:(id)sender {
 }
+
+
+-(void) updatePostButton
+{
+    self.postButton.enabled = self.textView.text.length > 0;
+}
+
+
+
+#pragma mark UITextViewDelegate
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    [self updatePostButton];
+}
+
+
+
+
+
+
+
 @end

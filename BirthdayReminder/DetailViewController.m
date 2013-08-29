@@ -14,6 +14,7 @@
 #import <AddressBook/AddressBook.h> // 전화, SMS, 이메일 등 데이터 불러오기
 #import "DModel.h" // Delete 버튼을 눌렀을 때 코어 데이터 엔티티 삭제
 #import "UIImageView+RemoteFile.h" // 원격지 이미지 내려받기 및 렌더링
+#import "PostToFacebookViewController.h" // 페이스북 담벼락에 글 남기기
 
 
 @interface DetailViewController ()
@@ -376,6 +377,11 @@
 - (IBAction)facebookButtonTapped:(id)sender
 {
     UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"PostToFacebookWall"];
+    
+    PostToFacebookViewController *facebookViewController  = (PostToFacebookViewController *) navigationController.topViewController;
+    facebookViewController.facebookID = self.birthday.facebookID;
+    facebookViewController.initialPostText = @"Happy Birthday!";
+    
     [self.navigationController presentViewController:navigationController animated:YES completion:nil];
 }
 
