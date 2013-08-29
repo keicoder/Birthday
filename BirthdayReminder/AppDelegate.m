@@ -38,7 +38,10 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    // 앱 배지 카운트 초기화
+    // reset the application badge count
+    // --> 할 일 : 캐싱한 데이터가 갱신될 때에는 홈 뷰 컨트롤러 테이블 뷰도 갱신되어야 함
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
