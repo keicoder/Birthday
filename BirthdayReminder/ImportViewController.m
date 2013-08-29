@@ -34,6 +34,11 @@
 
 @implementation ImportViewController
 
+@synthesize importButton;
+@synthesize tableView;
+
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

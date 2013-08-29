@@ -31,6 +31,8 @@
 
 + (DModel *)sharedInstance;  // 클래스 메소드
 
+@property (nonatomic,readonly) NSArray *addressBookBirthdays;
+
 #pragma mark - 코어 데이터 모델의 속성 (애플의 마스터-상세 앱에서 가져옴)
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
