@@ -85,6 +85,7 @@
 		BFBC036917C1A513002E4687 /* olly-murs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC035F17C1A513002E4687 /* olly-murs.jpg */; };
 		BFBC036A17C1A513002E4687 /* russell-brand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC036017C1A513002E4687 /* russell-brand.jpg */; };
 		BFBC036B17C1A513002E4687 /* scarlett-johansson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC036117C1A513002E4687 /* scarlett-johansson.jpg */; };
+		BFC15B4F17CEE586004545B1 /* UIImageView+RemoteFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC15B4E17CEE586004545B1 /* UIImageView+RemoteFile.m */; };
 		BFC18B9317BDAF2900D49685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9217BDAF2900D49685 /* Foundation.framework */; };
 		BFC18B9517BDAF2900D49685 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */; };
 		BFC18B9717BDAF2900D49685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC18B9617BDAF2900D49685 /* UIKit.framework */; };
@@ -230,6 +231,8 @@
 		BFBC035F17C1A513002E4687 /* olly-murs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "olly-murs.jpg"; sourceTree = "<group>"; };
 		BFBC036017C1A513002E4687 /* russell-brand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "russell-brand.jpg"; sourceTree = "<group>"; };
 		BFBC036117C1A513002E4687 /* scarlett-johansson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "scarlett-johansson.jpg"; sourceTree = "<group>"; };
+		BFC15B4D17CEE586004545B1 /* UIImageView+RemoteFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RemoteFile.h"; sourceTree = "<group>"; };
+		BFC15B4E17CEE586004545B1 /* UIImageView+RemoteFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RemoteFile.m"; sourceTree = "<group>"; };
 		BFC18B8F17BDAF2900D49685 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC18B9217BDAF2900D49685 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFC18B9417BDAF2900D49685 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -554,6 +557,8 @@
 			children = (
 				BFE00E3217C877A400DA6966 /* UIImage+Thumbnail.h */,
 				BFE00E3317C877A400DA6966 /* UIImage+Thumbnail.m */,
+				BFC15B4D17CEE586004545B1 /* UIImageView+RemoteFile.h */,
+				BFC15B4E17CEE586004545B1 /* UIImageView+RemoteFile.m */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -755,6 +760,7 @@
 				BF47BE6A17C46AD8003C209C /* DBirthday.m in Sources */,
 				BFA76B7617C5A70B00721697 /* DModel.m in Sources */,
 				BFC18BFA17BDD96000D49685 /* HomeViewController.m in Sources */,
+				BFC15B4F17CEE586004545B1 /* UIImageView+RemoteFile.m in Sources */,
 				BF31F62F17C9242900F06E96 /* TableViewCell.m in Sources */,
 				BF38352217CDB3EB0053EB59 /* ImportFacebookViewController.m in Sources */,
 				BFABE57317CC565F0011FE8E /* DBirthdayImport.m in Sources */,
