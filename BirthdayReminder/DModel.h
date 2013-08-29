@@ -65,6 +65,8 @@
 - (void)postToFacebookWall:(NSString *)message withFacebookID:(NSString *)facebookID;
 
 #pragma mark - 생일 엔티티의 데이터베이스를 순회하고 시간이 지난 nextBirthday 값을 업데이트
+// 앱을 전경에서 실행할 때마다 한 번씩 호출해야 한다. 이 시점은 앱이 활성화되거나, 또는 사용자가 앱을 재실행한 시점이다.
+// 따라서 AppDelegate.m 파일의 applicationDidBecomeActive 메소드에서 호출한다.
 -(void) updateCachedBirthdays;
 
 
