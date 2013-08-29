@@ -32,6 +32,7 @@
 		BF5AD05D17CC71A9001F9A24 /* icon-import-not-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5AD05917CC71A9001F9A24 /* icon-import-not-selected@2x.png */; };
 		BF5AD05E17CC71A9001F9A24 /* icon-import-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5AD05A17CC71A9001F9A24 /* icon-import-selected.png */; };
 		BF5AD05F17CC71A9001F9A24 /* icon-import-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5AD05B17CC71A9001F9A24 /* icon-import-selected@2x.png */; };
+		BF5CA07417CF436D001E04AB /* DSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5CA07317CF436D001E04AB /* DSettings.m */; };
 		BF6487E117BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E217BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
@@ -174,6 +175,8 @@
 		BF5AD05917CC71A9001F9A24 /* icon-import-not-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-import-not-selected@2x.png"; sourceTree = "<group>"; };
 		BF5AD05A17CC71A9001F9A24 /* icon-import-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-import-selected.png"; sourceTree = "<group>"; };
 		BF5AD05B17CC71A9001F9A24 /* icon-import-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-import-selected@2x.png"; sourceTree = "<group>"; };
+		BF5CA07217CF436D001E04AB /* DSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSettings.h; sourceTree = "<group>"; };
+		BF5CA07317CF436D001E04AB /* DSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSettings.m; sourceTree = "<group>"; };
 		BF6487DF17BDE90C00202254 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		BF6487E017BDE90C00202254 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		BF6487E317BDEDE200202254 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				BFA76B7517C5A70B00721697 /* DModel.m */,
 				BFABE57117CC565F0011FE8E /* DBirthdayImport.h */,
 				BFABE57217CC565F0011FE8E /* DBirthdayImport.m */,
+				BF5CA07217CF436D001E04AB /* DSettings.h */,
+				BF5CA07317CF436D001E04AB /* DSettings.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -746,6 +751,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5CA07417CF436D001E04AB /* DSettings.m in Sources */,
 				BF66039317CAEE8500E0C6C3 /* DeleteButton.m in Sources */,
 				BF6487F817BE0EB200202254 /* BuildGuideViewController.m in Sources */,
 				BF66039017CAEE6400E0C6C3 /* ActionButton.m in Sources */,

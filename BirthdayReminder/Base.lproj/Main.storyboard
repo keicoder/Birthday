@@ -1111,16 +1111,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="days_icon1.png" width="72" height="72"/>
-        <image name="days_icon1.png" width="72" height="72"/>
-        <image name="days_icon1.png" width="72" height="72"/>
-        <image name="days_icon1.png" width="72" height="72"/>
         <image name="icon-add-new.png" width="19" height="19"/>
         <image name="icon-addressbook.png" width="30" height="30"/>
         <image name="icon-birthday-cake.png" width="55" height="55"/>
         <image name="icon-call.png" width="30" height="30"/>
         <image name="icon-delete.png" width="30" height="30"/>
         <image name="icon-email.png" width="30" height="30"/>
-        <image name="icon-facebook.png" width="30" height="30"/>
         <image name="icon-facebook.png" width="30" height="30"/>
         <image name="icon-notes.png" width="22" height="22"/>
         <image name="icon-settings.png" width="19" height="19"/>
