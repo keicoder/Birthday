@@ -11,6 +11,7 @@
 #import "DModel.h"
 #import "UIImage+Thumbnail.h" // 카테고리 임포트
 #import "StyleSheet.h"        // 스타일 적용
+#import "UIImageView+RemoteFile.h" // 원격지 이미지 내려받기 및 렌더링
 
 @interface EditViewController ()
 
@@ -91,6 +92,9 @@
     [self.birthday updateNextBirthdayAndAge];
     self.datePicker.date = [calendar dateFromComponents:components];
     
+    
+    /*
+     // UIImageView+RemoteFile 카테고리 파일 및 테이블 뷰 셀에서 설정했음 -> 아래 코드로 대체
     if (self.birthday.imageData == nil)
     {
         self.photoView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
@@ -98,6 +102,21 @@
     else {
         self.photoView.image = [UIImage imageWithData:self.birthday.imageData];
     }
+    */
+    
+    
+    if (self.birthday.imageData == nil)
+    {
+        if ([self.birthday.picURL length] > 0) {
+            [self.photoView setImageWithRemoteFileURL:self.birthday.picURL placeHolderImage:[UIImage imageNamed:@"icon-birthday-cake.png"]];
+        }
+        else self.photoView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
+    }
+    else {
+        self.photoView.image = [UIImage imageWithData:_birthday.imageData];
+    }
+    
+    
     
     [self updateSaveButton];
     

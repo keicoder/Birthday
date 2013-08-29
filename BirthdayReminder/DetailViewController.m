@@ -13,6 +13,7 @@
 #import "StyleSheet.h"
 #import <AddressBook/AddressBook.h> // 전화, SMS, 이메일 등 데이터 불러오기
 #import "DModel.h" // Delete 버튼을 눌렀을 때 코어 데이터 엔티티 삭제
+#import "UIImageView+RemoteFile.h" // 원격지 이미지 내려받기 및 렌더링
 
 @interface DetailViewController ()
 
@@ -91,14 +92,30 @@
     
     // UIImage *image = self.birthday[@"image"];
     
-    UIImage *image = [UIImage imageWithData:self.birthday.imageData];
+    // UIImage *image = [UIImage imageWithData:self.birthday.imageData];
     
+    
+    /*
+     // UIImageView+RemoteFile 카테고리 파일 및 테이블 뷰 셀에서 설정했음 -> 아래 코드로 대체
     if (image == nil) {
         // 딕셔너리애 이미지가 없을 경우 기본으로 생일 케이크 이미지를 사용
         self.photoView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
     } else {
         self.photoView.image = image;
     }
+    */
+    
+    if (self.birthday.imageData == nil)
+    {
+        if ([self.birthday.picURL length] > 0) {
+            [self.photoView setImageWithRemoteFileURL:_birthday.picURL placeHolderImage:[UIImage imageNamed:@"icon-birthday-cake.png"]];
+        }
+        else self.photoView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
+    }
+    else {
+        self.photoView.image = [UIImage imageWithData:_birthday.imageData];
+    }
+    
     
     int days = self.birthday.remainingDaysUntilNextBirthday;
     
