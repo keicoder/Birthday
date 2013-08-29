@@ -59,6 +59,9 @@
 #pragma mark - 페이스북 불러오기
 -(void) fetchFacebookBirthdays;
 
+#pragma mark - 페이스북 담벼락에 글 남기기
+- (void)postToFacebookWall:(NSString *)message withFacebookID:(NSString *)facebookID;
+
 
 
 @end

@@ -38,6 +38,9 @@ typedef enum : int
 @property (strong) ACAccount *facebookAccount;  // 인증된 페이스북 계정에 대한 참조
 @property FacebookAction currentFacebookAction; // 현재 진행 중인 페이스북 그래프 API 액션을 추적하기 위한 속성
 
+@property (nonatomic,strong) NSString *postToFacebookMessage;
+@property (nonatomic,strong) NSString *postToFacebookID;
+
 @end
 
 
@@ -513,7 +516,7 @@ static DModel *_sharedInstance = nil;
                 case FacebookActionPostToWall:
                     // 할일 : 친구의 페이스북 담벼락에 글 남기기
                     // TODO : post to a friend's Facebook Wall
-                    // [self postToFacebookWall:self.postToFacebookMessage withFacebookID:self.postToFacebookID];
+                    [self postToFacebookWall:self.postToFacebookMessage withFacebookID:self.postToFacebookID];
                     break;
             }
         } else {
@@ -528,6 +531,48 @@ static DModel *_sharedInstance = nil;
     }];
 }
 
+
+
+#pragma mark - 페이스북 담벼락에 글 남기기
+
+- (void)postToFacebookWall:(NSString *)message withFacebookID:(NSString *)facebookID
+{
+    NSLog(@"postToFacebookWall");
+    
+    if (self.facebookAccount == nil) {
+        //We're not authorized yet so store the Facebook message and id and start the authentication flow
+        self.postToFacebookMessage = message;
+        self.postToFacebookID = facebookID;
+        self.currentFacebookAction = FacebookActionPostToWall;
+        [self authenticateWithFacebook];
+        return;
+    }
+    
+    NSLog(@"We're authorized so post to Facebook!");
+    
+    NSDictionary *params = @{@"message":message};
+    
+    //Use the user's Facebook ID to call the post to friend feed Graph API path
+    NSString *postGraphPath = [NSString stringWithFormat:@"https://graph.facebook.com/%@/feed",facebookID];
+    
+    NSURL *requestURL = [NSURL URLWithString:postGraphPath];
+    
+    SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeFacebook requestMethod:SLRequestMethodPOST URL:requestURL parameters:params];
+    request.account = self.facebookAccount;
+    
+    [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+        if (error != nil) {
+            NSLog(@"Error posting to Facebook: %@",error);
+        }
+        else
+        {
+            //Facebook returns a dictionary with the id of the new post - this might be useful for other projects
+            NSDictionary *dict = (NSDictionary *) [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+            NSLog(@"Successfully posted to Facebook! Post ID: %@",dict);
+        }
+    }];
+    
+}
 
 
 @end

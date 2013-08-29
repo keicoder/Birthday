@@ -9,6 +9,7 @@
 #import "PostToFacebookViewController.h"
 #import "StyleSheet.h"
 #import "UIImageView+RemoteFile.h"
+#import "DModel.h"
 
 @interface PostToFacebookViewController ()
 
@@ -50,7 +51,10 @@
 
 
 
-- (IBAction)postToFacebook:(id)sender {
+- (IBAction)postToFacebook:(id)sender
+{
+    [[DModel sharedInstance] postToFacebookWall:self.textView.text withFacebookID:self.facebookID];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
