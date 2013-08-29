@@ -147,6 +147,8 @@
     
     tableCell.birthdayImport = birthdayImport;
     
+    /*
+     // UIImageView+RemoteFile 카테고리 파일 및 테이블 뷰 셀에서 설정했음
     if (birthdayImport.imageData == nil)
     {
         tableCell.iconView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
@@ -154,6 +156,7 @@
     else {
         tableCell.iconView.image = [UIImage imageWithData:birthdayImport.imageData];
     }
+    */
     
     // 테이블 셀 배경 이미지 적용
     //UIImage *backgroundImage = (indexPath.row == 0) ? [UIImage imageNamed:@"background_banner.png"] : [UIImage imageNamed:@"background_banner.png"];

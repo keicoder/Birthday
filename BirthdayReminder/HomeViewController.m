@@ -261,6 +261,9 @@
     
     TableViewCell *tableCell = (TableViewCell *)cell;
     tableCell.birthday = birthday;
+    
+    /*
+     // UIImageView+RemoteFile 카테고리 파일 및 테이블 뷰 셀에서 설정했음
     if (birthday.imageData == nil)
     {
         tableCell.iconView.image = [UIImage imageNamed:@"icon-birthday-cake.png"];
@@ -268,6 +271,7 @@
     else {
         tableCell.iconView.image = [UIImage imageWithData:birthday.imageData];
     }
+    */
     
     // 테이블 셀 배경 이미지 적용
     
