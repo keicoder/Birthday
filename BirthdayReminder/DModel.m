@@ -23,6 +23,7 @@
 #import "DBirthdayImport.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
+#import "DSettings.h"
 
 
 typedef enum : int
@@ -399,6 +400,8 @@ static DModel *_sharedInstance = nil;
     // 새로 추가한 내용이나 변경 사항을 코어 데이터 저장소에 저장한다.
     [self saveChanges];
     
+    [self updateCachedBirthdays];
+    
 }
 
 
@@ -583,6 +586,9 @@ static DModel *_sharedInstance = nil;
 
 -(void) updateCachedBirthdays
 {
+    // 로컬 알림이 중복 생성되지 않게 기존에 예약된 모든 로컬 알림 제거
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
     NSManagedObjectContext *context = self.managedObjectContext;
@@ -617,6 +623,10 @@ static DModel *_sharedInstance = nil;
     // This creates a date with time 00:00 today
     NSDate *today = [[NSCalendar currentCalendar] dateFromComponents:dateComponentsToday];
     
+    UILocalNotification *reminderNotification;
+    int scheduled = 0;
+    NSDate *fireDate;
+    
     for (int i = 0; i < resultCount; i++) {
         birthday = (DBirthday *) fetchedObjects[i];
         
@@ -628,6 +638,32 @@ static DModel *_sharedInstance = nil;
             // next birthday is now incorrect and is in the past...
             [birthday updateNextBirthdayAndAge];
             }
+        
+        if (scheduled < 20) {
+            //get the scheduled reminder date for this birthday from settings
+            fireDate = [[DSettings sharedInstance] reminderDateForNextBirthday:birthday.nextBirthday];
+            if([now compare:fireDate] != NSOrderedAscending) {
+                //this reminder was for today, but the reminder time has now passed - don't schedule a reminder!
+            }
+            else {
+                //create new new local notification to schedule
+                reminderNotification = [[UILocalNotification alloc] init];
+                //set the schedule reminder date
+                reminderNotification.fireDate = fireDate;
+                reminderNotification.timeZone = [NSTimeZone defaultTimeZone];
+                reminderNotification.alertAction = @"View Birthdays";
+                reminderNotification.alertBody = [[DSettings sharedInstance] reminderTextForNextBirthday:birthday];
+                //play a custom sound with a local notification
+                reminderNotification.soundName = @"HappyBirthday.m4a";
+                //update the badge count on the Birthday Reminder icon
+                reminderNotification.applicationIconBadgeNumber = 1;
+                //schedule the notification!
+                [[UIApplication sharedApplication] scheduleLocalNotification:reminderNotification];
+                scheduled++;
+                
+            }
+        }
+        
     }
     
     [self saveChanges];

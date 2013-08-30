@@ -6,6 +6,11 @@
 //  Copyright (c) 2013년 jun. All rights reserved.
 //
 
+#define I5SB1 @"app-background1.png"
+#define I5SB2 @"screenBackgroundImage_iP5.png"
+#define I5SB3 @"iPhone5ScreenBackgroundImage_iP5retina_lightBlue.png"
+
+
 #import "CoreViewController.h"
 
 @interface CoreViewController ()
@@ -29,7 +34,7 @@
     // [self.view insertSubview:backgroundView atIndex:0];
     
     // 상속받는 모든 뷰의 백그라운드 이미지 지정
-    UIImage *img = [UIImage imageNamed:@"app-background1.png"];
+    UIImage *img = [UIImage imageNamed:I5SB2];
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:img];
     backgroundView.frame = CGRectMake(backgroundView.frame.origin.x, backgroundView.frame.origin.y,
                                  img.size.width, img.size.height);

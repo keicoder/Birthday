@@ -8,6 +8,7 @@
 
 
 #import "DSettings.h"
+#import "DBirthday.h"
 
 @implementation DSettings
 
@@ -136,6 +137,96 @@ static NSDateFormatter *dateFormatter;
     return [dateFormatter stringFromDate:date];
 }
 
+
+// 사용자 환경 설정에 따른 생일 알림 날짜/시간 계산을 위한 핼퍼 메소드
+-(NSDate *) reminderDateForNextBirthday:(NSDate *)nextBirthday
+{
+    NSTimeInterval timeInterval;
+    NSTimeInterval secondsInOneDay = 60.f * 60.f * 24.f;
+    
+    //work out how many days to detract from the friend's next birthday for the reminder date
+    switch (self.daysBefore) {
+        case DaysBeforeTypeOnBirthday:
+            timeInterval = 0.f;
+            break;
+        case DaysBeforeTypeOneDay:
+            timeInterval = secondsInOneDay;
+            break;
+        case DaysBeforeTypeTwoDays:
+            timeInterval = secondsInOneDay * 2.f;
+            break;
+        case DaysBeforeTypeThreeDays:
+            timeInterval = secondsInOneDay * 3.f;
+            break;
+        case DaysBeforeTypeFiveDays:
+            timeInterval = secondsInOneDay * 5.f;
+            break;
+        case DaysBeforeTypeOneWeek:
+            timeInterval = secondsInOneDay * 7.f;
+            break;
+        case DaysBeforeTypeTwoWeeks:
+            timeInterval = secondsInOneDay * 14.f;
+            break;
+        case DaysBeforeTypeThreeWeeks:
+            timeInterval = secondsInOneDay * 21.f;
+            break;
+    }
+    
+    //This creates the day of the reminder at time 00:00
+    NSDate *reminderDate = [nextBirthday dateByAddingTimeInterval:-timeInterval];
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:reminderDate];
+    
+    //update the hour and minute of the reminder time
+    components.hour = self.notificationHour;
+    components.minute = self.notificationMinute;
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+
+
+// 알림 날짜 및 친구의 다음 생일 사이의 차이를 기반으로 알림 텍스트를 설정하기 위한 핼퍼 메소드
+-(NSString *) reminderTextForNextBirthday:(DBirthday *)birthday
+{
+    NSString *text;
+    
+    if ([birthday.nextBirthdayAge intValue] > 0)
+    {
+        if (self.daysBefore == DaysBeforeTypeOnBirthday) {
+            //if the friend's birthday is the same day as the reminder eg. "Joe is 30 today"
+            text = [NSString stringWithFormat:@"%@ is %@ ",birthday.name,birthday.nextBirthdayAge];
+        }
+        else {
+            //reminder is in advance of the birthday eg. "Joe will be 30 tomorrow"
+            text = [NSString stringWithFormat:@"%@ will be %@ ",birthday.name,birthday.nextBirthdayAge];
+        }
+    }
+    else {
+        text = [NSString stringWithFormat:@"It's %@'s Birthday ",birthday.name];
+    }
+    
+    switch (self.daysBefore) {
+        case DaysBeforeTypeOnBirthday:
+            return [text stringByAppendingFormat:@"today!"];
+        case DaysBeforeTypeOneDay:
+            return [text stringByAppendingFormat:@"tomorrow!"];
+        case DaysBeforeTypeTwoDays:
+            return [text stringByAppendingFormat:@"in 2 days!"];
+        case DaysBeforeTypeThreeDays:
+            return [text stringByAppendingFormat:@"in 3 days!"];
+        case DaysBeforeTypeFiveDays:
+            return [text stringByAppendingFormat:@"in 5 days!"];
+        case DaysBeforeTypeOneWeek:
+            return [text stringByAppendingFormat:@"in 1 week!"];
+        case DaysBeforeTypeTwoWeeks:
+            return [text stringByAppendingFormat:@"in 2 weeks!"];
+        case DaysBeforeTypeThreeWeeks:
+            return [text stringByAppendingFormat:@"in 3 weeks!"];
+    }
+    
+    return @"";
+}
 
 
 @end

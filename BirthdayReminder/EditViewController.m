@@ -319,6 +319,8 @@
 {
     // DModel에서 구현한 saveChanges public 메소드 호출
     [[DModel sharedInstance] saveChanges];
+    [[DModel sharedInstance] updateCachedBirthdays];
+    [super saveAndDismiss:sender];
     
     
     [super saveAndDismiss:sender];

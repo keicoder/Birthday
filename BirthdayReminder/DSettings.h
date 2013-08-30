@@ -20,6 +20,8 @@ typedef enum : int {
 
 
 #import <Foundation/Foundation.h>
+@class DBirthday;
+
 
 @interface DSettings : NSObject
 
@@ -33,6 +35,11 @@ typedef enum : int {
 -(NSString *) titleForNotificationTime;
 -(NSString *) titleForDaysBefore:(DaysBeforeType)daysBefore;
 
+
+// 사용자 환경 설정에 따른 생일 알림 날짜/시간 계산을 위한 핼퍼 메소드
+-(NSDate *) reminderDateForNextBirthday:(NSDate *)nextBirthday;
+// 알림 날짜 및 친구의 다음 생일 사이의 차이를 기반으로 알림 텍스트를 설정하기 위한 핼퍼 메소드
+-(NSString *) reminderTextForNextBirthday:(DBirthday *)birthday;
 
 
 @end

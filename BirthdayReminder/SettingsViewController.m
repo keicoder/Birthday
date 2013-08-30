@@ -6,10 +6,15 @@
 //  Copyright (c) 2013년 jun. All rights reserved.
 //
 
+#define I5SB1 @"app-background1.png"
+#define I5SB2 @"screenBackgroundImage_iP5.png"
+#define I5SB3 @"iPhone5ScreenBackgroundImage_iP5retina_lightBlue.png"
+
 
 #import "SettingsViewController.h"
 #import "DSettings.h"
 #import "StyleSheet.h"
+#import "DModel.h"
 
 @interface SettingsViewController ()
 
@@ -34,7 +39,7 @@
     [super viewDidLoad];
     
     // 백그라운드 이미지 설정
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app-background1.png"]];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:I5SB2]];
     self.tableView.backgroundView = backgroundView;
 }
 
@@ -68,6 +73,7 @@
 
 - (IBAction)didClickDoneButton:(id)sender
 {
+    [[DModel sharedInstance] updateCachedBirthdays];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

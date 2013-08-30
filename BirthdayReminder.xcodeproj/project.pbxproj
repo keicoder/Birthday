@@ -49,6 +49,21 @@
 		BF6487FB17BE3EDF00202254 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6487FA17BE3EDF00202254 /* QuartzCore.framework */; };
 		BF66039017CAEE6400E0C6C3 /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF66038F17CAEE6400E0C6C3 /* ActionButton.m */; };
 		BF66039317CAEE8500E0C6C3 /* DeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF66039217CAEE8500E0C6C3 /* DeleteButton.m */; };
+		BF6B198C17CF9CD00080BD2D /* HappyBirthday.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF6B198B17CF9CD00080BD2D /* HappyBirthday.m4a */; };
+		BF6B198E17CFA05B0080BD2D /* iPhone5ScreenBackgroundImage_iP5retina.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B198D17CFA05B0080BD2D /* iPhone5ScreenBackgroundImage_iP5retina.png */; };
+		BF6B199017CFA3720080BD2D /* iPhone5ScreenBackgroundImage_iP5retina_lightBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B198F17CFA3720080BD2D /* iPhone5ScreenBackgroundImage_iP5retina_lightBlue.png */; };
+		BF6B199F17CFAC850080BD2D /* cellBackgroundImage_iP5_jun.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B199D17CFAC850080BD2D /* cellBackgroundImage_iP5_jun.png */; };
+		BF6B19A017CFAC850080BD2D /* cellBackgroundImage_iP5_jun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B199E17CFAC850080BD2D /* cellBackgroundImage_iP5_jun@2x.png */; };
+		BF6B19A317CFAFC30080BD2D /* inCellDaysImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19A117CFAFC30080BD2D /* inCellDaysImage.png */; };
+		BF6B19A417CFAFC30080BD2D /* inCellDaysImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19A217CFAFC30080BD2D /* inCellDaysImage@2x.png */; };
+		BF6B19AB17CFB42B0080BD2D /* screenBackgroundImage_iP5.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19A917CFB42B0080BD2D /* screenBackgroundImage_iP5.png */; };
+		BF6B19AC17CFB42B0080BD2D /* screenBackgroundImage_iP5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19AA17CFB42B0080BD2D /* screenBackgroundImage_iP5@2x.png */; };
+		BF6B19AF17CFB6620080BD2D /* navigationBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19AD17CFB6620080BD2D /* navigationBarBackground.png */; };
+		BF6B19B017CFB6620080BD2D /* navigationBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19AE17CFB6620080BD2D /* navigationBarBackground@2x.png */; };
+		BF6B19B317CFBB630080BD2D /* toolBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19B117CFBB630080BD2D /* toolBarBackground.png */; };
+		BF6B19B417CFBB630080BD2D /* toolBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19B217CFBB630080BD2D /* toolBarBackground@2x.png */; };
+		BF6B19B717D039BD0080BD2D /* cellBackgroundImage_iP5_1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19B517D039BD0080BD2D /* cellBackgroundImage_iP5_1.png */; };
+		BF6B19B817D039BD0080BD2D /* cellBackgroundImage_iP5_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6B19B617D039BD0080BD2D /* cellBackgroundImage_iP5_1@2x.png */; };
 		BF6D140A17CB9D8500DEC148 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6D140217CB9D8500DEC148 /* Icon-72.png */; };
 		BF6D140B17CB9D8500DEC148 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6D140317CB9D8500DEC148 /* Icon-72@2x.png */; };
 		BF6D140C17CB9D8500DEC148 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6D140417CB9D8500DEC148 /* Icon-Small-50.png */; };
@@ -196,6 +211,21 @@
 		BF66038F17CAEE6400E0C6C3 /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
 		BF66039117CAEE8500E0C6C3 /* DeleteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteButton.h; sourceTree = "<group>"; };
 		BF66039217CAEE8500E0C6C3 /* DeleteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteButton.m; sourceTree = "<group>"; };
+		BF6B198B17CF9CD00080BD2D /* HappyBirthday.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = HappyBirthday.m4a; sourceTree = "<group>"; };
+		BF6B198D17CFA05B0080BD2D /* iPhone5ScreenBackgroundImage_iP5retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone5ScreenBackgroundImage_iP5retina.png; sourceTree = "<group>"; };
+		BF6B198F17CFA3720080BD2D /* iPhone5ScreenBackgroundImage_iP5retina_lightBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone5ScreenBackgroundImage_iP5retina_lightBlue.png; sourceTree = "<group>"; };
+		BF6B199D17CFAC850080BD2D /* cellBackgroundImage_iP5_jun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellBackgroundImage_iP5_jun.png; sourceTree = "<group>"; };
+		BF6B199E17CFAC850080BD2D /* cellBackgroundImage_iP5_jun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellBackgroundImage_iP5_jun@2x.png"; sourceTree = "<group>"; };
+		BF6B19A117CFAFC30080BD2D /* inCellDaysImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inCellDaysImage.png; sourceTree = "<group>"; };
+		BF6B19A217CFAFC30080BD2D /* inCellDaysImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inCellDaysImage@2x.png"; sourceTree = "<group>"; };
+		BF6B19A917CFB42B0080BD2D /* screenBackgroundImage_iP5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenBackgroundImage_iP5.png; sourceTree = "<group>"; };
+		BF6B19AA17CFB42B0080BD2D /* screenBackgroundImage_iP5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenBackgroundImage_iP5@2x.png"; sourceTree = "<group>"; };
+		BF6B19AD17CFB6620080BD2D /* navigationBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationBarBackground.png; sourceTree = "<group>"; };
+		BF6B19AE17CFB6620080BD2D /* navigationBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBarBackground@2x.png"; sourceTree = "<group>"; };
+		BF6B19B117CFBB630080BD2D /* toolBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolBarBackground.png; sourceTree = "<group>"; };
+		BF6B19B217CFBB630080BD2D /* toolBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolBarBackground@2x.png"; sourceTree = "<group>"; };
+		BF6B19B517D039BD0080BD2D /* cellBackgroundImage_iP5_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellBackgroundImage_iP5_1.png; sourceTree = "<group>"; };
+		BF6B19B617D039BD0080BD2D /* cellBackgroundImage_iP5_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellBackgroundImage_iP5_1@2x.png"; sourceTree = "<group>"; };
 		BF6D140217CB9D8500DEC148 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		BF6D140317CB9D8500DEC148 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		BF6D140417CB9D8500DEC148 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -422,6 +452,7 @@
 		BFC18B9917BDAF2900D49685 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B198B17CF9CD00080BD2D /* HappyBirthday.m4a */,
 				BFBC035517C1A4FE002E4687 /* birthdays.plist */,
 				BFC18B9A17BDAF2900D49685 /* BirthdayReminder-Info.plist */,
 				BFC18B9B17BDAF2900D49685 /* InfoPlist.strings */,
@@ -452,6 +483,20 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B19B517D039BD0080BD2D /* cellBackgroundImage_iP5_1.png */,
+				BF6B19B617D039BD0080BD2D /* cellBackgroundImage_iP5_1@2x.png */,
+				BF6B19B117CFBB630080BD2D /* toolBarBackground.png */,
+				BF6B19B217CFBB630080BD2D /* toolBarBackground@2x.png */,
+				BF6B19AD17CFB6620080BD2D /* navigationBarBackground.png */,
+				BF6B19AE17CFB6620080BD2D /* navigationBarBackground@2x.png */,
+				BF6B19A917CFB42B0080BD2D /* screenBackgroundImage_iP5.png */,
+				BF6B19AA17CFB42B0080BD2D /* screenBackgroundImage_iP5@2x.png */,
+				BF6B19A117CFAFC30080BD2D /* inCellDaysImage.png */,
+				BF6B19A217CFAFC30080BD2D /* inCellDaysImage@2x.png */,
+				BF6B199D17CFAC850080BD2D /* cellBackgroundImage_iP5_jun.png */,
+				BF6B199E17CFAC850080BD2D /* cellBackgroundImage_iP5_jun@2x.png */,
+				BF6B198F17CFA3720080BD2D /* iPhone5ScreenBackgroundImage_iP5retina_lightBlue.png */,
+				BF6B198D17CFA05B0080BD2D /* iPhone5ScreenBackgroundImage_iP5retina.png */,
 				BFEB03EB17CDB98E000BA938 /* background_banner.png */,
 				BFEB03EC17CDB98E000BA938 /* background_banner@2x.png */,
 				BF5AD05817CC71A9001F9A24 /* icon-import-not-selected.png */,
@@ -664,7 +709,9 @@
 				BFBC036417C1A513002E4687 /* brad-pitt.jpg in Resources */,
 				BFBC036B17C1A513002E4687 /* scarlett-johansson.jpg in Resources */,
 				BFE0858D17CAF2D200F10909 /* button-blue.png in Resources */,
+				BF6B19B717D039BD0080BD2D /* cellBackgroundImage_iP5_1.png in Resources */,
 				BFE0859617CAF5C200F10909 /* actionButton.png in Resources */,
+				BF6B198C17CF9CD00080BD2D /* HappyBirthday.m4a in Resources */,
 				BFBC036A17C1A513002E4687 /* russell-brand.jpg in Resources */,
 				BF74A03E17C9BE240052E26F /* iOS_ToolBar_BackgroundImage@2x.png in Resources */,
 				BFFA258517C9155400BB0173 /* app-background1@2x.png in Resources */,
@@ -675,14 +722,18 @@
 				BF6D140C17CB9D8500DEC148 /* Icon-Small-50.png in Resources */,
 				BF8B450417C93CA300B11EF7 /* cell_background.png in Resources */,
 				BF2C2E3317C9F5B5001E5014 /* icon-sms.png in Resources */,
+				BF6B19B817D039BD0080BD2D /* cellBackgroundImage_iP5_1@2x.png in Resources */,
 				BF2C2E3017C9F5A4001E5014 /* icon-facebook@2x.png in Resources */,
 				BFE0858E17CAF2D200F10909 /* button-blue@2x.png in Resources */,
+				BF6B199F17CFAC850080BD2D /* cellBackgroundImage_iP5_jun.png in Resources */,
+				BF6B19B317CFBB630080BD2D /* toolBarBackground.png in Resources */,
 				BF74AB3317C940940095F451 /* days_icon@2x.png in Resources */,
 				BF2C2E2D17C9F5A4001E5014 /* icon-email.png in Resources */,
 				BFFA258417C9155400BB0173 /* app-background1.png in Resources */,
 				BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */,
 				BF31F62A17C920C900F06E96 /* icon-days-remaining.png in Resources */,
 				BF2C2E2817C9EC67001E5014 /* icon-notes.png in Resources */,
+				BF6B19A417CFAFC30080BD2D /* inCellDaysImage@2x.png in Resources */,
 				BF74A03117C9AE950052E26F /* icon-settings.png in Resources */,
 				BFBC036617C1A513002E4687 /* jamie-oliver.jpg in Resources */,
 				BF5AD05F17CC71A9001F9A24 /* icon-import-selected@2x.png in Resources */,
@@ -703,6 +754,8 @@
 				BF8B450517C93CA300B11EF7 /* cell_background@2x.png in Resources */,
 				BFBC036217C1A513002E4687 /* aloe-blacc.jpg in Resources */,
 				BFE0858F17CAF2D200F10909 /* button-red.png in Resources */,
+				BF6B19A317CFAFC30080BD2D /* inCellDaysImage.png in Resources */,
+				BF6B19AF17CFB6620080BD2D /* navigationBarBackground.png in Resources */,
 				BF74A03217C9AE950052E26F /* icon-settings@2x.png in Resources */,
 				BFE0859517CAF5C200F10909 /* deleteButton.png in Resources */,
 				BF38708217CB050100C05D98 /* icon-addressbook@2x.png in Resources */,
@@ -710,10 +763,14 @@
 				BF6D140D17CB9D8500DEC148 /* Icon-Small.png in Resources */,
 				BFBC036917C1A513002E4687 /* olly-murs.jpg in Resources */,
 				BF74AB3B17C9449F0095F451 /* days_icon1.png in Resources */,
+				BF6B19AC17CFB42B0080BD2D /* screenBackgroundImage_iP5@2x.png in Resources */,
 				BF5AD05C17CC71A9001F9A24 /* icon-import-not-selected.png in Resources */,
+				BF6B198E17CFA05B0080BD2D /* iPhone5ScreenBackgroundImage_iP5retina.png in Resources */,
 				BFC1BBDF17C09058007B8266 /* thumbnail-background.png in Resources */,
 				BF74A03617C9B9100052E26F /* iOS_NavigationBar_BackgroundImage@2x.png in Resources */,
+				BF6B19A017CFAC850080BD2D /* cellBackgroundImage_iP5_jun@2x.png in Resources */,
 				BFFA258617C9155400BB0173 /* app-background.png in Resources */,
+				BF6B19AB17CFB42B0080BD2D /* screenBackgroundImage_iP5.png in Resources */,
 				BF6D141017CB9D8500DEC148 /* Icon@2x.png in Resources */,
 				BFBC036817C1A513002E4687 /* katy-perry.jpg in Resources */,
 				BF2C2E2717C9EC67001E5014 /* icon-notes@2x.png in Resources */,
@@ -723,9 +780,11 @@
 				BFBC036517C1A513002E4687 /* christina-aguilera.jpg in Resources */,
 				BF74A03517C9B9100052E26F /* iOS_NavigationBar_BackgroundImage.png in Resources */,
 				BF74AB3917C944970095F451 /* days_icon1@2x.png in Resources */,
+				BF6B19B417CFBB630080BD2D /* toolBarBackground@2x.png in Resources */,
 				BF74AB3217C940940095F451 /* days_icon.png in Resources */,
 				BFBC036717C1A513002E4687 /* justin-bieber.jpg in Resources */,
 				BFBC036317C1A513002E4687 /* angelina-jolie.jpg in Resources */,
+				BF6B19B017CFB6620080BD2D /* navigationBarBackground@2x.png in Resources */,
 				BFBC035617C1A4FE002E4687 /* birthdays.plist in Resources */,
 				BF55AF5317C9FEBA009E5A38 /* icon-call@2x.png in Resources */,
 				BFC18BD317BDB74400D49685 /* Default.png in Resources */,
@@ -734,6 +793,7 @@
 				BF5AD05E17CC71A9001F9A24 /* icon-import-selected.png in Resources */,
 				BF2C2E3417C9F5B5001E5014 /* icon-sms@2x.png in Resources */,
 				BF74A02E17C9AE8A0052E26F /* icon-add-new@2x.png in Resources */,
+				BF6B199017CFA3720080BD2D /* iPhone5ScreenBackgroundImage_iP5retina_lightBlue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

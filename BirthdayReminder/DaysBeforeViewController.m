@@ -6,6 +6,12 @@
 //  Copyright (c) 2013년 jun. All rights reserved.
 //
 
+
+#define I5SB1 @"app-background1.png"
+#define I5SB2 @"screenBackgroundImage_iP5.png"
+#define I5SB3 @"iPhone5ScreenBackgroundImage_iP5retina_lightBlue.png"
+
+
 #import "DaysBeforeViewController.h"
 #import "DSettings.h"
 
@@ -20,7 +26,7 @@
 -(void) viewDidLoad
 {
     [super viewDidLoad];
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app-background.png"]];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:I5SB2]];
     [self.tableView setBackgroundView:backgroundView];
 }
 

@@ -6,6 +6,9 @@
 //  Copyright (c) 2013년 jun. All rights reserved.
 //
 
+#define navigationBarBackground @"navigationBarBackground.png"
+#define toolBarBackground @"toolBarBackground.png"
+
 #import "StyleSheet.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ActionButton.h"
@@ -128,7 +131,7 @@
     
     // 네비게이션 바 배경 이미지
     
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"iOS_NavigationBar_BackgroundImage.png"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:navigationBarBackground] forBarMetrics:UIBarMetricsDefault];
     
      NSDictionary *barButtonItemTextAttributes;
     
@@ -138,10 +141,16 @@
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class],nil] setTintColor:kNavigationButtonBackgroundColour];
     
     barButtonItemTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                   kFontNavigationTextColour, UITextAttributeTextColor, nil];
+    
+    /*
+    barButtonItemTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                    kFontNavigationTextColour, UITextAttributeTextColor,
                                    [UIColor whiteColor], UITextAttributeTextShadowColor,
                                    [NSValue valueWithUIOffset:UIOffsetMake(0, 1)], UITextAttributeTextShadowOffset,nil];
+    */
     
+    /*
     // appearanceWhenContainedIn 스타일 메소드를 통해 UIBarButtonItem 인스턴스에만 크림 색상 스타일 적용
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:barButtonItemTextAttributes forState:UIControlStateNormal];
     
@@ -150,12 +159,13 @@
                                                          [UIColor whiteColor], UITextAttributeTextShadowColor,
                                                          [NSValue valueWithUIOffset:UIOffsetMake(0, 1)], UITextAttributeTextShadowOffset,nil];
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:disabledBarButtonItemTextAttributes forState:UIControlStateDisabled];
+    */
     
     
     // 툴바
      
     // 툴바 배경 이미지
-    [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"iOS_ToolBar_BackgroundImage.png"]  forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+    [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:toolBarBackground]  forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
     
     // 툴바 버튼
     //Dark background of Toolbar Buttons
@@ -181,7 +191,7 @@
     // 테이블 뷰
     [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
     [[UITableViewCell appearance] setSelectionStyle:UITableViewCellSelectionStyleNone];
-    [[UITableView appearance] setSeparatorStyle:UITableViewCellSeparatorStyleSingleLineEtched];
+    [[UITableView appearance] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 

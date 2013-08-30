@@ -6,6 +6,10 @@
 //  Copyright (c) 2013년 jun. All rights reserved.
 //
 
+#define CB1 @"cellBackgroundImage_iP5_jun.png"
+#define CB2 @"cellBackgroundImage_iP5_1"
+
+
 #import "HomeViewController.h"
 #import "DetailViewController.h"
 #import "EditViewController.h"
@@ -200,7 +204,31 @@
     
     // 코어 데이터 저장소에 생일이 없을 경우에만 importView(컨테이너 뷰)를 보여줌, BOOL 값 확인
     self.hasFriends = [self.fetchedResultsController.fetchedObjects count] > 0;
+    
+    
+    // 생일 엔티티의 데이터베이스를 순회하고 시간이 지난 nextBirthday 값을 업데이트
+    // 앱을 전경에서 실행할 때마다 한 번씩 호출해야 한다. 이 시점은 앱이 활성화되거나, 또는 사용자가 앱을 재실행한 시점이다.
+    // 따라서 AppDelegate.m 파일의 applicationDidBecomeActive 메소드에서 updateCachedBirthdays 호출한다.
+    
+    self.hasFriends = [self.fetchedResultsController.fetchedObjects count] > 0;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleCachedBirthdaysDidUpdate:) name:NotificationCachedBirthdaysDidUpdate object:nil];
 }
+
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationCachedBirthdaysDidUpdate object:nil];
+}
+
+
+-(void) handleCachedBirthdaysDidUpdate:(NSNotification *)notification
+{
+    // 캐시가 업데이트되면 그냥 테이블 뷰를 재로드함.
+    // if the cache updates simply reload the table view
+    [self.tableView reloadData];
+}
+
 
 
 #pragma mark - 코어 데이터 저장소에 생일이 없을 경우에만 importView(컨테이너 뷰)를 보여줌, private 속성, 세터 메소드 오버라이드
@@ -278,7 +306,7 @@
     //UIImage *backgroundImage = (indexPath.row == 0) ? [UIImage imageNamed:@"background_banner.png"] : [UIImage imageNamed:@"background_banner.png"];
     //UIImage *backgroundImage = [UIImage imageNamed:@"background_banner.png"];
     
-    UIImage *backgroundImage = [UIImage imageNamed:@"cell_background.png"];
+    UIImage *backgroundImage = [UIImage imageNamed:CB2];
     tableCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
     
     return cell;

@@ -6,6 +6,10 @@
 //  Copyright (c) 2013년 jun. All rights reserved.
 //
 
+
+#define ICI1 @"inCellDaysImage.png"
+
+
 #import "DetailViewController.h"
 #import "EditViewController.h"
 #import "DBirthday.h"
@@ -128,7 +132,7 @@
     } else {
         self.remainingDaysLabel.text = [NSString stringWithFormat:@"%d",days];
         self.remainingDaysSubTextLabel.text = (days == 1) ? @"more day" : @"more days";
-        self.remainingDaysImageView.image = [UIImage imageNamed:@"days_icon1.png"];
+        self.remainingDaysImageView.image = [UIImage imageNamed:ICI1];
     }
     
     self.birthdayLabel.text = self.birthday.birthdayTextToDisplay;
