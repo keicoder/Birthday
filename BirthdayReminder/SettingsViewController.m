@@ -15,6 +15,7 @@
 #import "DSettings.h"
 #import "StyleSheet.h"
 #import "DModel.h"
+#import "Appirater.h" // 사용자 앱 리뷰 리마인드
 
 @interface SettingsViewController ()
 
@@ -51,24 +52,48 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40.f)];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.f, 15.f, 300.f, 20.f)];
     label.backgroundColor = [UIColor clearColor];
-    [StyleSheet styleLabel:label withType:LabelTypeLarge];
+    [StyleSheet styleLabel:label withType:LabelTypeJun];
     label.text = text;
     [view addSubview:label];
     return view;
 }
 
 
+#pragma mark - 테이블 뷰 메소드
+
+// 헤더 높이
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 40.f;
 }
 
-
+// 섹션 헤더 텍스트
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return [self createSectionHeaderWithLabel:@"Reminders"];
+    // return [self createSectionHeaderWithLabel:@"Reminders"];
+    return section == 0 ? [self createSectionHeaderWithLabel:@"Reminders"] : [self createSectionHeaderWithLabel:@"Share the Love"];
 }
 
+// 테이블 셀 행을 클릭했을 때
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 사용자가 Days Before나 Alert Time 테이블 셀을 탭하면 무시한다.
+    if (indexPath.section == 0) return;
+    
+    switch (indexPath.row) {
+        case 0:
+            // 앱 스토어 리뷰를 추가
+            [Appirater rateApp];
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
+
+#pragma mark - 버튼
 
 
 - (IBAction)didClickDoneButton:(id)sender

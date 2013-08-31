@@ -41,6 +41,8 @@
 		BF624CF617D19B6800EE688D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF624CF517D19B6800EE688D /* CFNetwork.framework */; };
 		BF624CF817D19B9900EE688D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF624CF717D19B9900EE688D /* SystemConfiguration.framework */; };
 		BF624CFA17D19BA300EE688D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF624CF917D19BA300EE688D /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BF624CFD17D1AB1500EE688D /* icon-compose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF624CFB17D1AB1500EE688D /* icon-compose@2x.png */; };
+		BF624CFE17D1AB1500EE688D /* icon-compose.png in Resources */ = {isa = PBXBuildFile; fileRef = BF624CFC17D1AB1500EE688D /* icon-compose.png */; };
 		BF6487E117BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E217BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
@@ -240,6 +242,8 @@
 		BF624CF517D19B6800EE688D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BF624CF717D19B9900EE688D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BF624CF917D19BA300EE688D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BF624CFB17D1AB1500EE688D /* icon-compose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-compose@2x.png"; sourceTree = "<group>"; };
+		BF624CFC17D1AB1500EE688D /* icon-compose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-compose.png"; sourceTree = "<group>"; };
 		BF6487DF17BDE90C00202254 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		BF6487E017BDE90C00202254 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		BF6487E317BDEDE200202254 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
@@ -559,6 +563,8 @@
 		BFC18BC717BDB74400D49685 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BF624CFB17D1AB1500EE688D /* icon-compose@2x.png */,
+				BF624CFC17D1AB1500EE688D /* icon-compose.png */,
 				BF6B19BD17D03ECF0080BD2D /* cellBackgroundImage_iP5_3.png */,
 				BF6B19BE17D03ECF0080BD2D /* cellBackgroundImage_iP5_3@2x.png */,
 				BF6B19B917D03D660080BD2D /* cellBackgroundImage_iP5_2.png */,
@@ -838,6 +844,7 @@
 				BF6B199F17CFAC850080BD2D /* cellBackgroundImage_iP5_jun.png in Resources */,
 				BF6B19B317CFBB630080BD2D /* toolBarBackground.png in Resources */,
 				BF74AB3317C940940095F451 /* days_icon@2x.png in Resources */,
+				BF624CFE17D1AB1500EE688D /* icon-compose.png in Resources */,
 				BF2C2E2D17C9F5A4001E5014 /* icon-email.png in Resources */,
 				BFFA258417C9155400BB0173 /* app-background1.png in Resources */,
 				BFC1BBE017C09058007B8266 /* thumbnail-background@2x.png in Resources */,
@@ -900,6 +907,7 @@
 				BF6B19BB17D03D660080BD2D /* cellBackgroundImage_iP5_2.png in Resources */,
 				BF55AF5317C9FEBA009E5A38 /* icon-call@2x.png in Resources */,
 				BFC18BD317BDB74400D49685 /* Default.png in Resources */,
+				BF624CFD17D1AB1500EE688D /* icon-compose@2x.png in Resources */,
 				BF6D140A17CB9D8500DEC148 /* Icon-72.png in Resources */,
 				BF38708117CB050100C05D98 /* icon-addressbook.png in Resources */,
 				BF6B19C017D03ECF0080BD2D /* cellBackgroundImage_iP5_3@2x.png in Resources */,
