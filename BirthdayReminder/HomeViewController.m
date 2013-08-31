@@ -6,9 +6,10 @@
 //  Copyright (c) 2013년 jun. All rights reserved.
 //
 
-#define CB1 @"cellBackgroundImage_iP5_jun.png"
-#define CB2 @"cellBackgroundImage_iP5_1"
-
+#define CB0 @"cellBackgroundImage_iP5_jun.png"
+#define CB1 @"cellBackgroundImage_iP5_1.png"
+#define CB2 @"cellBackgroundImage_iP5_2.png"
+#define CB3 @"cellBackgroundImage_iP5_3.png"
 
 #import "HomeViewController.h"
 #import "DetailViewController.h"
@@ -306,7 +307,7 @@
     //UIImage *backgroundImage = (indexPath.row == 0) ? [UIImage imageNamed:@"background_banner.png"] : [UIImage imageNamed:@"background_banner.png"];
     //UIImage *backgroundImage = [UIImage imageNamed:@"background_banner.png"];
     
-    UIImage *backgroundImage = [UIImage imageNamed:CB2];
+    UIImage *backgroundImage = [UIImage imageNamed:CB3];
     tableCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
     
     return cell;

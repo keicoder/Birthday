@@ -38,6 +38,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    // 알림 배지 개수의 재설정
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     // 앱 배지 카운트 초기화
     // reset the application badge count
     // --> 할 일 : 캐싱한 데이터가 갱신될 때에는 홈 뷰 컨트롤러 테이블 뷰도 갱신되어야 함

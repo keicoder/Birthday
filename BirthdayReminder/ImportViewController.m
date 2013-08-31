@@ -10,8 +10,10 @@
 // -> 이렇게 하면 연락처 불러오기 뷰 뿐만 아니라 나중에 페이스북 불러오기 뷰 컨트롤러를 개발할 때도 상위 클래스에서 로직을 이미 구현한 만큼 시간을 절약할 수 있다.
 
 
-#define CB1 @"cellBackgroundImage_iP5_jun.png"
-#define CB2 @"cellBackgroundImage_iP5_1"
+#define CB0 @"cellBackgroundImage_iP5_jun.png"
+#define CB1 @"cellBackgroundImage_iP5_1.png"
+#define CB2 @"cellBackgroundImage_iP5_2.png"
+#define CB3 @"cellBackgroundImage_iP5_3.png"
 
 
 #import "ImportViewController.h"
@@ -165,7 +167,7 @@
     //UIImage *backgroundImage = (indexPath.row == 0) ? [UIImage imageNamed:@"background_banner.png"] : [UIImage imageNamed:@"background_banner.png"];
     //UIImage *backgroundImage = [UIImage imageNamed:@"background_banner.png"];
     
-    UIImage *backgroundImage = [UIImage imageNamed:CB2];
+    UIImage *backgroundImage = [UIImage imageNamed:CB3];
     tableCell.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
     
     // accessoryView 속성에 선택 이미지 보여줌
