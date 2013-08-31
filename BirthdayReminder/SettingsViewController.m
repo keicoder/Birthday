@@ -171,7 +171,25 @@
             break;
         }
             
+        case 5:
+        {
+            // 문자 전송
+            if (![MFMessageComposeViewController canSendText]) {
+                NSLog(@"Can't send messages");
+                return;
+            }
+            MFMessageComposeViewController *messageViewController = [[MFMessageComposeViewController alloc] init];
             
+            //Combine the text and the app store link to create the email body
+            NSString *textWithLink = [NSString stringWithFormat:@"%@\n\n%@",text,appStoreLink];
+            
+            [messageViewController setBody:textWithLink];
+            messageViewController.messageComposeDelegate = self;
+            [self presentViewController:messageViewController animated:YES
+                             completion:nil];
+            break;
+        }
+
         default:
             break;
     }
@@ -180,7 +198,7 @@
 
 
 
-#pragma mark 메일 작성 뷰 이벤트 메소드 (MFMailComposeViewControllerDelegate)
+#pragma mark - 메일 작성 뷰 이벤트 메소드 (MFMailComposeViewControllerDelegate)
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
@@ -204,6 +222,27 @@
     
 }
 
+
+#pragma mark - 메시지 작성 뷰 이벤트 메소드 (MFMessageComposeViewControllerDelegate)
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    switch (result)
+	{
+		case MessageComposeResultCancelled:
+			NSLog(@"message composer cancelled");
+			break;
+		case MessageComposeResultFailed:
+			NSLog(@"message composer saved");
+			break;
+		case MessageComposeResultSent:
+			NSLog(@"message composer sent");
+			break;
+	}
+	
+    [controller dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 
 
