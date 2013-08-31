@@ -38,6 +38,9 @@
 		BF624CF217D1965C00EE688D /* Appirater.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BF624CD317D1965C00EE688D /* Appirater.podspec */; };
 		BF624CF317D1965C00EE688D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF624CD517D1965C00EE688D /* AppiraterLocalizable.strings */; };
 		BF624CF417D1965C00EE688D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BF624CE917D1965C00EE688D /* README.md */; };
+		BF624CF617D19B6800EE688D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF624CF517D19B6800EE688D /* CFNetwork.framework */; };
+		BF624CF817D19B9900EE688D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF624CF717D19B9900EE688D /* SystemConfiguration.framework */; };
+		BF624CFA17D19BA300EE688D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF624CF917D19BA300EE688D /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BF6487E117BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E217BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
@@ -234,6 +237,9 @@
 		BF624CEE17D1965C00EE688D /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/AppiraterLocalizable.strings; sourceTree = "<group>"; };
 		BF624CEF17D1965C00EE688D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AppiraterLocalizable.strings"; sourceTree = "<group>"; };
 		BF624CF017D1965C00EE688D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/AppiraterLocalizable.strings"; sourceTree = "<group>"; };
+		BF624CF517D19B6800EE688D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BF624CF717D19B9900EE688D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BF624CF917D19BA300EE688D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BF6487DF17BDE90C00202254 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		BF6487E017BDE90C00202254 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		BF6487E317BDEDE200202254 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
@@ -372,6 +378,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF624CFA17D19BA300EE688D /* StoreKit.framework in Frameworks */,
+				BF624CF817D19B9900EE688D /* SystemConfiguration.framework in Frameworks */,
+				BF624CF617D19B6800EE688D /* CFNetwork.framework in Frameworks */,
 				BFEB03F217CDC017000BA938 /* Social.framework in Frameworks */,
 				BFEB03F017CDC00C000BA938 /* Accounts.framework in Frameworks */,
 				BFE685E717CB87BF00613921 /* AddressBook.framework in Frameworks */,
@@ -485,6 +494,9 @@
 		BFC18B9117BDAF2900D49685 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF624CF917D19BA300EE688D /* StoreKit.framework */,
+				BF624CF717D19B9900EE688D /* SystemConfiguration.framework */,
+				BF624CF517D19B6800EE688D /* CFNetwork.framework */,
 				BFEB03F117CDC017000BA938 /* Social.framework */,
 				BFEB03EF17CDC00C000BA938 /* Accounts.framework */,
 				BFE685E617CB87BF00613921 /* AddressBook.framework */,

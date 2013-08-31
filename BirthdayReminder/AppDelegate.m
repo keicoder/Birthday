@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "StyleSheet.h"
+#import "Appirater.h" // 사용자에게 앱 평가 요청 리마인드
 
 @implementation AppDelegate
 
@@ -15,6 +16,8 @@
 {
     // StyleSheet 클래스에서 구현한 네비게이션 바와 툴바 외양에 적용할 스타일 시트 public 클래스 메소드 호출
     [StyleSheet initStyles];
+    
+    [Appirater appLaunched:YES];
     
     return YES;
 }
@@ -34,6 +37,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

@@ -47,6 +47,12 @@ extern NSString *const kAppiraterDeclinedToRate;
 extern NSString *const kAppiraterReminderRequestDate;
 
 /*
+ Place your Apple generated software id here.
+ */
+#define APPIRATER_APP_ID	BirthdayReminder (com.lov2jun.*)
+
+
+/*
  Your localized app's name.
  */
 #define APPIRATER_LOCALIZED_APP_NAME    [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"]
@@ -54,7 +60,38 @@ extern NSString *const kAppiraterReminderRequestDate;
 /*
  Your app's name.
  */
+#define APPIRATER_APP_NAME	@"Birthday Reminder"
+
+/*
+ Your app's name.
+
 #define APPIRATER_APP_NAME				APPIRATER_LOCALIZED_APP_NAME ? APPIRATER_LOCALIZED_APP_NAME : [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
+*/
+
+/*
+ 'YES' will show the Appirater alert everytime. Useful for testing how your message
+ looks and making sure the link to your app's review page works.
+ */
+#define APPIRATER_DEBUG		NO
+
+
+/*
+ Users will need to have the same version of your app installed for this many
+ days before they will be prompted to rate it.
+ */
+#define APPIRATER_DAYS_UNTIL_PROMPT		7		// double
+
+/*
+ An example of a 'use' would be if the user launched the app. Bringing the app
+ into the foreground (on devices that support it) would also be considered
+ a 'use'. You tell Appirater about these events using the two methods:
+ [Appirater appLaunched:]
+ [Appirater appEnteredForeground:]
+ 
+ Users need to 'use' the same version of the app this many times before
+ before they will be prompted to rate it.
+ */
+#define APPIRATER_USES_UNTIL_PROMPT		5		// integer
 
 /*
  This is the message your users will see once they've passed the day+launches
