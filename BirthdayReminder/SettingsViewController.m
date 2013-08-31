@@ -80,11 +80,32 @@
     // 사용자가 Days Before나 Alert Time 테이블 셀을 탭하면 무시한다.
     if (indexPath.section == 0) return;
     
+    
+    NSString *text = @"Check out this iPhone App: Birthday Reminder";
+    UIImage *image = [UIImage imageNamed:@"Icon-72@2x.png"];
+    NSURL *facebookPageLink = [NSURL URLWithString:@"http://www.facebook.com/apps/application.php?id=123956661050729"];
+    NSURL *appStoreLink = [NSURL URLWithString:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=489537509&mt=8"];
+    
+    
     switch (indexPath.row) {
         case 0:
             // 앱 스토어 리뷰를 추가
             [Appirater rateApp];
             break;
+        
+        case 1:
+        {
+            // 공유
+            NSArray *activityItems = @[text, image, appStoreLink];
+            
+            UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+            
+            activityViewController.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList];
+            
+            [self presentViewController:activityViewController animated:YES completion:nil];
+            
+            break;
+        }
             
         default:
             break;
