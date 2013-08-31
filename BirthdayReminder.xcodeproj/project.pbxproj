@@ -43,6 +43,7 @@
 		BF624CFA17D19BA300EE688D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF624CF917D19BA300EE688D /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BF624CFD17D1AB1500EE688D /* icon-compose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF624CFB17D1AB1500EE688D /* icon-compose@2x.png */; };
 		BF624CFE17D1AB1500EE688D /* icon-compose.png in Resources */ = {isa = PBXBuildFile; fileRef = BF624CFC17D1AB1500EE688D /* icon-compose.png */; };
+		BF624D0017D1CA1B00EE688D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF624CFF17D1CA1B00EE688D /* MessageUI.framework */; };
 		BF6487E117BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E217BDE90C00202254 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E017BDE90C00202254 /* EditViewController.m */; };
 		BF6487E517BDEDE200202254 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6487E417BDEDE200202254 /* CoreViewController.m */; };
@@ -244,6 +245,7 @@
 		BF624CF917D19BA300EE688D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BF624CFB17D1AB1500EE688D /* icon-compose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-compose@2x.png"; sourceTree = "<group>"; };
 		BF624CFC17D1AB1500EE688D /* icon-compose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-compose.png"; sourceTree = "<group>"; };
+		BF624CFF17D1CA1B00EE688D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BF6487DF17BDE90C00202254 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		BF6487E017BDE90C00202254 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		BF6487E317BDEDE200202254 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF624D0017D1CA1B00EE688D /* MessageUI.framework in Frameworks */,
 				BF624CFA17D19BA300EE688D /* StoreKit.framework in Frameworks */,
 				BF624CF817D19B9900EE688D /* SystemConfiguration.framework in Frameworks */,
 				BF624CF617D19B6800EE688D /* CFNetwork.framework in Frameworks */,
@@ -498,6 +501,7 @@
 		BFC18B9117BDAF2900D49685 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF624CFF17D1CA1B00EE688D /* MessageUI.framework */,
 				BF624CF917D19BA300EE688D /* StoreKit.framework */,
 				BF624CF717D19B9900EE688D /* SystemConfiguration.framework */,
 				BF624CF517D19B6800EE688D /* CFNetwork.framework */,

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h> // email 및 sms 공유
 
-@interface SettingsViewController : UITableViewController
+@interface SettingsViewController : UITableViewController <MFMailComposeViewControllerDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *tableCellDaysBefore;
