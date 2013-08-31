@@ -179,8 +179,35 @@
 }
 
 
-#pragma mark - 버튼
 
+#pragma mark 메일 작성 뷰 이벤트 메소드 (MFMailComposeViewControllerDelegate)
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+	switch (result)
+	{
+		case MFMailComposeResultCancelled:
+			NSLog(@"mail composer cancelled");
+			break;
+		case MFMailComposeResultSaved:
+			NSLog(@"mail composer saved");
+			break;
+		case MFMailComposeResultSent:
+			NSLog(@"mail composer sent");
+			break;
+		case MFMailComposeResultFailed:
+			NSLog(@"mail composer failed");
+			break;
+	}
+	
+    [controller dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
+
+
+#pragma mark - 버튼
 
 - (IBAction)didClickDoneButton:(id)sender
 {
